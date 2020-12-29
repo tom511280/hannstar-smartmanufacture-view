@@ -36,3 +36,6 @@ hanyucaij
 https://app.zeplin.io/project/5f9bbbc7e5c6d0b9f031aa52
 Hann_____
 Hann_____
+
+# echarts中文官網
+https://echarts.apache.org/examples/zh/index.html#chart-type-pie
