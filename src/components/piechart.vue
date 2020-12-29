@@ -25,17 +25,22 @@ export default {
   },
   data(){
       return {
-           //堆叠折线图所需参数对象   
-           myline:{
-             tooltip: {
-        trigger: 'item',
-        formatter: '{a} <br/>{b}: {c} ({d}%)'
-    },
+        //堆叠折线图所需参数对象   
+        myline: {
+                  tooltip: {
+                    trigger: 'item',
+                    formatter: '{a} <br/>{b}: {c} ({d}%)'
+                  },
+                  title: {
+                    left: "5%",
+                    bottom: "93%",
+                    text:'Sports Monitor'
+                  },
     legend: {
       backgroundColor: '#eee',
       orient: 'vertical',
-      left: "68%",
-      top: "60%",
+      left: "70%",
+      top: "65%",
       // center: ['70%', '40%'],
       data: ['Normal', 'Abnormal'],
     },
@@ -44,7 +49,7 @@ export default {
             name: '访问来源',
             type: 'pie',
             radius: ['50%', '70%'],
-            center: ['38%', '40%'],
+            center: ['40%', '45%'],
             avoidLabelOverlap: false,
             label: {
                 // show: false,
