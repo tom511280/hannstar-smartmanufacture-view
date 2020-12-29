@@ -1,9 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
 
+
+
 import 'bootstrap/dist/js/bootstrap.js'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'normalize.css/normalize.css'
+import '@/assets/css/hannstarCommon.css';
 import '@/assets/css/memberCommon.css'; /*引入登入公共樣式*/
 
 //引入util

@@ -1,49 +1,76 @@
 <template>
     <div class="bodyhealthView">
-        <div class="heart-rate-monitor"><piechart></piechart></div>
-        <div class="sleep-monitor"><piechart></piechart></div>
-        <div class="sports-monitor"><piechart></piechart></div>
+        <div class="bodyhealthView-monitor-area">
+            <monitorpieChartComp></monitorpieChartComp>
+            <div class="bodyhealthView-monitor-area-ypper-line"></div>
+            <h4>Abnormal Heart Rate</h4>
+            <monitorpieListComp></monitorpieListComp>
+            <div class="bodyhealthView-monitor-area-ypper-line"></div>
+            <monitorpieListComp></monitorpieListComp>
+        </div>
+        <div class="bodyhealthView-monitor-area">
+            <monitorpieChartComp></monitorpieChartComp>
+            <div class="bodyhealthView-monitor-area-ypper-line"></div>
+            <monitorpieListComp></monitorpieListComp>
+            <monitorpieListComp></monitorpieListComp>
+        </div>
+        <div class="bodyhealthView-monitor-area">
+            <monitorpieChartComp></monitorpieChartComp>
+            <div class="bodyhealthView-monitor-area-ypper-line"></div>
+            <monitorpieListComp></monitorpieListComp>
+            <monitorpieListComp></monitorpieListComp>
+        </div>
     </div>
 </template>
 <script>
-import piechart from '@/components/piechart.vue'
-
+import monitorpieChartComp from '@/components/monitorChart/subcomponents/monitorpieChartComp.vue'
+import monitorpieListComp from '@/components/monitorChart/subcomponents/monitorpieListComp.vue'
 export default {
     components: {
-        piechart,
+        monitorpieChartComp,
+        monitorpieListComp
     },
 }
 </script>
 <style scoped>
+.h4-container {
+    display: flex;
+    flex-direction: row;
+}
 .bodyhealthView {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
-    align-items: center;
+    align-items: flex-start;
     background-color: #f1f2f3;
-    height: 94.5vh;
+    min-height: 94.5vh;
     margin-left: 16vw;
+    overflow-y: auto;
 }
-.bodyhealthView > .heart-rate-monitor {
+.bodyhealthView > .bodyhealthView-monitor-area {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: 28vw;
+    align-items: flex-start;
+    /* align-items: center; */
+    width: 26vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    background-color: #ffffff;
+    border-radius: 8px;
 }
-.bodyhealthView > .sleep-monitor {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 28vw;
-}
-.bodyhealthView> .sports-monitor {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 28vw;
+.bodyhealthView-monitor-area-ypper-line {
+  width: 467px;
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh;
+  /* height: 1px; */
+  /* margin: 16px 20px 14px; */
+  border: solid 1px #bbbfca;
 }
 </style>
