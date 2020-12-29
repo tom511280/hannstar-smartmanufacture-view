@@ -1,0 +1,230 @@
+
+::-webkit-input-placeholder {
+    /* Chrome, Safari */
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.13;
+  letter-spacing: normal;
+  color: #bbbfca;
+}
+input[type=text], input[type=email], input[type=password]
+{
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: #394867;
+}
+
+input[type=checkbox] {
+  border-radius: 5px;
+  box-shadow: 0 7px 24px 0 rgba(0, 0, 0, 0.07);
+  border: solid 1px #495464;
+  background-color: #ffffff;
+}
+
+.fontbase {
+  font-family: Arial;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.loginBg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 22vh;
+  padding-bottom: 22vh;
+  padding-left: 16vw;
+  padding-right: 16vw; 
+  background-image: url("../img/bg-login.jpg");
+  background-size: cover;
+  
+} 
+.loginLeft {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: 12vw;
+}
+.loginRright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 22vw;
+  /* height: 50vh; */
+  margin-top: 7vh;
+  padding-top: 3.7vh;
+  padding-bottom: 3vh;
+  padding-left: 1.6vw;
+  padding-right: 1.6vw; 
+  box-shadow: 0 0 8px 0 rgba(204, 204, 204, 0.6);
+  background-color: #ffffff;
+}
+.loginTitle {
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.27;
+  color: #394867;
+}
+.loginDescribution {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.7vh;
+  margin-bottom: 2vh;
+  font-size: 15px;
+  color: #9ba4b4;
+}
+
+/*inputbox about css*/
+.inputbox-area-external {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 18.3vw;
+  height: 4.1vh;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  border-radius: 6px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+  
+}
+.inputbox-area-external > .common-icon {
+  width: 2.1vh;
+  height: 1vw;
+  cursor: pointer;
+}
+.inputbox-area-external > .common-line {
+  height: 2vh;
+  margin-top: 0.2vh;
+  margin-bottom: 0.2vh;
+  margin-left: 0.6vw;
+  margin-right: 0.6vw;
+  box-shadow: 0 0 0 0.5px #bbbfca;
+}
+.inputbox-area-external > .common-inputBox {
+  /* width: 250px; */
+  border-width: 0px;
+  border-style: none;
+  outline: none;
+  cursor: text;
+}
+.inputbox-area-external > .common-right-icon-external {
+  flex: 1;
+  text-align: right;
+  cursor: pointer;
+}
+/*ckeckBox about css*/
+.ckeckBox-area-external {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 18vw;
+  height: 2vh;
+  margin-top: 0.9vh;
+}
+.ckeckBox-area-external > .common-ckeckBox {
+  margin-right: 0.4vw;
+  border-radius: 5px;
+  box-shadow: 0 7px 64px 0 rgba(0, 0, 0, 0.07);
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+}
+.ckeckBox-area-external > .ckeckBox-area-lefttext {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-size: 14px;
+  color: #707b91;
+}
+.ckeckBox-area-external > .ckeckBox-area-rightText {
+  font-family: Roboto;
+  font-size: 14px;
+  color: #9ba4b4;
+  /*置右*/
+  flex: 1;
+  text-align: right;
+  text-decoration: none;
+}
+
+/*btn about css*/
+.login-btn-area-external {
+  margin-top: 3.4vh;
+  width: 18vw;
+  height: 4vh;
+}
+.login-btn-area-external > .login-btn {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  background-color: #394867;
+  cursor: pointer;
+}
+.login-btn-area-external > .login-btn > .login-btn-text {
+  font-family: Roboto;
+  font-size: 16px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+/*signup text css*/
+.signup-area-external {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.2vh;
+}
+.signup-leftText {
+  font-family: Roboto;
+  font-size: 14px;
+  color: #9ba4b4;
+  text-align: right;
+  white-space:nowrap;
+}
+.signup-rightText {
+  margin-left: 0.4vw;
+  font-size: 14px;
+  color: #707b91;
+  text-decoration: none;
+}
+
+/*error text css*/
+.errortext {
+  height: 0.01vh;
+  width: 18vw;
+  font-family: Roboto;
+  font-size: 14px;
+  color: #e43030;
+}
+.input-error-style {
+  border-color: red !important;
+}
+.input-no-error-style {
+  border-color: #e8e8e8 !important;
+}
+
+
+
+
