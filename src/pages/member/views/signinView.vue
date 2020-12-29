@@ -16,7 +16,7 @@
                 <p class="errortext fontbase input-no-error-style">{{emailErrorMsg}}</p>
             </div>
             <div id="memberArea" class="inputbox-area-external" :class="[this.memberInputErrorClass]">
-                <img class="common" src="@/assets/img/icons-member.png" srcset="@/assets/img/icons-member@2x.png 2x,@/assets/img/icons-member@3x.png 3x">
+                <img class="common-icon" src="@/assets/img/icons-member.png" srcset="@/assets/img/icons-member@2x.png 2x,@/assets/img/icons-member@3x.png 3x">
                 <div class="common-line"></div>
                 <input type="text" class="common-inputBox" v-model="member"  name="member" placeholder="User Name">
             </div>
@@ -28,7 +28,7 @@
                 <div class="common-line"></div>
                 <input :type="passwordInputType" class="common-inputBox" v-model="password" name="password" placeholder="Password">
                 <div class="common-right-icon-external" @mousedown="showPwd(true)" @mouseup="showPwd(false)">
-                    <img class="common-right-icon" src="@/assets/img/icon-eye-hide.png" srcset="@/assets/img/icon-eye-hide@2x.png 2x,img/icon-eye-hide@3x.png 3x">
+                    <img class="common-icon" src="@/assets/img/icon-eye-hide.png" srcset="@/assets/img/icon-eye-hide@2x.png 2x,img/icon-eye-hide@3x.png 3x">
                 </div>
             </div>
             <div>

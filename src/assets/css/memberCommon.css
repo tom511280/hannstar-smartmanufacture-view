@@ -107,7 +107,7 @@ input[type=checkbox] {
   background-color: #ffffff;
   
 }
-.inputbox-area-external > .common-icon {
+.inputbox-area-external > .common-icon, .common-right-icon-external > .common-icon{
   width: 2.1vh;
   height: 1vw;
   cursor: pointer;

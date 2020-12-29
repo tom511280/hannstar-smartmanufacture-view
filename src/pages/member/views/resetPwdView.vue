@@ -12,7 +12,7 @@
                 <div class="common-line"></div>
                 <input :type="passwordInputType" class="common-inputBox" v-model="password" placeholder="Password">
                 <div class="common-right-icon-external" @mousedown="showPwd('password', true)" @mouseup="showPwd('password', false)">
-                    <img class="common-right-icon" src="@/assets/img/icon-eye-hide.png" srcset="@/assets/img/icon-eye-hide@2x.png 2x,img/icon-eye-hide@3x.png 3x">
+                    <img class="common-icon" src="@/assets/img/icon-eye-hide.png" srcset="@/assets/img/icon-eye-hide@2x.png 2x,img/icon-eye-hide@3x.png 3x">
                 </div>
             </div>
             <div>
@@ -23,7 +23,7 @@
                 <div class="common-line"></div>
                 <input :type="confirmPasswordInputType" class="common-inputBox" v-model="confirmPassword" placeholder="Confirm password">
                 <div class="common-right-icon-external" @mousedown="showPwd('confirmPassword', true)" @mouseup="showPwd('confirmPassword', false)">
-                    <img class="common-right-icon" src="@/assets/img/icon-eye-hide.png" srcset="@/assets/img/icon-eye-hide@2x.png 2x,img/icon-eye-hide@3x.png 3x">
+                    <img class="common-icon" src="@/assets/img/icon-eye-hide.png" srcset="@/assets/img/icon-eye-hide@2x.png 2x,img/icon-eye-hide@3x.png 3x">
                 </div>
             </div>
             <div>

@@ -28,6 +28,12 @@ Vue.use(VueSidebarMenu)
 //引入狀態管理  自動找底下index
 import store from './store'
 
+import ECharts from 'vue-echarts'
+import 'echarts/lib/chart/bar'
+import 'echarts/lib/component/tooltip'
+import 'echarts-gl' //等等會使用 grapic 設定圖形文字，故需載入此 module
+Vue.component('v-chart', ECharts) // 註冊為 global component
+
 
 Vue.config.productionTip = false
 
