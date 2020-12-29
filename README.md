@@ -39,3 +39,17 @@ Hann_____
 
 # echarts中文官網
 https://echarts.apache.org/examples/zh/index.html#chart-type-pie
+
+## git 上傳
+# step1.
+git add .
+
+# step2.
+git commit -m '
+2020-12-29變更
+Author: TomWu
+Content :
+1.調整圓餅圖整體區塊，並加上下方table
+'
+# step3.
+git push origin master
