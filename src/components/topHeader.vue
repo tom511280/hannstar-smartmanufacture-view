@@ -1,4 +1,5 @@
 <template>
+<div class="topHeader-external">
     <div class="topHeader">
         <img src="https://picsum.photos/300/200" alt="">
         <div class="topHeader-info">
@@ -6,6 +7,7 @@
             <div class="topHeader-membername">tom wu</div>
         </div>
     </div>
+</div>
 </template>
 <script>
 export default {
@@ -13,12 +15,21 @@ export default {
 }
 </script>
 <style scoped>
+.topHeader-external {
+    /* display: flex;
+    justify-content: flex-end; */
+}
 .topHeader {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     height: 5.5vh;
     background-color: #394867;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:998
 }
 .topHeader > img {
     width: 2vw;

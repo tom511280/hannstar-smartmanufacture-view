@@ -1,11 +1,7 @@
 <template>
   <div class="piechart">
     <!-- 调用v-chart组件:渲染折线图 -->
-    <v-chart :options="myline" 
-    style="width:26vw;display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;text-align: right;"></v-chart>
+    <v-chart :options="option"></v-chart>
   </div>
 </template>
 <script>
@@ -24,63 +20,81 @@ export default {
       'v-chart': ECharts
   },
   data(){
-      return {
-        //堆叠折线图所需参数对象   
-        myline: {
-                  tooltip: {
-                    trigger: 'item',
-                    formatter: '{a} <br/>{b}: {c} ({d}%)'
-                  },
-                  title: {
-                    left: "5%",
-                    bottom: "93%",
-                    text:'Sports Monitor'
-                  },
-    legend: {
-      backgroundColor: '#eee',
-      orient: 'vertical',
-      left: "70%",
-      top: "65%",
-      // center: ['70%', '40%'],
-      data: ['Normal', 'Abnormal'],
+        return {
+          option: {
+    backgroundColor: '#2c343c',
+
+    title: {
+        text: 'Customized Pie',
+        left: 'center',
+        top: 20,
+        textStyle: {
+            color: '#ccc'
+        }
     },
-    series: [
+
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    visualMap: {
+        show: false,
+        min: 80,
+        max: 600,
+        inRange: {
+            colorLightness: [0, 1]
+        }
+    },
+    series : [
         {
-            name: '访问来源',
-            type: 'pie',
-            radius: ['50%', '70%'],
-            center: ['40%', '45%'],
-            avoidLabelOverlap: false,
+            name:'访问来源',
+            type:'pie',
+            radius : '55%',
+            center: ['50%', '50%'],
+            data:[
+                {value:335, name:'直接访问'},
+                {value:310, name:'邮件营销'},
+                {value:274, name:'联盟广告'},
+                {value:235, name:'视频广告'},
+                {value:400, name:'搜索引擎'}
+            ].sort(function (a, b) { return a.value - b.value; }),
+            roseType: 'radius',
             label: {
-                // show: false,
                 normal: {
-                  position: 'inner',  // 设置标签位置，默认在饼状图外 可选值：'outer' ¦ 'inner（饼状图上）'
-                  // formatter: '{a} {b} : {c}个 ({d}%)'   设置标签显示内容 ，默认显示{b}
-                  // {a}指series.name  {b}指series.data的name
-                  // {c}指series.data的value  {d}%指这一部分占总数的百分比
-                  formatter: '{c}'
-                }
-                // position: 'center'
-            },
-            emphasis: {
-                label: {
-                    show: true,
-                    fontSize: '30',
-                    fontWeight: 'bold'
+                    textStyle: {
+                        color: 'rgba(255, 255, 255, 0.3)'
+                    }
                 }
             },
             labelLine: {
-                show: false
+                normal: {
+                    lineStyle: {
+                        color: 'rgba(255, 255, 255, 0.3)'
+                    },
+                    smooth: 0.2,
+                    length: 10,
+                    length2: 20
+                }
             },
-            data: [
-                {value: 5, name: 'Normal', itemStyle: {color: '#ea5455'},},
-                {value: 25, name: 'Abnormal', itemStyle: {color: '#52b8e5'},}
-            ]
+            itemStyle: {
+                normal: {
+                    color: '#c23531',
+                    shadowBlur: 200,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            },
+
+            animationType: 'scale',
+            animationEasing: 'elasticOut',
+            animationDelay: function (idx) {
+              console.log(idx);
+                return Math.random() * 200;
+            }
         }
     ]
-        }
+}
+        }  
       }
-  }  
 }
 </script>
 <style scope>

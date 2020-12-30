@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="sidebar">
     <sidebar-menu
         :menu="menu"
         :collapsed="collapsed"
@@ -145,102 +145,6 @@ export default {
 
 <style lang="scss">
 @import url('https://use.fontawesome.com/releases/v5.0.6/css/all.css');
-body,
-html {
-  margin: 0;
-  padding: 0;
-}
-body {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 18px;
-  background-color: #f2f4f7;
-//   color: #262626;
-  color: #394867;
-}
-#demo {
-  padding-left: 350px;
-  transition: 0.3s ease;
-}
-#demo.collapsed {
-  padding-left: 50px;
-}
-#demo.onmobile {
-  padding-left: 50px;
-}
-.sidebar-overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: #000;
-  opacity: 0.5;
-  z-index: 900;
-}
-.demo {
-  padding: 50px;
-}
-.container {
-  max-width: 900px;
-}
-pre {
-  font-family: Consolas, monospace;
-  color: #000;
-  background: #fff;
-  border-radius: 2px;
-  padding: 15px;
-  line-height: 1.5;
-  overflow: auto;
-}
-// .v-sidebar-menu .vsm--item {
-//     font-family: Roboto;
-//     font-size: 16px;
-//     font-weight: normal;
-//     font-stretch: normal;
-//     font-style: normal;
-//     line-height: 1.25;
-//     letter-spacing: normal;
-//     color: #707b91;
-// }
-// .v-sidebar-menu.vsm_expanded {
-//     background-color:#f1f6f9;
-// }
-// .v-sidebar-menu .vsm--item.vsm--item_open {
-    
-// }
-// .v-sidebar-menu .vsm--link.vsm--link_active {
-//     background-color:#f1f6f9;
-// }
-// .v-sidebar-menu .vsm--link.vsm--link_exact-active {
-//     background-color:#f1f6f9;
-// }
-// .v-sidebar-menu.vsm_white-theme.vsm_expanded .vsm--item_open .vsm--link_level-1 {
-    // background-color:#f1f6f9 !important;
-// }
-// .v-sidebar-menu.vsm_expanded .vsm--item_open .vsm--link_level-1 {
-//     font-family: Roboto;
-//     font-size: 16px;
-//     font-weight: 500;
-//     font-stretch: normal;
-//     font-style: normal;
-//     line-height: 1.25;
-//     letter-spacing: normal;
-//     // color: #394867 !important; 
-//     background-color:#f1f6f9 !important;
-//     color: #ef8059 !important; 
-// }
-// .v-sidebar-menu.vsm_expanded .vsm--item_open .vsm--link_level-1 {
-//     font-family: Roboto;
-//     font-size: 16px;
-//     font-weight: 500;
-//     font-stretch: normal;
-//     font-style: normal;
-//     line-height: 1.25;
-//     letter-spacing: normal;
-//     // color: #394867 !important; 
-//     background-color:#f1f6f9 !important;
-//     color: #ef8059 !important; 
-// }
 .vsm--item .vsm--link_level-1{
     border-bottom:1px #e8e8e8 solid;
 }

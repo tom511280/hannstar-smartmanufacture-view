@@ -5,18 +5,19 @@
 </div>
 </template>
 <style  scoped>
-    .loginTitle_C {
-        font-size: 36px;
-    }
-    .sidebarHead {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 2vh;
-        height: 8.5vh;
-        border-bottom:1px #e8e8e8 solid;
-    }
+.loginTitle_C {
+    font-size: 36px;
+}
+.sidebarHead {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    height: 8.5vh;
+    border-bottom:1px #e8e8e8 solid;
+    /* z-index:1001 */
+}
 </style>
 <script>
 export default {

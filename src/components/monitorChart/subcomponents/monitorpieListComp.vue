@@ -28,6 +28,24 @@
           <td>140</td>
           <td>2020/10/10 11:10:35</td>
         </tr>
+        <tr>
+          <th scope="row">Jack Huang (3001…</th>
+          <td>SG004</td>
+          <td>140</td>
+          <td>2020/10/10 11:10:35</td>
+        </tr>
+        <tr>
+          <th scope="row">Jack Huang (3001…</th>
+          <td>SG004</td>
+          <td>140</td>
+          <td>2020/10/10 11:10:35</td>
+        </tr>
+        <tr>
+          <th scope="row">Jack Huang (3001…</th>
+          <td>SG004</td>
+          <td>140</td>
+          <td>2020/10/10 11:10:35</td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -40,6 +58,17 @@
   align-items: center;
   text-align: right;
   width: 100%;
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+}
+table > thead > tr {
+  background-color: #dddfe5;
+}
+table > thead > tr > th {
+  text-align: left;
+  white-space:nowrap; 
 }
 th, td {
   font-family: Roboto;
@@ -50,5 +79,7 @@ th, td {
   line-height: normal;
   letter-spacing: -0.3px;
   color: #707b91;
+  white-space:nowrap; 
+  padding-left: 0.5vw;
 }
 </style>

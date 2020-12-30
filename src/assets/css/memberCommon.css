@@ -29,15 +29,6 @@ input[type=checkbox] {
   background-color: #ffffff;
 }
 
-.fontbase {
-  font-family: Arial;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-}
-
 .loginBg {
   display: flex;
   flex-direction: row;
@@ -110,7 +101,7 @@ input[type=checkbox] {
 .inputbox-area-external > .common-icon, .common-right-icon-external > .common-icon{
   width: 2.1vh;
   height: 1vw;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .inputbox-area-external > .common-line {
   height: 2vh;

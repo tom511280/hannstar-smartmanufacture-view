@@ -5,6 +5,7 @@ h1, h2, h3, h4, h5 {
     font-style: normal;
     letter-spacing: normal;
     color: #394867;
+    white-space:nowrap;
 }
 h4 {
     font-size: 18px;
@@ -22,4 +23,16 @@ p {
     letter-spacing: normal;
     text-align: center;
     color: #9ba4b4;
+}
+
+.common-icon {
+    cursor: pointer;
+}
+.fontbase {
+    font-family: Arial;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
 }
