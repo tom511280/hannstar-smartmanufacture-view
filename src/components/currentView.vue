@@ -8,10 +8,4 @@
         </transition>
     </div>
 </template>
-<style lang="scss" scope>
-    .currentView {
-        margin-top: 5.5vh;
-    }
-</style>
-
 

@@ -60,26 +60,5 @@ export default {
 }
 .loginDescribution_C_S {
   margin-top: 0vh;
-} 
-
-/* 
-.exploreAround-btn-area-external {
-  margin-top: 38px;
 }
-.exploreAround-btn-area-external > .exploreAround-btn {
-  width: 350px;
-  height: 44px;
-  border-radius: 6px;
-  background-color: #394867;
-  cursor: pointer;
-}
-.exploreAround-btn-area-external > .exploreAround-btn > .exploreAround-btn-text {
-  font-family: Roboto;
-  font-size: 16px;
-  text-align: center;
-  color: #ffffff;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  text-align: center;
-} */
 </style>

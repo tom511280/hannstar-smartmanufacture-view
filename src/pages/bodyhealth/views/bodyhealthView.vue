@@ -76,11 +76,12 @@ export default {
 .bodyhealthView {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
     background-color: #f1f2f3;
     min-height: 94.5vh;
     margin-left: 16vw;
+    padding-right: 1.5vw;
     overflow-y: auto;
 }
 .bodyhealthView > .bodyhealthView-monitor-area {
@@ -88,29 +89,30 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;    
-}
-.bodyhealthView > .bodyhealthView-monitor-area >.bodyhealthView-monitor-area-title {
     margin-left: 1.5vw;
-    margin-right: 1vw;
-    margin-top: 1vh;
-    /* margin-bottom: 2vh; */
+    margin-top: 2.2vh;
+    margin-bottom: 2vh;
+}
+
+.bodyhealthView > .bodyhealthView-monitor-area >.bodyhealthView-monitor-area-title {
+    
+    /* margin-right: 1vw; */
+    /* margin-top: 2vh; */
     padding-left: 1vw;
-    /* padding-right: 1vw; */
-    /* padding-top: 1vh; */
-    /* padding-bottom: 1vh; */
     background-color: #ffffff;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     width: 26vw;
 }
 .bodyhealthView > .bodyhealthView-monitor-area >.bodyhealthView-monitor-area-content {
-    margin-left: 1.5vw;
-    margin-right: 1vw;
+    /* margin-left: 1vw; */
+    /* margin-right: 1vw; */
     /* margin-top: 1vh; */
-    margin-bottom: 2vh;
+    /* margin-bottom: 2vh; */
+    /* padding-top: 1vh; */
+
     padding-left: 1vw;
     padding-right: 1vw;
-    /* padding-top: 1vh; */
     padding-bottom: 1vh;
     background-color: #ffffff;
     border-bottom-left-radius: 8px;

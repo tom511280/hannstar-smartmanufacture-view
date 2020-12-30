@@ -3,7 +3,9 @@
         <sidebar v-if="isShowSiderbar"></sidebar>
         <div>
             <topHeader v-if="isShowTopHeader"></topHeader>
-            <currentView></currentView>
+            <div :class="{ 'currentView-contain-topHeader': isShowSiderbar, 'currentView-nocontain-topHeader': !isShowSiderbar }">
+              <currentView></currentView>
+            </div>
         </div>
     </div>
 </template>
@@ -28,5 +30,13 @@ export default {
     },
 }
 </script>
+<style lang="scss" scoped>
+.currentView-contain-topHeader{
+    margin-top: 5.5vh;
+} 
+.currentView-nocontain-topHeader {
+    margin-top: 0px;
+}
+</style>
 
 
