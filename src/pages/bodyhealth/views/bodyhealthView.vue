@@ -1,6 +1,6 @@
 <template>
-    <div class="bodyhealthView row">
-        <div class="bodyhealthView-monitor-area col-4">
+    <div class="bodyhealthView">
+        <div class="bodyhealthView-monitor-area">
             <div class="bodyhealthView-monitor-area-title">
                 <monitorpieSearchHeaderComp></monitorpieSearchHeaderComp>
             </div>
@@ -16,7 +16,7 @@
                 <monitorpieListComp></monitorpieListComp>
             </div>
         </div>
-        <div class="bodyhealthView-monitor-area col-4">
+        <div class="bodyhealthView-monitor-area">
             <div class="bodyhealthView-monitor-area-title">
                 <monitorpieSearchHeaderComp></monitorpieSearchHeaderComp>
             </div>
@@ -32,7 +32,7 @@
                 <monitorpieListComp></monitorpieListComp>
             </div>
         </div>
-        <div class="bodyhealthView-monitor-area col-4">
+        <div class="bodyhealthView-monitor-area">
             <div class="bodyhealthView-monitor-area-title">
                 <monitorpieSearchHeaderComp></monitorpieSearchHeaderComp>
             </div>
@@ -90,7 +90,7 @@ export default {
     align-items: flex-start;    
 }
 .bodyhealthView > .bodyhealthView-monitor-area >.bodyhealthView-monitor-area-title {
-    margin-left: 1vw;
+    margin-left: 1.5vw;
     margin-right: 1vw;
     margin-top: 1vh;
     /* margin-bottom: 2vh; */
@@ -104,7 +104,7 @@ export default {
     width: 26vw;
 }
 .bodyhealthView > .bodyhealthView-monitor-area >.bodyhealthView-monitor-area-content {
-    margin-left: 1vw;
+    margin-left: 1.5vw;
     margin-right: 1vw;
     /* margin-top: 1vh; */
     margin-bottom: 2vh;
