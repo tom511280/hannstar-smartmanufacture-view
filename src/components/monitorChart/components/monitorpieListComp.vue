@@ -3,45 +3,45 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Group</th>
-          <th scope="col">Heart Rate</th>
-          <th scope="col">Time</th>
+          <th>Name</th>
+          <th>Group</th>
+          <th>Heart Rate</th>
+          <th>Time</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th scope="row">Jack Huang (3001…</th>
+          <th>Jack Huang (3001…</th>
           <td>SG004</td>
           <td>140</td>
           <td>2020/10/10 11:10:35</td>
         </tr>
         <tr>
-          <th scope="row">Jack Huang (3001…</th>
+          <th>Jack Huang (3001…</th>
           <td>SG004</td>
           <td>140</td>
           <td>2020/10/10 11:10:35</td>
         </tr>
         <tr>
-          <th scope="row">Jack Huang (3001…</th>
+          <th>Jack Huang (3001…</th>
           <td>SG004</td>
           <td>140</td>
           <td>2020/10/10 11:10:35</td>
         </tr>
         <tr>
-          <th scope="row">Jack Huang (3001…</th>
+          <th>Jack Huang (3001…</th>
           <td>SG004</td>
           <td>140</td>
           <td>2020/10/10 11:10:35</td>
         </tr>
         <tr>
-          <th scope="row">Jack Huang (3001…</th>
+          <th>Jack Huang (3001…</th>
           <td>SG004</td>
           <td>140</td>
           <td>2020/10/10 11:10:35</td>
         </tr>
         <tr>
-          <th scope="row">Jack Huang (3001…</th>
+          <th>Jack Huang (3001…</th>
           <td>SG004</td>
           <td>140</td>
           <td>2020/10/10 11:10:35</td>
@@ -57,18 +57,11 @@
   justify-content: center;
   align-items: center;
   text-align: right;
-  width: 100%;
+  // width: 100%;
   overflow-x: auto;
-}
-table {
-  width: 100%;
 }
 table > thead > tr {
   background-color: #dddfe5;
-}
-table > thead > tr > th {
-  text-align: left;
-  white-space:nowrap; 
 }
 th, td {
   font-family: Roboto;
@@ -80,6 +73,10 @@ th, td {
   letter-spacing: -0.3px;
   color: #707b91;
   white-space:nowrap; 
-  padding-left: 0.5vw;
+  text-align: left;
+  // padding: 10px;
 }
+// table > thead > tr > th {
+//   padding-left: 10px;
+// }
 </style>

@@ -51,10 +51,10 @@
     </div>
 </template>
 <script>
-import monitorpieChartComp from '@/components/monitorChart/subcomponents/monitorpieChartComp.vue'
-import monitorpieListComp from '@/components/monitorChart/subcomponents/monitorpieListComp.vue'
-import monitorpieSearchComp from '@/components/monitorChart/subcomponents/monitorpieSearchComp.vue'
-import monitorpieSearchHeaderComp from '@/components/monitorChart/subcomponents/monitorpieSearchHeaderComp.vue'
+import monitorpieChartComp from '@/components/monitorChart/components/monitorpieChartComp.vue'
+import monitorpieListComp from '@/components/monitorChart/components/monitorpieListComp.vue'
+import monitorpieSearchComp from '@/components/monitorChart/components/monitorpieSearchComp.vue'
+import monitorpieSearchHeaderComp from '@/components/monitorChart/components/monitorpieSearchHeaderComp.vue'
 
 export default {
     components: {

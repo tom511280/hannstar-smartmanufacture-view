@@ -62,7 +62,14 @@
     height: 3.5vh;
     width: 55vw;
     margin-right: 1vw;
+    font-family: Roboto;
     font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #394867;
 }
 .monitorpieSearchComp-btn {
   width: 100%;

@@ -66,7 +66,7 @@ export default {
       passwordInputType:'password',
     }
   },
-  mounted(){
+  created(){
       //初始化時執行
       this.$store.dispatch({type:'memberModule/initPage'})
       this.$store.dispatch({type:'commonModule/init'})

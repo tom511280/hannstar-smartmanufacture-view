@@ -19,6 +19,6 @@ export default {
 .overview {
     background-color: #dddfe5;
     height: 94.5vh;
-    widows: 100vh;
+    /* widows: 100vh; */
 }
 </style>

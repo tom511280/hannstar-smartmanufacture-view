@@ -27,6 +27,7 @@ const actions = {
     // 3 = password is empty
     // 4 = email address does not exist
     // 5 = password is not valid
+    // 6 = other
 
     payload.parameter.errorCodeList = [];
     //驗證email
@@ -45,15 +46,35 @@ const actions = {
       return;
     } 
 
-    //驗證帳密是否正確
-    if(payload.parameter.email != "hannstar@hannstar.com"){
+    Vue.prototype.$axios({
+      url:'testdata/member.json',
+      params:{}
+    }).then((resp) => { // 回應正常
+      const respData = resp.data;
+      for (let member of respData) {
+        if(payload.parameter.email == member.email){
+          if(payload.parameter.password == member.password) {
+            // 0 = success
+            payload.parameter.errorCodeList.push(0);
+          }else{
+            // 5 = password is not valid
+            payload.parameter.errorCodeList.push(5);
+          }
+          commit(LOGIN, payload);
+          return;
+        }
+      }
+      // 4 = email address does not exist
       payload.parameter.errorCodeList.push(4);
-    } else if(payload.parameter.password != '000000'){
-      payload.parameter.errorCodeList.push(5);
-    } else {
-      payload.parameter.errorCodeList.push(0);
-    }
-    
+      commit(LOGIN, payload);
+      return;
+
+    }).catch((error) => { // 異常處理
+      window.console.error(error);
+      window.alert(error)
+    });
+
+    payload.parameter.errorCodeList.push(6);
     commit(LOGIN, payload);
   },
   /**
