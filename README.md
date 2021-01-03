@@ -44,10 +44,10 @@ https://echarts.apache.org/examples/zh/index.html#chart-type-pie
 git add .
 
 git commit -m '
-2020-12-29變更
+2020-12-30變更
 Author: TomWu
 Content :
-1.調整圓餅圖整體區塊，並加上下方table
+1.調整圓餅圖整體區塊
 '
 git push origin master
 
@@ -55,3 +55,5 @@ git push origin master
 git fetch --all
 git reset --hard origin/master
 git pull
+
+
