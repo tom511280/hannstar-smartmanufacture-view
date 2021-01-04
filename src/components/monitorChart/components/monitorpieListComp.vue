@@ -53,12 +53,12 @@
 <style lang="scss" scoped>
 .monitorpieListComp {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   text-align: right;
-  // width: 100%;
-  overflow-x: auto;
+  width: 100%;
+  height: 100%;
 }
 table > thead > tr {
   background-color: #dddfe5;

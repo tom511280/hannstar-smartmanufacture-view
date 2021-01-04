@@ -5,6 +5,7 @@ import resetPwdView from '@/pages/member/views/resetPwdView.vue'
 import sendResetpwdEmailView from '@/pages/member/views/sendResetpwdEmailView.vue'
 import overviewView from '@/pages/overview/views/overviewView.vue'
 import bodyhealthView from '@/pages/bodyhealth/views/bodyhealthView.vue'
+import bodyhealthDetailView from '@/pages/bodyhealth/views/bodyhealthDetailView.vue'
 
 
 
@@ -20,6 +21,7 @@ let routes = [
     {path:'/overviewView',component:overviewView},
     //運動健康
     {path:'/bodyhealthView',component:bodyhealthView},
+    {path:'/bodyhealthDetailView',component:bodyhealthDetailView},
     //預設
     {path:'',redirect:'/loginView'},
     {path:'*',component:loginView}

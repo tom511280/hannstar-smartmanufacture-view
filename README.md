@@ -57,3 +57,14 @@ git reset --hard origin/master
 git pull
 
 
+# 待補UI
+1.運動健康沒資料圖示
+2.sidebar使用者設定橘色ICON
+
+# 待處理
+1.topHeader使用者圖示改圓
+2.登入功能字體
+3.view more 箭頭
+
+
+

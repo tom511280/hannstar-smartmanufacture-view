@@ -7,24 +7,32 @@
             </div>
         </div> -->
         <div class="monitorpieSearchComp_content">
-            <select class="monitorpieSearchComp-select" id="cars" name="cars">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="fiat">Fiat</option>
-                <option value="audi">Audi</option>
+            <select class="monitorpieSearchComp-select" id="timeSelect" name="timeSelect">
+                <option v-for="timeItem in timeSelects" :key="timeItem.value" :value="timeItem.value">{{ timeItem.text }}</option>
             </select>
-            <select class="monitorpieSearchComp-select" id="cars" name="cars">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="fiat">Fiat</option>
-                <option value="audi">Audi</option>
+            <select class="monitorpieSearchComp-select" id="groupSelect" name="groupSelect">
+                <option v-for="groupItem in groupSelects" :key="groupItem.value" :value="groupItem.value">{{ groupItem.text }}</option>
             </select>
-            <button class="monitorpieSearchComp-btn" type="button" @click="login()">
+            <button class="monitorpieSearchComp-btn" type="button">
                     <p class="monitorpieSearchComp-btn-text fontbase">Search</p>
             </button>
         </div>
     </div>
 </template>
+<script>
+export default {
+    props: {
+        timeSelects: {
+            type: Array,
+            required: true,
+        },
+        groupSelects: {
+            type: Array,
+            required: true,
+        },
+    },
+}
+</script>
 <style lang="scss" scoped>
 .monitorpieSearchComp {
     display: flex;
@@ -33,20 +41,6 @@
     align-items: center;
     width: 100%;
 }
-// .monitorpieSearchComp > .monitorpieSearchComp-title {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: flex-start;
-//     align-items: center;
-//     width: 100%;
-// }
-// .monitorpieSearchComp > .monitorpieSearchComp-title > .monitorpieSearchComp-title-img-external{
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: flex-end;
-//     align-items: center;
-//     width: 100%;
-// }
 .monitorpieSearchComp_content {
     display: flex;
     flex-direction: row;
@@ -55,7 +49,6 @@
     height: 6vh;
     width: 100%;
 }
-
 .monitorpieSearchComp-select {
     border-radius: 8px;
     background-color: #ffffff;
@@ -91,12 +84,4 @@
   margin-top: 0px;
   margin-bottom: 0px;
 }
-
-// .monitorpieSearchComp-btn {
-//     padding: 0.8vh 1vw;
-//     border-radius: 6px;
-//     background-color: #394867;
-// }
-
-
 </style>

@@ -44,6 +44,11 @@ Vue.component('v-chart', ECharts) // 註冊為 global component
 import axiosPlugin from '@/plugins/axios';
 Vue.use(axiosPlugin);
 
+//引入element-ui用於分頁
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+import locale from 'element-ui/lib/locale/lang/en';
+Vue.use(ElementUI, { locale })
 
 Vue.config.productionTip = false
 
