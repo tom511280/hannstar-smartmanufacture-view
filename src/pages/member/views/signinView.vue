@@ -69,7 +69,12 @@ export default {
   created(){
       //初始化時執行
       this.$store.dispatch({type:'memberModule/initPage'})
-      this.$store.dispatch({type:'commonModule/init'})
+       //初始化時執行
+      let parameter = {
+        isShowSiderbar:false,
+        isShowTopHeader:false
+      }
+      this.$store.dispatch({type:'commonModule/init',parameter:parameter})
   },
   computed: {
     //取得留言資料

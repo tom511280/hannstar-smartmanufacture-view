@@ -10,6 +10,7 @@ import commonModule from '@/pages/module';
 
 //by功能
 import memberModule from '@/pages/member/module';
+import bodyhealthModule from '@/pages/bodyhealth/module';
 
 Vue.use(Vuex);
 
@@ -20,6 +21,7 @@ export default new Vuex.Store({
     commonModule: commonModule,
     //by功能
     memberModule: memberModule,
+    bodyhealthModule: bodyhealthModule,
   },
   //持久化vuex 避免因為刷新頁面數據消失
   plugins: [createPersistedState()]

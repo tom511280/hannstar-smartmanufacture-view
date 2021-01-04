@@ -35,6 +35,7 @@ export default {
     width: 2vw;
     height: 3.7vh;
     margin-right: 1vw;
+    border-radius: 50%;
 }
 .topHeader > .topHeader-info {
     margin-right: 0.5vw;

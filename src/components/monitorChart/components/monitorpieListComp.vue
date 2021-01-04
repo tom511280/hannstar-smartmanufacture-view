@@ -3,53 +3,35 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Group</th>
-          <th>Heart Rate</th>
-          <th>Time</th>
+          <th v-for="field in fields" :key="field">{{ field }}</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th>Jack Huang (3001…</th>
-          <td>SG004</td>
-          <td>140</td>
-          <td>2020/10/10 11:10:35</td>
-        </tr>
-        <tr>
-          <th>Jack Huang (3001…</th>
-          <td>SG004</td>
-          <td>140</td>
-          <td>2020/10/10 11:10:35</td>
-        </tr>
-        <tr>
-          <th>Jack Huang (3001…</th>
-          <td>SG004</td>
-          <td>140</td>
-          <td>2020/10/10 11:10:35</td>
-        </tr>
-        <tr>
-          <th>Jack Huang (3001…</th>
-          <td>SG004</td>
-          <td>140</td>
-          <td>2020/10/10 11:10:35</td>
-        </tr>
-        <tr>
-          <th>Jack Huang (3001…</th>
-          <td>SG004</td>
-          <td>140</td>
-          <td>2020/10/10 11:10:35</td>
-        </tr>
-        <tr>
-          <th>Jack Huang (3001…</th>
-          <td>SG004</td>
-          <td>140</td>
-          <td>2020/10/10 11:10:35</td>
+        <tr v-for="dataItem in datas.slice(0,6)" :key="dataItem.value" :value="dataItem.value">
+          <th v-for="fieldkey in fieldkeys" :key="fieldkey" >{{dataItem[fieldkey]}}</th>
         </tr>
       </tbody>
     </table>
   </div>
 </template>
+<script>
+export default {
+  props: {
+        fields: {
+            type: Array,
+            required: true,
+        },
+        fieldkeys: {
+            type: Array,
+            required: true,
+        },
+        datas: {
+            type: Array,
+            required: true,
+        },
+  },
+}
+</script>
 <style lang="scss" scoped>
 .monitorpieListComp {
   display: flex;
@@ -74,9 +56,5 @@ th, td {
   color: #707b91;
   white-space:nowrap; 
   text-align: left;
-  // padding: 10px;
 }
-// table > thead > tr > th {
-//   padding-left: 10px;
-// }
 </style>

@@ -1,6 +1,6 @@
 const state = {
-  isShowSiderbar:false,
-  isShowTopHeader:false,
+  isShowSiderbar:true,
+  isShowTopHeader:true,
 };
 export default state;
   

@@ -33,6 +33,14 @@ export default {
       passwordInputType:'password',
     }
   },
+  created(){
+      //初始化時執行
+      let parameter = {
+        isShowSiderbar:false,
+        isShowTopHeader:false
+      }
+      this.$store.dispatch({type:'commonModule/init',parameter:parameter})
+  },
   methods: {
     exploreAround(){
       this.$router.push({ path: '/overviewView'});

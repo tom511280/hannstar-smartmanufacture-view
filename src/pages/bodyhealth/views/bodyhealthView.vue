@@ -20,11 +20,19 @@
                 </div>
                 <div class="bodyhealthView-monitor-area-content-list first-el">
                     <h4>{{this.heartMsg.tableP1Title}}</h4>
-                    <monitorpieListComp></monitorpieListComp>
+                    <monitorpieListComp
+                    :fields="this.heartRateData.normal.fields"
+                    :fieldkeys="this.heartRateData.normal.fieldkeys"
+                    :datas="this.heartRateData.normal.datas"
+                    ></monitorpieListComp>
                 </div>
                 <div class="bodyhealthView-monitor-area-content-list">
                     <h4>{{this.heartMsg.tableP2Title}}</h4>
-                    <monitorpieListComp></monitorpieListComp>
+                    <monitorpieListComp
+                    :fields="this.heartRateData.abnormal.fields"
+                    :fieldkeys="this.heartRateData.abnormal.fieldkeys"
+                    :datas="this.heartRateData.abnormal.datas"
+                    ></monitorpieListComp>
                 </div>
                 <div class="bodyhealthView-monitor-area-content-viewmore">
                     <p @click="goBodyhealthDetailView()">View More</p>
@@ -51,11 +59,19 @@
                 </div>
                 <div class="bodyhealthView-monitor-area-content-list first-el">
                     <h4>{{this.sleepMsg.tableP1Title}}</h4>
-                    <monitorpieListComp></monitorpieListComp>
+                    <monitorpieListComp
+                    :fields="this.heartRateData.normal.fields"
+                    :fieldkeys="this.heartRateData.normal.fieldkeys"
+                    :datas="this.heartRateData.normal.datas"
+                    ></monitorpieListComp>
                 </div>
                 <div class="bodyhealthView-monitor-area-content-list">
                     <h4>{{this.sleepMsg.tableP2Title}}</h4>
-                    <monitorpieListComp></monitorpieListComp>
+                    <monitorpieListComp
+                    :fields="this.heartRateData.abnormal.fields"
+                    :fieldkeys="this.heartRateData.abnormal.fieldkeys"
+                    :datas="this.heartRateData.abnormal.datas"
+                    ></monitorpieListComp>
                 </div>
                 <div class="bodyhealthView-monitor-area-content-viewmore">
                     <p @click="goBodyhealthDetailView()">View More</p>
@@ -84,11 +100,19 @@
                 </div>
                 <div class="bodyhealthView-monitor-area-content-list first-el">
                     <h4>{{this.sportsMsg.tableP1Title}}</h4>
-                    <monitorpieListComp></monitorpieListComp>
+                    <monitorpieListComp
+                    :fields="this.heartRateData.normal.fields"
+                    :fieldkeys="this.heartRateData.normal.fieldkeys"
+                    :datas="this.heartRateData.normal.datas"
+                    ></monitorpieListComp>
                 </div>
                 <div class="bodyhealthView-monitor-area-content-list">
                     <h4>{{this.sportsMsg.tableP2Title}}</h4>
-                    <monitorpieListComp></monitorpieListComp>
+                    <monitorpieListComp
+                    :fields="this.heartRateData.abnormal.fields"
+                    :fieldkeys="this.heartRateData.abnormal.fieldkeys"
+                    :datas="this.heartRateData.abnormal.datas"
+                    ></monitorpieListComp>
                 </div>
                 <div class="bodyhealthView-monitor-area-content-viewmore">
                     <p @click="goBodyhealthDetailView()">View More</p>
@@ -156,11 +180,25 @@ export default {
             }
         }
     },
+    created(){
+      //初始化時執行
+      this.$store.dispatch({type:'commonModule/init'})
+      this.$store.dispatch({type:'bodyhealthModule/init'})
+
+      //查詢心律資料
+      let bodyhealthModule_parameter = {}
+      this.$store.dispatch({type:'bodyhealthModule/loadHeartrate', parameter:bodyhealthModule_parameter})
+    },
     components: {
         monitorpieChartComp,
         monitorpieListComp,
         monitorpieSearchComp,
         monitorpieSearchHeaderComp
+    },
+    computed: {
+        heartRateData(){
+            return this.$store.getters['bodyhealthModule/getState'].heartRate;
+        },
     },
     methods: {
         goBodyhealthDetailView(){

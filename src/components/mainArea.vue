@@ -42,7 +42,7 @@ export default {
     padding-bottom: 2vh;
     padding-left: 1vw;
     padding-right: 1vw;
-    background-color: #f1f2f3;
+    background-color: #f1f2f3;;
 } 
 .currentView-nocontain-topHeader {
     margin-top: 0px;
