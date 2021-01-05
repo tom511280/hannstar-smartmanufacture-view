@@ -63,8 +63,9 @@ git pull
 
 # 待處理
 1.topHeader使用者圖示改圓
-2.登入功能字體
+2.登入功能字體  
 3.view more 箭頭
 
 
-
+# AWS
+http://ec2-54-199-123-149.ap-northeast-1.compute.amazonaws.com:8001/hannstar-smartmanufacture-view/#/

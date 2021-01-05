@@ -15,24 +15,16 @@
                 <div class="bodyhealthView-monitor-area-content-graph">
                     <h4>{{this.heartMsg.graphTitle}}</h4>
                     <div class="bodyhealthView-monitor-area-content-graph-main">
-                        <monitorpieChartComp></monitorpieChartComp>
+                        <monitorpieChartComp ref="heartRateChart"></monitorpieChartComp>
                     </div>
                 </div>
                 <div class="bodyhealthView-monitor-area-content-list first-el">
                     <h4>{{this.heartMsg.tableP1Title}}</h4>
-                    <monitorpieListComp
-                    :fields="this.heartRateData.normal.fields"
-                    :fieldkeys="this.heartRateData.normal.fieldkeys"
-                    :datas="this.heartRateData.normal.datas"
-                    ></monitorpieListComp>
+                    <monitorpieListComp ref="heartRateListP1"></monitorpieListComp>
                 </div>
                 <div class="bodyhealthView-monitor-area-content-list">
                     <h4>{{this.heartMsg.tableP2Title}}</h4>
-                    <monitorpieListComp
-                    :fields="this.heartRateData.abnormal.fields"
-                    :fieldkeys="this.heartRateData.abnormal.fieldkeys"
-                    :datas="this.heartRateData.abnormal.datas"
-                    ></monitorpieListComp>
+                    <monitorpieListComp ref="heartRateListP2"></monitorpieListComp>
                 </div>
                 <div class="bodyhealthView-monitor-area-content-viewmore">
                     <p @click="goBodyhealthDetailView()">View More</p>
@@ -54,10 +46,10 @@
                 <div class="bodyhealthView-monitor-area-content-graph">
                     <h4>{{this.sleepMsg.graphTitle}}</h4>
                     <div class="bodyhealthView-monitor-area-content-graph-main">
-                        <monitorpieChartComp></monitorpieChartComp>
+                        <monitorpieChartComp ref="heartSleepChart"></monitorpieChartComp>
                     </div>
                 </div>
-                <div class="bodyhealthView-monitor-area-content-list first-el">
+                <!-- <div class="bodyhealthView-monitor-area-content-list first-el">
                     <h4>{{this.sleepMsg.tableP1Title}}</h4>
                     <monitorpieListComp
                     :fields="this.heartRateData.normal.fields"
@@ -75,7 +67,7 @@
                 </div>
                 <div class="bodyhealthView-monitor-area-content-viewmore">
                     <p @click="goBodyhealthDetailView()">View More</p>
-                </div>
+                </div> -->
             </div>
         </div>
         <!--Sports Monitor-->
@@ -95,10 +87,10 @@
                 <div class="bodyhealthView-monitor-area-content-graph">
                     <h4>{{this.sportsMsg.graphTitle}}</h4>
                     <div class="bodyhealthView-monitor-area-content-graph-main">
-                        <monitorpieChartComp></monitorpieChartComp>
+                        <!-- <monitorpieChartComp></monitorpieChartComp> -->
                     </div>
                 </div>
-                <div class="bodyhealthView-monitor-area-content-list first-el">
+                <!-- <div class="bodyhealthView-monitor-area-content-list first-el">
                     <h4>{{this.sportsMsg.tableP1Title}}</h4>
                     <monitorpieListComp
                     :fields="this.heartRateData.normal.fields"
@@ -116,7 +108,7 @@
                 </div>
                 <div class="bodyhealthView-monitor-area-content-viewmore">
                     <p @click="goBodyhealthDetailView()">View More</p>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -183,22 +175,52 @@ export default {
     created(){
       //初始化時執行
       this.$store.dispatch({type:'commonModule/init'})
+      this.$store.dispatch({type:'bodyhealthModule/initHeartrate'})
+      this.$store.dispatch({type:'bodyhealthModule/initSports'})
       this.$store.dispatch({type:'bodyhealthModule/init'})
 
-      //查詢心律資料
-      let bodyhealthModule_parameter = {}
-      this.$store.dispatch({type:'bodyhealthModule/loadHeartrate', parameter:bodyhealthModule_parameter})
+      //查詢心率資料
+      let bodyHealthModule_parameter = {}
+      this.$store.dispatch({type:'bodyhealthModule/loadHeartrate', parameter:bodyHealthModule_parameter})
+
+      //查詢睡眠資料
+      let bodySleepModule_parameter = {}
+      this.$store.dispatch({type:'bodyhealthModule/loadSleep', parameter:bodySleepModule_parameter})
+    //   heartSleepChart
+    },
+    computed: {
+        sleepData(){
+            return Object.assign({},this.$store.getters['bodyhealthModule/getState'].sleep);
+        },
+        heartRateData(){
+            return Object.assign({},this.$store.getters['bodyhealthModule/getState'].heartRate);
+        },
+    },
+    watch: {
+        immediate: true,
+        deep: true,
+        heartRateData: function(heartRate) {
+            this.$refs.heartRateChart.drawChart(
+                heartRate.normal.totalNumber, 
+                heartRate.abnormal.totalNumber
+            )
+            this.$refs.heartRateListP1.drawTable(
+                heartRate.normal.fields,
+                heartRate.normal.fieldkeys,
+                heartRate.normal.datas,
+            )  
+            this.$refs.heartRateListP2.drawTable(
+                heartRate.abnormal.fields,
+                heartRate.abnormal.fieldkeys,
+                heartRate.abnormal.datas,
+            ) 
+        }
     },
     components: {
         monitorpieChartComp,
         monitorpieListComp,
         monitorpieSearchComp,
         monitorpieSearchHeaderComp
-    },
-    computed: {
-        heartRateData(){
-            return this.$store.getters['bodyhealthModule/getState'].heartRate;
-        },
     },
     methods: {
         goBodyhealthDetailView(){

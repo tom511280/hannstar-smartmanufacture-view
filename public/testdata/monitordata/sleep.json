@@ -1,44 +1,74 @@
 [
     {
-        "name": "Jack Huang (3001…",
+        "name": "ziv Huang",
         "group": "SG004",
-        "heartRate": "140",
+        "heartRate": 70,
         "time": "2020/10/10 11:10:35"
     },
     {
-        "name": "tom Huang (3001…",
+        "name": "tom Wu ",
         "group": "SG004",
-        "heartRate": "140",
+        "heartRate": 5,
         "time": "2020/10/10 11:10:35"
     },
     {
-        "name": "ziv Huang (3001…",
+        "name": "ziv Ho",
         "group": "SG004",
-        "heartRate": "140",
+        "heartRate": 50,
         "time": "2020/10/10 11:10:35"
     },
     {
-        "name": "Jack1 Huang (3001…",
+        "name": "ziv Huang1",
         "group": "SG004",
-        "heartRate": "140",
+        "heartRate": 100,
         "time": "2020/10/10 11:10:35"
     },
     {
-        "name": "tom1 Huang (3001…",
+        "name": "ziv Huang2",
         "group": "SG004",
-        "heartRate": "140",
+        "heartRate": 70,
         "time": "2020/10/10 11:10:35"
     },
     {
-        "name": "ziv1 Huang (3001…",
+        "name": "ziv1 Huang",
         "group": "SG004",
-        "heartRate": "140",
+        "heartRate": 10,
         "time": "2020/10/10 11:10:35"
     },
     {
-        "name": "Jack2 Huang (3001…",
+        "name": "Jack2 Huang",
         "group": "SG004",
-        "heartRate": "140",
+        "heartRate": 100,
+        "time": "2020/10/10 11:10:35"
+    },
+    {
+        "name": "Jack6 Huang",
+        "group": "SG004",
+        "heartRate": 100,
+        "time": "2020/10/10 11:10:35"
+    },
+    {
+        "name": "Jack4 Huang",
+        "group": "SG004",
+        "heartRate": 100,
+        "time": "2020/10/10 11:10:35"
+    },
+    {
+        "name": "Jack5 Huang",
+        "group": "SG004",
+        "heartRate": 100,
+        "time": "2020/10/10 11:10:35"
+    },
+    {
+        "name": "Jack7 Huang",
+        "group": "SG004",
+        "heartRate": 101,
+        "time": "2020/10/10 11:10:35"
+    },
+    {
+        "name": "Jack9 Huang",
+        "group": "SG004",
+        "heartRate": 50,
         "time": "2020/10/10 11:10:35"
     }
 ]

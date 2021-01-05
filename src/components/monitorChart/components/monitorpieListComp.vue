@@ -16,20 +16,20 @@
 </template>
 <script>
 export default {
-  props: {
-        fields: {
-            type: Array,
-            required: true,
-        },
-        fieldkeys: {
-            type: Array,
-            required: true,
-        },
-        datas: {
-            type: Array,
-            required: true,
-        },
+  data() {
+    return {
+      fieldkeys:[],
+      fields:[],
+      datas:[]
+    }
   },
+  methods: {
+    drawTable(fields, fieldkeys, datas) {
+      this.fieldkeys = fieldkeys;
+      this.fields = fields;
+      this.datas = datas;
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
