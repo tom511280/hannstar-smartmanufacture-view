@@ -19,11 +19,11 @@
                     </div>
                 </div>
                 <div class="bodyhealthView-monitor-area-content-list first-el">
-                    <h4>{{this.heartMsg.tableP1Title}}</h4>
+                    <h5>{{this.heartMsg.tableP1Title}}</h5>
                     <monitorpieListComp ref="heartRateListP1"></monitorpieListComp>
                 </div>
                 <div class="bodyhealthView-monitor-area-content-list">
-                    <h4>{{this.heartMsg.tableP2Title}}</h4>
+                    <h5>{{this.heartMsg.tableP2Title}}</h5>
                     <monitorpieListComp ref="heartRateListP2"></monitorpieListComp>
                 </div>
                 <div class="bodyhealthView-monitor-area-content-viewmore">
@@ -46,28 +46,20 @@
                 <div class="bodyhealthView-monitor-area-content-graph">
                     <h4>{{this.sleepMsg.graphTitle}}</h4>
                     <div class="bodyhealthView-monitor-area-content-graph-main">
-                        <monitorpieChartComp ref="heartSleepChart"></monitorpieChartComp>
+                        <monitorpieChartComp ref="sleepChart"></monitorpieChartComp>
                     </div>
                 </div>
-                <!-- <div class="bodyhealthView-monitor-area-content-list first-el">
-                    <h4>{{this.sleepMsg.tableP1Title}}</h4>
-                    <monitorpieListComp
-                    :fields="this.heartRateData.normal.fields"
-                    :fieldkeys="this.heartRateData.normal.fieldkeys"
-                    :datas="this.heartRateData.normal.datas"
-                    ></monitorpieListComp>
+                <div class="bodyhealthView-monitor-area-content-list first-el">
+                    <h5>{{this.sleepMsg.tableP1Title}}</h5>
+                    <monitorpieListComp ref="sleepListP1"></monitorpieListComp>
                 </div>
                 <div class="bodyhealthView-monitor-area-content-list">
-                    <h4>{{this.sleepMsg.tableP2Title}}</h4>
-                    <monitorpieListComp
-                    :fields="this.heartRateData.abnormal.fields"
-                    :fieldkeys="this.heartRateData.abnormal.fieldkeys"
-                    :datas="this.heartRateData.abnormal.datas"
-                    ></monitorpieListComp>
+                    <h5>{{this.sleepMsg.tableP2Title}}</h5>
+                    <monitorpieListComp ref="sleepListP2"></monitorpieListComp>
                 </div>
                 <div class="bodyhealthView-monitor-area-content-viewmore">
                     <p @click="goBodyhealthDetailView()">View More</p>
-                </div> -->
+                </div>
             </div>
         </div>
         <!--Sports Monitor-->
@@ -87,28 +79,20 @@
                 <div class="bodyhealthView-monitor-area-content-graph">
                     <h4>{{this.sportsMsg.graphTitle}}</h4>
                     <div class="bodyhealthView-monitor-area-content-graph-main">
-                        <!-- <monitorpieChartComp></monitorpieChartComp> -->
+                        <monitorpieChartComp ref="sportsChart"></monitorpieChartComp>
                     </div>
                 </div>
-                <!-- <div class="bodyhealthView-monitor-area-content-list first-el">
-                    <h4>{{this.sportsMsg.tableP1Title}}</h4>
-                    <monitorpieListComp
-                    :fields="this.heartRateData.normal.fields"
-                    :fieldkeys="this.heartRateData.normal.fieldkeys"
-                    :datas="this.heartRateData.normal.datas"
-                    ></monitorpieListComp>
+                <div class="bodyhealthView-monitor-area-content-list first-el">
+                    <h5>{{this.sportsMsg.tableP1Title}}</h5>
+                    <monitorpieListComp ref="sportsListP1"></monitorpieListComp>
                 </div>
                 <div class="bodyhealthView-monitor-area-content-list">
-                    <h4>{{this.sportsMsg.tableP2Title}}</h4>
-                    <monitorpieListComp
-                    :fields="this.heartRateData.abnormal.fields"
-                    :fieldkeys="this.heartRateData.abnormal.fieldkeys"
-                    :datas="this.heartRateData.abnormal.datas"
-                    ></monitorpieListComp>
+                    <h5>{{this.sportsMsg.tableP2Title}}</h5>
+                    <monitorpieListComp ref="sportsListP2"></monitorpieListComp>
                 </div>
                 <div class="bodyhealthView-monitor-area-content-viewmore">
                     <p @click="goBodyhealthDetailView()">View More</p>
-                </div> -->
+                </div>
             </div>
         </div>
     </div>
@@ -176,8 +160,8 @@ export default {
       //初始化時執行
       this.$store.dispatch({type:'commonModule/init'})
       this.$store.dispatch({type:'bodyhealthModule/initHeartrate'})
+      this.$store.dispatch({type:'bodyhealthModule/initSleep'})
       this.$store.dispatch({type:'bodyhealthModule/initSports'})
-      this.$store.dispatch({type:'bodyhealthModule/init'})
 
       //查詢心率資料
       let bodyHealthModule_parameter = {}
@@ -186,7 +170,10 @@ export default {
       //查詢睡眠資料
       let bodySleepModule_parameter = {}
       this.$store.dispatch({type:'bodyhealthModule/loadSleep', parameter:bodySleepModule_parameter})
-    //   heartSleepChart
+
+      //查詢運動資料
+      let bodySportsModule_parameter = {}
+      this.$store.dispatch({type:'bodyhealthModule/loadSports', parameter:bodySportsModule_parameter})
     },
     computed: {
         sleepData(){
@@ -194,6 +181,9 @@ export default {
         },
         heartRateData(){
             return Object.assign({},this.$store.getters['bodyhealthModule/getState'].heartRate);
+        },
+        sportsData(){
+            return Object.assign({},this.$store.getters['bodyhealthModule/getState'].sports);
         },
     },
     watch: {
@@ -214,6 +204,38 @@ export default {
                 heartRate.abnormal.fieldkeys,
                 heartRate.abnormal.datas,
             ) 
+        },
+        sleepData: function(sleep) {
+            this.$refs.sleepChart.drawChart(
+                sleep.normal.totalNumber, 
+                sleep.abnormal.totalNumber
+            )
+            this.$refs.sleepListP1.drawTable(
+                sleep.normal.fields,
+                sleep.normal.fieldkeys,
+                sleep.normal.datas,
+            )  
+            this.$refs.sleepListP2.drawTable(
+                sleep.abnormal.fields,
+                sleep.abnormal.fieldkeys,
+                sleep.abnormal.datas,
+            ) 
+        },
+        sportsData: function(sports) {
+            this.$refs.sportsChart.drawChart(
+                sports.reached.totalNumber, 
+                sports.noReached.totalNumber
+            )
+            this.$refs.sportsListP1.drawTable(
+                sports.noReached.fields,
+                sports.noReached.fieldkeys,
+                sports.noReached.datas,
+            )  
+            this.$refs.sportsListP2.drawTable(
+                sports.sportsSort.fields,
+                sports.sportsSort.fieldkeys,
+                sports.sportsSort.datas,
+            ) 
         }
     },
     components: {
@@ -233,7 +255,7 @@ export default {
 /* .row {
     --bs-gutter-x: 1.5rem;
 } */
-h4 {
+h4,h5 {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -241,6 +263,7 @@ h4 {
     margin-bottom: 0px;
     height: 4vh;
 }
+
 .bodyhealthView {
     display: flex;
     flex-direction: row;
@@ -338,7 +361,6 @@ h4 {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center; 
-  font-family: Roboto;
   font-size: 15px;
   color: #ef8059;
   height: 100%;
@@ -346,25 +368,4 @@ h4 {
   margin-bottom: auto;
   cursor: pointer;
 }
-
-/* .bodyhealthView-monitor-area-content-viewmore > .shape {
-  content: '\f105';
-  font-family: 'Font Awesome 5 Free';
-  color:  #ef8059;
-} */
-
-
-
-/* .bodyhealthView > .bodyhealthView-monitor-area > 
-.bodyhealthView-monitor-area-content > .bodyhealthView-monitor-area-content-list
-> h4 {
-    height: 10%;
-    width: 100%;
-}
-.bodyhealthView > .bodyhealthView-monitor-area > 
-.bodyhealthView-monitor-area-content > .bodyhealthView-monitor-area-content-list
-> .monitorpieListComp {
-    height: 90%;
-    width: 100%;
-} */
 </style>

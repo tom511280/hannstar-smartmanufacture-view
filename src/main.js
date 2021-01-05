@@ -9,6 +9,7 @@ import 'normalize.css/normalize.css'
 import '@/assets/css/hannstarCommon.css'; /*引入登入公共樣式*/
  
 
+
 //引入util
 import validUtilPlugin from '@/plugins/validUtil';
 Vue.use(validUtilPlugin);

@@ -12,4 +12,7 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+</style>
 

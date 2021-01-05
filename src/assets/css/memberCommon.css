@@ -1,33 +1,9 @@
-
+/*輸入框內的文字*/
 ::-webkit-input-placeholder {
-    /* Chrome, Safari */
-  font-family: Roboto;
   font-size: 16px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.13;
-  letter-spacing: normal;
   color: #bbbfca;
 }
-input[type=text], input[type=email], input[type=password]
-{
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.25;
-  letter-spacing: normal;
-  color: #394867;
-}
 
-input[type=checkbox] {
-  border-radius: 5px;
-  box-shadow: 0 7px 24px 0 rgba(0, 0, 0, 0.07);
-  border: solid 1px #495464;
-  background-color: #ffffff;
-}
 
 .loginBg {
   display: flex;
@@ -172,7 +148,6 @@ input[type=checkbox] {
   cursor: pointer;
 }
 .login-btn-area-external > .login-btn > .login-btn-text {
-  font-family: Roboto;
   font-size: 16px;
   text-align: center;
   color: #ffffff;
@@ -188,7 +163,6 @@ input[type=checkbox] {
   margin-top: 1.2vh;
 }
 .signup-leftText {
-  font-family: Roboto;
   font-size: 14px;
   color: #9ba4b4;
   text-align: right;
@@ -205,7 +179,6 @@ input[type=checkbox] {
 .errortext {
   height: 0.01vh;
   width: 18vw;
-  font-family: Roboto;
   font-size: 14px;
   color: #e43030;
 }

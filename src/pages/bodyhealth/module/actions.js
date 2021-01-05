@@ -147,10 +147,70 @@ const actions = {
    * 載入運動監測資料
    */
   loadSports({commit},payload) {
-    //TODO
-    payload.result.errorCodeList.push(0);
-    payload.result.data = [];
-    commit(LOAD_SPORTS, payload);
+    // 0 = success
+    // 1 = error
+    Vue.prototype.$axios({
+      url:'testdata/monitordata/sports.json',
+      params:{}
+    }).then((resp) => { // 回應正常
+      const respData = resp.data;
+      let reachedlDatas = []
+      let noReachedlDatas = []
+      let sportsSortDatas = []
+      for (let data of respData) {
+        if(data.steps < 100){
+          noReachedlDatas.push(data);
+        } else{
+          reachedlDatas.push(data);
+        } 
+        sportsSortDatas.push(data);
+      }
+
+      //TODO 後續補上errorcode判斷
+      payload.result = {
+        sports:{
+          reached:{
+            errorCodeList:[],
+          },
+          noReached:{
+            errorCodeList:[],
+          },
+          sportsSort:{
+            errorCodeList:[],
+          }
+        }
+      }
+      payload.result.sports.reached.datas = reachedlDatas;
+      payload.result.sports.reached.total = reachedlDatas.length / 10;
+      payload.result.sports.reached.pageNow = 1;
+      payload.result.sports.reached.pageSize = 10;
+      payload.result.sports.reached.totalNumber  = reachedlDatas.length;
+
+      payload.result.sports.noReached.datas = noReachedlDatas;
+      payload.result.sports.noReached.total = noReachedlDatas.length / 10;
+      payload.result.sports.noReached.pageNow = 1;
+      payload.result.sports.noReached.pageSize = 10;
+      payload.result.sports.noReached.totalNumber = noReachedlDatas.length;
+
+      payload.result.sports.sportsSort.datas = sportsSortDatas;
+      payload.result.sports.sportsSort.total = sportsSortDatas.length / 10;
+      payload.result.sports.sportsSort.pageNow = 1;
+      payload.result.sports.sportsSort.pageSize = 10;
+      payload.result.sports.sportsSort.totalNumber = sportsSortDatas.length;
+
+      payload.result.sports.reached.errorCodeList.push(0);
+      payload.result.sports.noReached.errorCodeList.push(0);
+      payload.result.sports.sportsSort.errorCodeList.push(0);
+      commit(LOAD_SPORTS, payload);
+
+    }).catch((error) => { // 異常處理
+      window.console.error(error);
+      payload.result.sports.reached.errorCodeList.push(1);
+      payload.result.sports.noReached.errorCodeList.push(1);
+      payload.result.sports.sportsSort.errorCodeList.push(1);
+      window.alert(error)
+      commit(LOAD_SPORTS, payload);
+    });
   },
 };
 

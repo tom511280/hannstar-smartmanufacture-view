@@ -114,9 +114,30 @@ const mutations = {
   },
   // 載入運動監測資料
   [LOAD_SPORTS](state, payload) { 
-    state.sleep.reachedgoal.datas = payload.result.reachedgoal.datas;
-    state.sleep.notreachedgoal.datas = payload.result.notreachedgoal.datas;
-    state.sleep.sportsort.datas = payload.result.sportsort.datas;
+    let sportsNew = Object.assign({}, state.sports);
+
+    sportsNew.reached.datas = payload.result.sports.reached.datas;
+    sportsNew.reached.total = payload.result.sports.reached.total
+    sportsNew.reached.pageNow = payload.result.sports.reached.pageNow;
+    sportsNew.reached.pageSize = payload.result.sports.reached.pageSize;
+    sportsNew.reached.totalNumber = payload.result.sports.reached.totalNumber;
+    sportsNew.reached.errorCodeList = payload.result.sports.reached.errorCodeList;
+
+    sportsNew.noReached.datas = payload.result.sports.noReached.datas;
+    sportsNew.noReached.total = payload.result.sports.noReached.total
+    sportsNew.noReached.pageNow = payload.result.sports.noReached.pageNow;
+    sportsNew.noReached.pageSize = payload.result.sports.noReached.pageSize;
+    sportsNew.noReached.totalNumber = payload.result.sports.noReached.totalNumber;
+    sportsNew.noReached.errorCodeList = payload.result.sports.noReached.errorCodeList;
+
+    sportsNew.sportsSort.datas = payload.result.sports.sportsSort.datas;
+    sportsNew.sportsSort.total = payload.result.sports.sportsSort.total
+    sportsNew.sportsSort.pageNow = payload.result.sports.sportsSort.pageNow;
+    sportsNew.sportsSort.pageSize = payload.result.sports.sportsSort.pageSize;
+    sportsNew.sportsSort.totalNumber = payload.result.sports.sportsSort.totalNumber;
+    sportsNew.sportsSort.errorCodeList = payload.result.sports.sportsSort.errorCodeList;
+
+    state.sleep = Object.assign({}, state.sports, sportsNew)
   },
 };
 

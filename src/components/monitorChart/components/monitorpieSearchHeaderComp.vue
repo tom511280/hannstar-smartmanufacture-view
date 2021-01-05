@@ -19,12 +19,16 @@
 .monitorpieSearchHeaderComp > h4 {
     padding-top: 2vh;
 }
+.monitorpieSearchHeaderComp > h4 {
+    width: 40%;
+    height: 100%;
+}
 .monitorpieSearchHeaderComp > .monitorpieSearchHeaderComp-img-external {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     // align-items: center;
-    width: 80%;
+    width: 60%;
     height: 100%;
 }
 .monitorpieSearchHeaderComp > .monitorpieSearchHeaderComp-img-external > .setting-icon {

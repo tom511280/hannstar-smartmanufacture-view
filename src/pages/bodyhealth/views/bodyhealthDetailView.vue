@@ -46,6 +46,7 @@
         aria-labelledby="home-tab"
       >
         人之初
+        <monitorpieTableComp></monitorpieTableComp>
       </div>
       <div
         class="tab-pane fade"
@@ -54,6 +55,7 @@
         aria-labelledby="profile-tab"
       >
         性本善
+        <monitorpieTableComp></monitorpieTableComp>
       </div>
       <div
         class="tab-pane fade"
@@ -62,11 +64,13 @@
         aria-labelledby="contact-tab"
       >
         詞窮了
+        <monitorpieTableComp></monitorpieTableComp>
       </div>
     </div>
   </div>
 </template>
 <script>
+import monitorpieTableComp from '@/components/monitorChart/components/monitorpieTableComp.vue'
 export default {
   mounted() {
     //初始化時執行
@@ -75,6 +79,9 @@ export default {
       isShowTopHeader: true,
     };
     this.$store.dispatch({ type: "commonModule/init", parameter: parameter });
+  },
+  components: {
+        monitorpieTableComp,
   },
 };
 </script>

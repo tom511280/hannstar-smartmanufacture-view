@@ -55,13 +55,8 @@ export default {
     height: 3.5vh;
     width: 55vw;
     margin-right: 1vw;
-    font-family: Roboto;
     font-size: 15px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 1.33;
-    letter-spacing: normal;
     color: #394867;
 }
 .monitorpieSearchComp-btn {
@@ -72,11 +67,7 @@ export default {
   cursor: pointer;
 }
 .monitorpieSearchComp-btn > .monitorpieSearchComp-btn-text {
-  font-family: SFProText;
   font-size: 15px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
