@@ -111,15 +111,14 @@ export default {
       this.$store.dispatch({type:'memberModule/initPage'})
       let parameter = {
         isShowSiderbar:false,
-        isShowTopHeader:false
+        isShowTopHeader:false,
+        isContainerBase:false,
       }
       this.$store.dispatch({type:'commonModule/init',parameter:parameter})
   },
   methods: {
     login(){
       let parameter = {
-          isShowSiderbar:true,
-          isShowTopHeader:true,
           email:this.email,
           password:this.password
       }

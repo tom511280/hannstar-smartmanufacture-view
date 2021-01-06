@@ -59,16 +59,16 @@ const actions = {
         }
       }
       payload.result.heartRate.normal.datas = normalDatas;
-      payload.result.heartRate.normal.total = normalDatas.length / 10;
       payload.result.heartRate.normal.pageNow = 1;
       payload.result.heartRate.normal.pageSize = 10;
       payload.result.heartRate.normal.totalNumber  = normalDatas.length;
+      payload.result.heartRate.normal.total = Math.floor(normalDatas.length / payload.result.heartRate.normal.pageSize);
 
       payload.result.heartRate.abnormal.datas = abnormalDatas;
-      payload.result.heartRate.abnormal.total = abnormalDatas.length / 10;
       payload.result.heartRate.abnormal.pageNow = 1;
       payload.result.heartRate.abnormal.pageSize = 10;
       payload.result.heartRate.abnormal.totalNumber = abnormalDatas.length;
+      payload.result.heartRate.abnormal.total = Math.floor(abnormalDatas.length / payload.result.heartRate.abnormal.pageSize);
 
       payload.result.heartRate.normal.errorCodeList.push(0);
       payload.result.heartRate.abnormal.errorCodeList.push(0);
@@ -119,16 +119,16 @@ const actions = {
         }
       }
       payload.result.sleep.normal.datas = normalDatas;
-      payload.result.sleep.normal.total = normalDatas.length / 10;
       payload.result.sleep.normal.pageNow = 1;
       payload.result.sleep.normal.pageSize = 10;
       payload.result.sleep.normal.totalNumber  = normalDatas.length;
+      payload.result.sleep.normal.total = Math.floor(normalDatas.length / payload.result.sleep.normal.pageSize);
 
       payload.result.sleep.abnormal.datas = abnormalDatas;
-      payload.result.sleep.abnormal.total = abnormalDatas.length / 10;
       payload.result.sleep.abnormal.pageNow = 1;
       payload.result.sleep.abnormal.pageSize = 10;
       payload.result.sleep.abnormal.totalNumber = abnormalDatas.length;
+      payload.result.sleep.abnormal.total = Math.floor(abnormalDatas.length / payload.result.sleep.abnormal.pageSize);
 
       payload.result.sleep.normal.errorCodeList.push(0);
       payload.result.sleep.abnormal.errorCodeList.push(0);
@@ -181,22 +181,23 @@ const actions = {
         }
       }
       payload.result.sports.reached.datas = reachedlDatas;
-      payload.result.sports.reached.total = reachedlDatas.length / 10;
+      
       payload.result.sports.reached.pageNow = 1;
       payload.result.sports.reached.pageSize = 10;
       payload.result.sports.reached.totalNumber  = reachedlDatas.length;
+      payload.result.sports.reached.total = Math.floor(reachedlDatas.length / payload.result.sports.reached.pageSize);
 
       payload.result.sports.noReached.datas = noReachedlDatas;
-      payload.result.sports.noReached.total = noReachedlDatas.length / 10;
       payload.result.sports.noReached.pageNow = 1;
       payload.result.sports.noReached.pageSize = 10;
       payload.result.sports.noReached.totalNumber = noReachedlDatas.length;
+      payload.result.sports.noReached.total = Math.floor(noReachedlDatas.length / payload.result.sports.noReached.pageSize);
 
       payload.result.sports.sportsSort.datas = sportsSortDatas;
-      payload.result.sports.sportsSort.total = sportsSortDatas.length / 10;
       payload.result.sports.sportsSort.pageNow = 1;
       payload.result.sports.sportsSort.pageSize = 10;
       payload.result.sports.sportsSort.totalNumber = sportsSortDatas.length;
+      payload.result.sports.sportsSort.total = Math.floor(sportsSortDatas.length / payload.result.sports.sportsSort.pageSize);
 
       payload.result.sports.reached.errorCodeList.push(0);
       payload.result.sports.noReached.errorCodeList.push(0);

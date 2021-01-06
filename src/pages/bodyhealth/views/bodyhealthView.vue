@@ -176,11 +176,11 @@ export default {
       this.$store.dispatch({type:'bodyhealthModule/loadSports', parameter:bodySportsModule_parameter})
     },
     computed: {
-        sleepData(){
-            return Object.assign({},this.$store.getters['bodyhealthModule/getState'].sleep);
-        },
         heartRateData(){
             return Object.assign({},this.$store.getters['bodyhealthModule/getState'].heartRate);
+        },
+        sleepData(){
+            return Object.assign({},this.$store.getters['bodyhealthModule/getState'].sleep);
         },
         sportsData(){
             return Object.assign({},this.$store.getters['bodyhealthModule/getState'].sports);
@@ -224,7 +224,7 @@ export default {
         sportsData: function(sports) {
             this.$refs.sportsChart.drawChart(
                 sports.reached.totalNumber, 
-                sports.noReached.totalNumber
+                sports.reached.totalNumber
             )
             this.$refs.sportsListP1.drawTable(
                 sports.noReached.fields,

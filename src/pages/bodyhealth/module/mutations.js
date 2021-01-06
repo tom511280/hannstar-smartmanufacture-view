@@ -35,6 +35,8 @@ const mutations = {
     state.heartRate.abnormal.pageNow = 1
     state.heartRate.abnormal.pageSize = 10
     state.heartRate.abnormal.totalNumber = 0
+
+    state.heartRate = Object.assign({}, state.heartRate);
   },
   [INIT_SLEEP](state) { 
 
@@ -62,9 +64,49 @@ const mutations = {
     state.sleep.abnormal.pageSize = 10
     state.sleep.abnormal.totalNumber = 0
 
+    state.sleep = Object.assign({}, state.sleep);
+
   },
   [INIT_SPORTS](state) { 
-    window.console.log(state);
+
+    state.sports.reached.fields = ['Name','Group','Steps'];
+    state.sports.reached.fieldkeys = ['name','group','steps'],
+    state.sports.reached.Allfields = ['Name','Group','Steps'];
+    state.sports.reached.Allfieldkeys = ['name','group','steps'],
+    state.sports.reached.datas = [];
+    
+    state.sports.reached.errorCodeList = []
+    state.sports.reached.total = 0
+    state.sports.reached.pageNow = 1
+    state.sports.reached.pageSize = 10
+    state.sports.reached.totalNumber = 0
+
+    state.sports.noReached.fields = ['Name','Group','Steps'];
+    state.sports.noReached.fieldkeys = ['name','group','steps'],
+    state.sports.noReached.Allfields = ['Name','Group','Steps'];
+    state.sports.noReached.Allfieldkeys = ['name','group','steps'],
+    state.sports.noReached.datas = [];
+    
+    state.sports.noReached.errorCodeList = []
+    state.sports.noReached.total = 0
+    state.sports.noReached.pageNow = 1
+    state.sports.noReached.pageSize = 10
+    state.sports.noReached.totalNumber = 0
+
+    state.sports.sportsSort.fields = ['Name','Group','Steps'];
+    state.sports.sportsSort.fieldkeys = ['name','group','steps'],
+    state.sports.sportsSort.Allfields = ['Name','Group','Steps'];
+    state.sports.sportsSort.Allfieldkeys = ['name','group','steps'],
+    state.sports.sportsSort.datas = [];
+    
+    state.sports.sportsSort.errorCodeList = []
+    state.sports.sportsSort.total = 0
+    state.sports.sportsSort.pageNow = 1
+    state.sports.sportsSort.pageSize = 10
+    state.sports.sportsSort.totalNumber = 0
+
+    state.sports = Object.assign({}, state.sports);
+    
   },
   // 載入心率監測資料
   [LOAD_HEARTRATE](state, payload) { 
@@ -137,7 +179,7 @@ const mutations = {
     sportsNew.sportsSort.totalNumber = payload.result.sports.sportsSort.totalNumber;
     sportsNew.sportsSort.errorCodeList = payload.result.sports.sportsSort.errorCodeList;
 
-    state.sleep = Object.assign({}, state.sports, sportsNew)
+    state.sports = Object.assign({}, state.sports, sportsNew)
   },
 };
 

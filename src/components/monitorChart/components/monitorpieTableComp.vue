@@ -1,54 +1,26 @@
 <template>
   <div class="monitorpieTableComp">
-      <el-table :data="parkDataList">
-        <el-table-column label="編號" width="150">
+      <el-table 
+        :data="datasNow"
+        style="width: 100%;height:80%;white-space:nowrap;"
+        :header-cell-style="tableHeaderColor"
+        show-overflow-tooltip
+        height="80%"
+      >
+        <!--loop data-->
+        <el-table-column v-for="(field, index) in Allfields" :key="field" :label="field" show-overflow-tooltip>
           <template slot-scope="scope">
-            <span style="">{{ scope.row.treeSid }}</span>
+            <span>{{ scope.row[Allfieldkeys[index]] }}</span>
           </template>
         </el-table-column>
-        <el-table-column label="樹種" width="100">
-          <template slot-scope="scope">
-            <span style="">{{ scope.row.treeType }}</span>
-          </template>
-        </el-table-column>
-        <el-table-column label="學名" width="180">
-          <template slot-scope="scope">
-            <span style="">{{ scope.row.scientificName }}</span>
-          </template>
-        </el-table-column>
-        <!-- <el-table-column label="樹齡(年)" width="100">
-          <template slot-scope="scope">
-            <span style="">{{ scope.row.age }}</span>
-          </template>
-        </el-table-column>
-        <el-table-column label="樹高(公尺)" width="100">
-          <template slot-scope="scope">
-            <span style="">{{ scope.row.treeHeight }}</span>
-          </template>
-        </el-table-column>
-        <el-table-column label="管理單位" width="180">
-          <template slot-scope="scope">
-            <span style="">{{ scope.row.managementUnit }}</span>
-          </template>
-        </el-table-column>
-        <el-table-column label="公園" width="180">
-          <template slot-scope="scope">
-            <span style="">{{ scope.row.parkName }}</span>
-          </template>
-        </el-table-column>
-        <el-table-column label="位置" width="100">
-          <template slot-scope="scope">
-            <b-button size="sm" v-b-modal.modal-lg @click="setCurrentMapUrl(scope.row.longitude, scope.row.latitude)">打開</b-button>
-          </template>
-        </el-table-column> -->
       </el-table>
-      <div class="overflow-auto">
-      <el-col :span="12" :offset="8">
+      <div class="monitorpieTableComp-pagination">
+      <el-col>
         <div>
           <!-- 分页组件 -->
           <!--:page-sizes="[2,4,6,8,10]" -->
           <el-pagination
-            style="margin: 15px 0px"
+            style="width: 100%;height:80%;margin: 15px 0px"
             prev-text="prev"
             next-text="next"
             background
@@ -76,26 +48,70 @@ export default {
       treeTypeOptions: [],
       managementUnitSelected:'ALL',
       managementUnitOptions: [],
+      Allfields:[],
+      Allfieldkeys:[],
       total: 0, // 总页数, 从后台查询获取
       pageNow: 1, // 当前页数, 默认为1
       pageSize: 10, // 当前页显示的数据条数, 默认为4
-      parkDataList: [],
-      currentMapUrl:''
+      datas: [],
+      datasNow: [],
     };
   },
   methods: {
+    setTable(datas, Allfields, Allfieldkeys){
+      this.datas = datas;
+      this.Allfields = Allfields;
+      this.Allfieldkeys = Allfieldkeys;
+      this.pageNow =  1;
+      this.pageSize =  10;
+      this.total =  this.datas.length
+      // this.total =  Math.ceil(this.datas.length / this.pageSize);
+      this.changeData();
+    },
+    changeData(){
+      this.datasNow = this.datas.slice((this.pageNow-1)*this.pageSize,this.pageNow*this.pageSize);
+    },
     findPage(page) {
       // 用来处理分页相关方法
       window.console.log("当前页数: " + page);
       this.pageNow = page;
-      this.findAllTableDataByPage('findPage');
+      this.changeData();
     },
     findSize(size) {
       // 用来处理每页显示记录发生变化的方法
       window.console.log("当前页面记录条数: " + size);
       this.pageSize = size;
-      this.findAllTableDataByPage();
+      this.changeData();
     },
+    // 修改table header的背景色
+    tableHeaderColor({ row, column, rowIndex, columnIndex }) {
+      if (rowIndex === 0) {
+        return 'background-color: #dddfe5;color: #394867;font-weight: 500;font-size: 16px;'
+      }
+    }
   }
 };
 </script>
+<style>
+.monitorpieTableComp {
+  width: 100%;
+  height: 100%;
+}
+.monitorpieTableComp-table-header {
+ background-color: red !important;
+}
+.monitorpieTableComp-pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.el-table__body-wrapper {
+  /* display:block; */
+  /* height:100%; */
+  /* height:200px;
+  width: 100%;
+  overflow-y: auto; */
+}
+</style>

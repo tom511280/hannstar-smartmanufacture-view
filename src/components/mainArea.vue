@@ -3,7 +3,10 @@
         <sidebar v-if="isShowSiderbar"></sidebar>
         <div>
             <topHeader v-if="isShowTopHeader"></topHeader>
-            <div :class="{ 'currentView-contain-topHeader': isShowSiderbar, 'currentView-nocontain-topHeader': !isShowSiderbar }">
+            <div :class="{ 
+              'currentView-contain-topHeader': isShowSiderbar, 
+              'currentView-nocontain-topHeader': !isShowSiderbar,
+              'currentView-contaner-base' : isContainerBase }">
               <currentView></currentView>
             </div>
         </div>
@@ -21,6 +24,9 @@ export default {
         currentView,
     },
     computed: {
+      isContainerBase(){
+        return this.$store.getters['commonModule/getState'].isContainerBase;
+      },
       isShowSiderbar(){
         return this.$store.getters['commonModule/getState'].isShowSiderbar;
       },
@@ -34,14 +40,16 @@ export default {
 .mainArea {
   overflow: hidden;
 }
+.currentView-contaner-base{
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
 .currentView-contain-topHeader{
     margin-top: 5.5vh;
     height: 94.5vh;
     margin-left: 16vw;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-    padding-left: 1vw;
-    padding-right: 1vw;
     background-color: #f1f2f3;;
 } 
 .currentView-nocontain-topHeader {

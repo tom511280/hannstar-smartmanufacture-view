@@ -123,6 +123,7 @@
   align-items: center; 
   font-size: 14px;
   color: #707b91;
+  height: 100%;
 }
 .ckeckBox-area-external > .ckeckBox-area-rightText {
   font-family: Roboto;
@@ -148,12 +149,14 @@
   cursor: pointer;
 }
 .login-btn-area-external > .login-btn > .login-btn-text {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   font-size: 16px;
   text-align: center;
   color: #ffffff;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  text-align: center;
 }
 
 /*signup text css*/

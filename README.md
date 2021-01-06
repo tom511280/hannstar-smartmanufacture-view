@@ -44,10 +44,11 @@ https://echarts.apache.org/examples/zh/index.html#chart-type-pie
 git add .
 
 git commit -m '
-2020-12-30變更
+2020-01-05變更
 Author: TomWu
 Content :
-1.調整圓餅圖整體區塊
+1.處理vuex無法藉由watch監聽問題
+2.完成心率overview區塊
 '
 git push origin master
 

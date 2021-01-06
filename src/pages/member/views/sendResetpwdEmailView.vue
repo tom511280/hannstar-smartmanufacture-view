@@ -42,7 +42,8 @@ export default {
       //初始化時執行
       let parameter = {
         isShowSiderbar:false,
-        isShowTopHeader:false
+        isShowTopHeader:false,
+        isContainerBase:false,
       }
       this.$store.dispatch({type:'commonModule/init',parameter:parameter})
   },
