@@ -44,11 +44,10 @@ https://echarts.apache.org/examples/zh/index.html#chart-type-pie
 git add .
 
 git commit -m '
-2020-01-05變更
+2020-01-06變更
 Author: TomWu
 Content :
-1.處理vuex無法藉由watch監聽問題
-2.完成心率overview區塊
+2.調整頁面
 '
 git push origin master
 
@@ -70,3 +69,8 @@ git pull
 
 # AWS
 http://ec2-54-199-123-149.ap-northeast-1.compute.amazonaws.com:8001/hannstar-smartmanufacture-view/#/
+
+
+# 問題集
+* Q1:vue : 因為這個系統上已停用指令碼執行，所以無法載入...
+* A1:https://officeguide.cc/powershell-set-execution-policy-remote-signed/
