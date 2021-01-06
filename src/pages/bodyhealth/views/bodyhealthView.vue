@@ -3,7 +3,10 @@
         <!--Heart Rate Monitor-->
         <div class="bodyhealthView-monitor-area">
             <div class="bodyhealthView-monitor-area-title">
-                <monitorpieSearchHeaderComp :title="this.heartMsg.title"></monitorpieSearchHeaderComp>
+                <monitorpieSearchHeaderComp 
+                :title="this.heartMsg.title"
+                :settingModalId="this.heartMsg.settingModalId"
+                ></monitorpieSearchHeaderComp>
             </div>
             <div class="bodyhealthView-monitor-area-content">
                 <div class="bodyhealthView-monitor-area-content-search">
@@ -34,7 +37,10 @@
         <!--Sleep Monitor-->
         <div class="bodyhealthView-monitor-area">
             <div class="bodyhealthView-monitor-area-title">
-                <monitorpieSearchHeaderComp :title="this.sleepMsg.title"></monitorpieSearchHeaderComp>
+                <monitorpieSearchHeaderComp 
+                :title="this.sleepMsg.title"
+                :settingModalId="this.sleepMsg.settingModalId"
+                ></monitorpieSearchHeaderComp>
             </div>
             <div class="bodyhealthView-monitor-area-content">
                 <div class="bodyhealthView-monitor-area-content-search">
@@ -67,6 +73,7 @@
             <div class="bodyhealthView-monitor-area-title">
                 <monitorpieSearchHeaderComp 
                 :title="this.sportsMsg.title"
+                :settingModalId="this.sportsMsg.settingModalId"
                 ></monitorpieSearchHeaderComp>
             </div>
             <div class="bodyhealthView-monitor-area-content">
@@ -95,6 +102,7 @@
                 </div>
             </div>
         </div>
+        <monitorpieSettingModalComp></monitorpieSettingModalComp>
     </div>
 </template>
 <script>
@@ -102,6 +110,7 @@ import monitorpieChartComp from '@/components/monitorChart/components/monitorpie
 import monitorpieListComp from '@/components/monitorChart/components/monitorpieListComp.vue'
 import monitorpieSearchComp from '@/components/monitorChart/components/monitorpieSearchComp.vue'
 import monitorpieSearchHeaderComp from '@/components/monitorChart/components/monitorpieSearchHeaderComp.vue'
+import monitorpieSettingModalComp from '@/components/monitorChart/components/monitorpieSettingModalComp.vue'
 
 export default {
     data() {
@@ -111,6 +120,7 @@ export default {
                 graphTitle:'Heart Rate Overview',
                 tableP1Title:'Abnormal Heart Rate',
                 tableP2Title:'Normal Heart Rate',
+                settingModalId:'#heartRateSettingModal',
                 timeSelects:[
                     {value:"1",text:"last 1 hour"},
                     {value:"2",text:"last 24 hour"},
@@ -127,6 +137,7 @@ export default {
                 graphTitle:'Sleep Overview',
                 tableP1Title:'Abnormal Sleep',
                 tableP2Title:'Normal  Sleep',
+                settingModalId:'#sleepSettingModal',
                 timeSelects:[
                     {value:"1",text:"last 1 hour"},
                     {value:"2",text:"last 24 hour"},
@@ -143,6 +154,7 @@ export default {
                 graphTitle:'Sports Overview',
                 tableP1Title:'Not Reached Goal',
                 tableP2Title:'Sports Rank',
+                settingModalId:'#sportsSettingModal',
                 timeSelects:[
                     {value:"1",text:"last 1 hour"},
                     {value:"2",text:"last 24 hour"},
@@ -242,7 +254,8 @@ export default {
         monitorpieChartComp,
         monitorpieListComp,
         monitorpieSearchComp,
-        monitorpieSearchHeaderComp
+        monitorpieSearchHeaderComp,
+        monitorpieSettingModalComp
     },
     methods: {
         goBodyhealthDetailView(){

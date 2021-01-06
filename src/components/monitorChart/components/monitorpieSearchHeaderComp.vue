@@ -2,7 +2,7 @@
     <div class="monitorpieSearchHeaderComp">
         <h4>{{this.title}}</h4>
         <div class="monitorpieSearchHeaderComp-img-external">
-            <img class="setting-icon" src="@/assets/img/icon-setting.png" srcset="@/assets/img/icon-setting@2x.png 2x,@/assets/img/icon-setting@3x.png 3x">
+            <img class="setting-icon" src="@/assets/img/common/icon-setting.svg" data-bs-toggle="modal" :data-bs-target="settingModalId">
         </div>
     </div>
 </template>
@@ -46,6 +46,10 @@
 export default {
     props: {
         title: {
+            type: String,
+            required: true,
+        },
+        settingModalId: {
             type: String,
             required: true,
         },

@@ -2,13 +2,13 @@
   <div class="loginView">
     <div class="loginBg">
         <div class="loginLeft">
-          <img src="@/assets/img/img-login.png" srcset="@/assets/img/img-login@2x.png 2x,@/assets/img/img-login@3x.png 3x">
+          <img src="@/assets/img/login/img-login.png" srcset="@/assets/img/login/img-login@2x.png 2x,@/assets/img/login/img-login@3x.png 3x">
         </div>
         <div class="loginRright">
             <div class="loginTitle fontbase">Welcome</div>
             <div class="loginDescribution fontbase">Log in to your account to continue</div>
             <div id="emailArea" class="inputbox-area-external" :class="[this.emailInputErrorClass]">
-                <img class="common-icon" src="@/assets/img/icons-email.png" srcset="@/assets/img/icons-email@2x.png 2x,@/assets/img/icons-email@3x.png 3x">
+                <img class="common-icon" src="@/assets/img/login/icons-email.svg">
                 <div class="common-line"></div>
                 <input type="email" class="common-inputBox" v-model="email"  name="email" placeholder="Email">
             </div>
@@ -16,11 +16,12 @@
                 <p class="errortext fontbase input-no-error-style">{{emailErrorMsg}}</p>
             </div>
             <div id="passwordArea" class="inputbox-area-external" :class="[this.passwordInputErrorClass]">
-                <img class="common-icon" src="@/assets/img/icons-lock.png" srcset="@/assets/img/icons-lock@2x.png 2x,img/icons-lock@3x.png 3x">
+                <img class="common-icon" src="@/assets/img/login/icons-lock.svg">
                 <div class="common-line"></div>
                 <input :type="passwordInputType" class="common-inputBox" v-model="password" name="password" placeholder="Password">
                 <div class="common-right-icon-external" @mousedown="showPwd(true)" @mouseup="showPwd(false)">
-                    <img class="common-icon" src="@/assets/img/icon-eye-hide.png" srcset="@/assets/img/icon-eye-hide@2x.png 2x,img/icon-eye-hide@3x.png 3x">
+                    <img v-if="isShowPwd" class="common-icon" src="@/assets/img/login/icons-eye.svg">
+                    <img v-if="!isShowPwd" class="common-icon" src="@/assets/img/login/icons-eye-hide.svg">
                 </div>
             </div>
             <div>
@@ -57,6 +58,7 @@ export default {
       passwordErrorMsgClass:'',
       passwordInputErrorClass:'',
       passwordInputType:'password',
+      isShowPwd:false,
     }
   },
   computed: {
@@ -125,6 +127,7 @@ export default {
       this.$store.dispatch({type:'memberModule/login',parameter:parameter})
     },
     showPwd(isShow){
+      this.isShowPwd = isShow;
       if(isShow == true) this.passwordInputType = "text";
       else this.passwordInputType = "password";
     },

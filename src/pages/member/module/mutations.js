@@ -16,6 +16,7 @@ const mutations = {
     state.memberName = null;
     state.memberImg = null;
     state.confirmPassword = null;
+    state.errorCodeList = [];
   },
   // 登入
   [LOGIN](state, payload) { 

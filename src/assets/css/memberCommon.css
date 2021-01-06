@@ -16,7 +16,7 @@
   padding-bottom: 22vh;
   padding-left: 16vw;
   padding-right: 16vw; 
-  background-image: url("../img/bg-login.jpg");
+  background-image: url("../img/login/bg-login.png");
   background-size: cover;
   
 } 
@@ -89,15 +89,21 @@
 }
 .inputbox-area-external > .common-inputBox {
   /* width: 250px; */
+  width: 17vw;
   border-width: 0px;
   border-style: none;
   outline: none;
   cursor: text;
 }
 .inputbox-area-external > .common-right-icon-external {
-  flex: 1;
-  text-align: right;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  /* flex: 1; */
+  /* text-align: right; */
   cursor: pointer;
+  width: 1vw;
+  height: 1vh;
 }
 /*ckeckBox about css*/
 .ckeckBox-area-external {

@@ -2,28 +2,30 @@
   <div class="sendResetpwdEmailView">
     <div class="loginBg">
         <div class="loginLeft">
-          <img src="@/assets/img/img-login.png" srcset="@/assets/img/img-login@2x.png 2x,@/assets/img/img-login@3x.png 3x">
+          <img src="@/assets/img/login/img-login.png" srcset="@/assets/img/login/img-login@2x.png 2x,@/assets/img/login/img-login@3x.png 3x">
         </div>
         <div class="loginRright">
             <div class="loginTitle fontbase">Reset your password</div>
             <div class="loginDescribution fontbase">You can log in with your password soon</div>
             <div class="inputbox-area-external" :class="[this.passwordInputErrorClass]">
-                <img class="common-icon" src="@/assets/img/icons-lock.png" srcset="@/assets/img/icons-lock@2x.png 2x,img/icons-lock@3x.png 3x">
+                <img class="common-icon" src="@/assets/img/login/icons-lock.svg">
                 <div class="common-line"></div>
                 <input :type="passwordInputType" class="common-inputBox" v-model="password" placeholder="Password">
                 <div class="common-right-icon-external" @mousedown="showPwd('password', true)" @mouseup="showPwd('password', false)">
-                    <img class="common-icon" src="@/assets/img/icon-eye-hide.png" srcset="@/assets/img/icon-eye-hide@2x.png 2x,img/icon-eye-hide@3x.png 3x">
+                    <img v-if="isShowPwd" class="common-icon" src="@/assets/img/login/icons-eye.svg">
+                    <img v-if="!isShowPwd" class="common-icon" src="@/assets/img/login/icons-eye-hide.svg">
                 </div>
             </div>
             <div>
                 <p class="errortext fontbase input-no-error-style">{{passwordErrorMsg}}</p>
             </div>
             <div class="inputbox-area-external" :class="[this.confirmPasswordInputErrorClass]">
-                <img class="common-icon" src="@/assets/img/icons-lock.png" srcset="@/assets/img/icons-lock@2x.png 2x,img/icons-lock@3x.png 3x">
+                <img class="common-icon" src="@/assets/img/login/icons-lock.svg">
                 <div class="common-line"></div>
                 <input :type="confirmPasswordInputType" class="common-inputBox" v-model="confirmPassword" placeholder="Confirm password">
                 <div class="common-right-icon-external" @mousedown="showPwd('confirmPassword', true)" @mouseup="showPwd('confirmPassword', false)">
-                    <img class="common-icon" src="@/assets/img/icon-eye-hide.png" srcset="@/assets/img/icon-eye-hide@2x.png 2x,img/icon-eye-hide@3x.png 3x">
+                    <img v-if="isShowConfirmPwd" class="common-icon" src="@/assets/img/login/icons-eye.svg">
+                    <img v-if="!isShowConfirmPwd" class="common-icon" src="@/assets/img/login/icons-eye-hide.svg">
                 </div>
             </div>
             <div>
@@ -52,6 +54,8 @@ export default {
       confirmPasswordErrorMsgClass:'',
       confirmPasswordInputErrorClass:'',
       confirmPasswordInputType:'password',
+      isShowPwd:false,
+      isShowConfirmPwd:false,
     }
   },
   created(){
@@ -123,10 +127,12 @@ export default {
     },
     showPwd(type, isShow){
       if(type == 'password'){
+        this.isShowPwd = isShow;
         if(isShow == true) this.passwordInputType = "text";
         else this.passwordInputType = "password";
       }
       if(type == 'confirmPassword'){
+        this.isShowConfirmPwd = isShow;
         if(isShow == true) this.confirmPasswordInputType = "text";
         else this.confirmPasswordInputType = "password";
       }

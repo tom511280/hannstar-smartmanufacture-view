@@ -2,10 +2,10 @@
   <div class="loginView">
     <div class="loginBg">
         <div class="loginLeft">
-          <img src="@/assets/img/img-login.png" srcset="@/assets/img/img-login@2x.png 2x,@/assets/img/img-login@3x.png 3x">
+          <img src="@/assets/img/login/img-login.png" srcset="@/assets/img/login/img-login@2x.png 2x,@/assets/img/login/img-login@3x.png 3x">
         </div>
         <div class="loginRright loginRright_C">
-            <img class="icon_large_success" src="@/assets/img/icon-large-success.png" srcset="@/assets/img/icon-large-success@2x.png 2x,@/assets/img/icon-large-success@3x.png 3x">
+            <img class="icon_large_success" src="@/assets/img/login/icon-large-success.svg">
             <div class="loginTitle fontbase">Welcome</div>
             <div class="loginDescribution loginDescribution_C_F fontbase">You’ll receive a confirmation letter.</div>
             <div class="loginDescribution loginDescribution_C_S fontbase">Check out your mailbox.</div>

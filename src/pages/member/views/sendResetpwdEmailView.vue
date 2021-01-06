@@ -2,13 +2,13 @@
   <div class="sendResetpwdEmailView">
     <div class="loginBg">
         <div class="loginLeft">
-          <img src="@/assets/img/img-login.png" srcset="@/assets/img/img-login@2x.png 2x,@/assets/img/img-login@3x.png 3x">
+          <img src="@/assets/img/login/img-login.png" srcset="@/assets/img/login/img-login@2x.png 2x,@/assets/img/login/img-login@3x.png 3x">
         </div>
         <div class="loginRright">
             <div class="loginTitle fontbase">Don’t Worry</div>
             <div class="loginDescribution fontbase">Let’s reset your password with several steps.</div>
             <div id="emailArea" class="inputbox-area-external" :class="[this.emailInputErrorClass]">
-                <img class="common-icon" src="@/assets/img/icons-email.png" srcset="@/assets/img/icons-email@2x.png 2x,@/assets/img/icons-email@3x.png 3x">
+                <img class="common-icon" src="@/assets/img/login/icons-email.svg">
                 <div class="common-line"></div>
                 <input type="email" class="common-inputBox" v-model="email"  name="email" placeholder="Email">
             </div>

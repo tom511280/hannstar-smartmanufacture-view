@@ -197,38 +197,38 @@ export default {
   width: 1vw !important;
 }
 .vsm--item.vsm--item_open > a > .home-icon {
-  background-image: url("../assets/img/sidebar_icon/icons-home-active.png");
+  background-image: url("../assets/img/sidebar/icons-orange-member.svg");
   background-size: 100% 100%;
 }
 .vsm--item > a > .home-icon {
-  background-image: url("../assets/img/sidebar_icon/icons-home.png");
+  background-image: url("../assets/img/sidebar/icons-blue-member.svg");
   background-size: 100% 100%;
 }
 
 .vsm--item.vsm--item_open > a > .pm-icon {
-  background-image: url("../assets/img/sidebar_icon/icons-pm-active.png");
+  background-image: url("../assets/img/sidebar/icons-orange-personal-monitoring.svg");
   background-size: 100% 100%;
 }
 .vsm--item > a > .pm-icon {
-  background-image: url("../assets/img/sidebar_icon/icons-pm.png");
+  background-image: url("../assets/img/sidebar/icons-blue-personal-monitoring.svg");
   background-size: 100% 100%;
 }
 
 .vsm--item.vsm--item_open > a > .m-icon {
-  background-image: url("../assets/img/sidebar_icon/icons-m-active.png");
+  background-image: url("../assets/img/sidebar/icons-orange-filter.svg");
   background-size: 100% 100%;
 }
 .vsm--item > a > .m-icon {
-  background-image: url("../assets/img/sidebar_icon/icons-m.png");
+  background-image: url("../assets/img/sidebar/icons-blue-filter.svg");
   background-size: 100% 100%;
 }
 
 .vsm--item.vsm--item_open > a > .us-icon {
-  background-image: url("../assets/img/sidebar_icon/icons-us-active.png");
+  background-image: url("../assets/img/sidebar/icons-orange-member-setting.svg");
   background-size: 100% 100%;
 }
 .vsm--item > a > .us-icon {
-  background-image: url("../assets/img/sidebar_icon/icons-us.png");
+  background-image: url("../assets/img/sidebar/icons-blue-member-setting.svg");
   background-size: 100% 100%;
 }
 
