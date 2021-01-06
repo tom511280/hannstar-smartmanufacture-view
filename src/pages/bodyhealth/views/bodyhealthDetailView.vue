@@ -194,12 +194,12 @@ export default {
   height: 100%;
   width: 100%;
 }
-.tab-pane > .tab-pane-area > .tab-pane-subarea {
+.tab-pane > .tab-pane-area > .tab-pane-subarea:first-child {
   height: 100%;
   width: 49%;
   margin-right: 2%;
 }
-.tab-pane > .tab-pane-area > .tab-pane-subarea:first-of-type {
+.tab-pane > .tab-pane-area > .tab-pane-subarea {
   height: 100%;
   width: 49%;
 }
