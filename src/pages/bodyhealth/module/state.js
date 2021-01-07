@@ -1,5 +1,11 @@
 const state = {
     heartRate: {
+      setting:{
+        heartRateMaxValue: 0,
+        heartRateMinValue: 0,
+        loadingErrorCodeList:[],
+        updateErrorCodeList:[],
+      },
       normal: {
         fields:[],
         fieldkeys:[],
@@ -26,6 +32,12 @@ const state = {
       }
     },
     sleep: {
+      setting:{
+        sleepMaxValue: 0,
+        sleepMinValue: 0,
+        loadingErrorCodeList:[],
+        updateErrorCodeList:[],
+      },
       normal: {
         fields:[],
         fieldkeys:[],
@@ -52,6 +64,11 @@ const state = {
       }
     },
     sports: {
+      setting:{
+        sportsMinValue: 0,
+        loadingErrorCodeList:[],
+        updateErrorCodeList:[],
+      },
       reached: {
         fields:[],
         fieldkeys:[],

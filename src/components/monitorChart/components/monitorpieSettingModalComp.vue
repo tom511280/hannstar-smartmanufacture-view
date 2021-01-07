@@ -12,21 +12,23 @@
                         <div class="modal-body-content">
                             <div class="modal-body-content-sub">
                                 <h5>Maximum</h5>
-                                <select class="monitorpieSearchComp-select" id="timeSelect" name="timeSelect">
-                                    <!-- <option v-for="timeItem in timeSelects" :key="timeItem.value" :value="timeItem.value">{{ timeItem.text }}</option> -->
+                                <select v-model="heartRateMaxSelected" class="monitorpieSettingModalComp-select">
+                                    <option v-for="heartRateMaxSelect in heartRateMaxSelects" :key="heartRateMaxSelect.value" :value="heartRateMaxSelect.value">{{ heartRateMaxSelect.text }}</option>
                                 </select>
+                                <h5>bpm</h5>
                             </div>
                             <div class="modal-body-content-sub">
                                 <h5>Minimum</h5>
-                                <select class="monitorpieSearchComp-select" id="timeSelect" name="timeSelect">
-                                    <!-- <option v-for="timeItem in timeSelects" :key="timeItem.value" :value="timeItem.value">{{ timeItem.text }}</option> -->
+                                <select v-model="heartRateMinSelected" class="monitorpieSettingModalComp-select">
+                                    <option v-for="heartRateMinSelect in heartRateMinSelects" :key="heartRateMinSelect.value" :value="heartRateMinSelect.value">{{ heartRateMinSelect.text }}</option>
                                 </select>
+                                <h5>bpm</h5>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Confirm</button>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button @click="updateHeartRateSetting()" type="button" class="btn conFirmbutton">Confirm</button>
+                        <button type="button" class="btn cancelbutton" data-bs-dismiss="modal">Cancel</button>
                     </div>
                 </div>
             </div>
@@ -40,11 +42,26 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        ...
+                        <div class="modal-body-content">
+                            <div class="modal-body-content-sub">
+                                <h5>Maximum</h5>
+                                <select v-model="sleepMaxSelected" class="monitorpieSettingModalComp-select">
+                                    <option v-for="sleepMaxSelect in sleepMaxSelects" :key="sleepMaxSelect.value" :value="sleepMaxSelect.value">{{ sleepMaxSelect.text }}</option>
+                                </select>
+                                <h5>hrs</h5>
+                            </div>
+                            <div class="modal-body-content-sub">
+                                <h5>Minimum</h5>
+                                <select v-model="sleepMinSelected" class="monitorpieSettingModalComp-select">
+                                    <option v-for="sleepMinSelect in sleepMinSelects" :key="sleepMinSelect.value" :value="sleepMinSelect.value">{{ sleepMinSelect.text }}</option>
+                                </select>
+                                <h5>hrs</h5>
+                            </div>
+                        </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Confirm</button>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button @click="updateSleepSetting()" type="button" class="btn conFirmbutton">Confirm</button>
+                        <button type="button" class="btn cancelbutton" data-bs-dismiss="modal">Cancel</button>
                     </div>
                 </div>
             </div>
@@ -57,12 +74,20 @@
                         <h5 class="modal-title" id="exampleModalLabel">Set up standard momentum</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-                        ...
+                    <div class="modal-body sports-modal-body">
+                        <div class="modal-body-content">
+                            <div class="modal-body-content-sub">
+                                <h5>Minimum</h5>
+                                <select v-model="sportsMinSelected" class="monitorpieSettingModalComp-select">
+                                    <option v-for="sportsMinSelect in sportsMinSelects" :key="sportsMinSelect.value" :value="sportsMinSelect.value">{{ sportsMinSelect.text }}</option>
+                                </select>
+                                <h5>steps</h5>
+                            </div>
+                        </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Confirm</button>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button @click="updateSportsSetting()" type="button" class="btn conFirmbutton">Confirm</button>
+                        <button type="button" class="btn cancelbutton" data-bs-dismiss="modal">Cancel</button>
                     </div>
                 </div>
             </div>
@@ -73,7 +98,73 @@
 export default {
     data() {
         return {
+            heartRateMaxSelects:[],
+            heartRateMinSelects:[],
+            sleepMaxSelects:[],
+            sleepMinSelects:[],
+            sportsMinSelects:[],
+            heartRateMaxSelected:0,
+            heartRateMinSelected:0,
+            sleepMaxSelected:0,
+            sleepMinSelected:0,
+            sportsMinSelected:0,
         }
+    },
+    computed: {
+        heartRateData(){
+            return Object.assign({},this.$store.getters['bodyhealthModule/getState'].heartRate);
+        },
+        sleepData(){
+            return Object.assign({},this.$store.getters['bodyhealthModule/getState'].sleep);
+        },
+        sportsData(){
+            return Object.assign({},this.$store.getters['bodyhealthModule/getState'].sports);
+        },
+    },
+    watch: {
+        immediate: true,
+        deep: true,
+        heartRateData: function(heartRate) {
+            this.heartRateMaxSelected = heartRate.setting.heartRateMaxValue;
+            this.heartRateMinSelected = heartRate.setting.heartRateMinValue;
+        },
+        sleepData: function(sleep) {
+            this.sleepMaxSelected = sleep.setting.sleepMaxValue;
+            this.sleepMinSelected = sleep.setting.sleepMinValue;
+        },
+        sportsData: function(sports) {
+            this.sportsMinSelected = sports.setting.sportsMinValue;
+        }
+    },
+    methods: {
+        setHeartRateModal(heartRateMaxSelects, heartRateMinSelects){
+            this.heartRateMaxSelects = heartRateMaxSelects;
+            this.heartRateMinSelects = heartRateMinSelects;
+        },
+        setSleepModal(sleepMaxSelects, sleepMinSelects){
+            this.sleepMaxSelects = sleepMaxSelects;
+            this.sleepMinSelects = sleepMinSelects;
+        },
+        setSportsModal(sportsMinSelects){
+            this.sportsMinSelects = sportsMinSelects;
+        },
+        updateHeartRateSetting(){
+            let parameter = {};
+            parameter.heartRateMaxValue = this.heartRateMaxSelected;
+            parameter.heartRateMinValue = this.heartRateMinSelected;
+            this.$store.dispatch({type:'bodyhealthModule/updateHeartrateSetting', parameter:parameter})
+        },
+        updateSleepSetting(){
+            let parameter = {};
+            parameter.sleepMaxValue = this.sleepMaxSelected;
+            parameter.sleepMaxValue = this.sleepMinSelected;
+            this.$store.dispatch({type:'bodyhealthModule/updateSleepSetting', parameter:parameter})
+        },
+        updateSportsSetting(){
+            let parameter = {};
+            parameter.sportsMinValue = this.sportsMinSelected;
+            this.$store.dispatch({type:'bodyhealthModule/updateSportsSetting', parameter:parameter})
+        },
     }
 }
 </script>
@@ -87,18 +178,102 @@ export default {
   justify-content: center;
   align-items: center;
 }
+.modal-header {
+    background-color: #707b91;
+}
+.modal-header > h5{
+    color: #ffffff;;
+}
+
+.modal-body {
+    height: 20vh;
+    width: 100%;
+}
+.modal-body.sports-modal-body{
+    height: 10vh;
+    width: 100%;
+}
+.modal-content {
+    border: 0px;
+}
 .modal-body-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    padding-top: 3%;
+    /* padding-bottom: 3%; */
 }
 .modal-body-content-sub {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    width: 100%;  
+    height: 4.5vh;
 }
+.modal-body-content-sub:first-child {
+    margin-bottom: 5%;
+}
+.modal-body-content-sub > h5 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+}
+.modal-body-content-sub > h5:last-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+}
+.modal-body-content-sub > select {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 100%;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-size: 15px;
+    line-height: 1.33;
+    color: #394867;
+}
+.modal-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top: 0px;
+    /* padding:0px */
+}
+.modal-footer > button {
+    height: 100%;
+    width: 30%;
+    border-radius: 6px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.modal-footer > .conFirmbutton {
+    background-color: #394867;
+}
+.modal-footer > .cancelbutton {
+    background-color: #bbbfca;
+}
+
+
+h5 {
+    margin-bottom: 0px;
+    font-weight: normal;
+}
+
 /* .modal.fade .modal-dialog {
   transform: translate(0, -100%);
 }

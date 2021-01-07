@@ -5,7 +5,13 @@ import {
   INIT_SPORTS,
   LOAD_HEARTRATE,
   LOAD_SLEEP,
-  LOAD_SPORTS
+  LOAD_SPORTS,
+  LOAD_HEARTRATE_SETTING,
+  LOAD_SLEEP_SETTING,
+  LOAD_SPORTS_SETTING,
+  UPDATE_HEARTRATE_SETTING,
+  UPDATE_SLEEP_SETTING,
+  UPDATE_SPORTS_SETTING
 } from './mutationTypes';
 
 const actions = {
@@ -213,6 +219,198 @@ const actions = {
       commit(LOAD_SPORTS, payload);
     });
   },
+  /**
+   * 載入心率監測設定
+   */
+  loadHeartrateSetting({commit},payload) {
+    //TODO 後續補上errorcode判斷
+    payload.result = {
+      heartRate:{
+        setting:{
+          heartRateMaxValue: 0,
+          heartRateMinValue: 0,
+          loadingErrorCodeList:[],
+        },
+      }
+    }
+
+    // 0 = success
+    // 1 = error
+    Vue.prototype.$axios({
+      url:'testdata/monitordata/setting.json',
+      params:{}
+    }).then((resp) => { // 回應正常
+      const respData = resp.data;
+      payload.result.heartRate.setting.heartRateMaxValue = respData.heartRateMaxValue;
+      payload.result.heartRate.setting.heartRateMinValue = respData.heartRateMinValue;
+      payload.result.heartRate.setting.loadingErrorCodeList.push(0);
+      commit(LOAD_HEARTRATE_SETTING, payload);
+
+    }).catch((error) => { // 異常處理
+      window.console.error(error);
+      payload.result.heartRate.setting.loadingErrorCodeList.push(1);
+      window.alert(error)
+      commit(LOAD_HEARTRATE_SETTING, payload);
+    });
+  },
+  /**
+   * 載入睡眠監測設定
+   */
+  loadSleepSetting({commit},payload) {
+    //TODO 後續補上errorcode判斷
+    payload.result = {
+      sleep:{
+        setting:{
+          sleepMaxValue: 0,
+          sleepMinValue: 0,
+          loadingErrorCodeList:[],
+        },
+      }
+    }
+    // 0 = success
+    // 1 = error
+    Vue.prototype.$axios({
+      url:'testdata/monitordata/setting.json',
+      params:{}
+    }).then((resp) => { // 回應正常
+      const respData = resp.data;
+      payload.result.sleep.setting.sleepMaxValue = respData.sleepMaxValue;
+      payload.result.sleep.setting.sleepMinValue = respData.sleepMinValue;
+      payload.result.sleep.setting.loadingErrorCodeList.push(0);
+      commit(LOAD_SLEEP_SETTING, payload);
+
+    }).catch((error) => { // 異常處理
+      window.console.error(error);
+      payload.result.sleep.setting.loadingErrorCodeList.push(1);
+      window.alert(error)
+      commit(LOAD_SLEEP_SETTING, payload);
+    });
+  },
+  /**
+   * 載入運動監測設定
+   */
+  loadSportsSetting({commit},payload) {
+    //TODO 後續補上errorcode判斷
+    payload.result = {
+      sports:{
+        setting:{
+          sportsMinValue: 0,
+          loadingErrorCodeList:[],
+        },
+      }
+    }
+
+    // 0 = success
+    // 1 = error
+    Vue.prototype.$axios({
+      url:'testdata/monitordata/setting.json',
+      params:{}
+    }).then((resp) => { // 回應正常
+      const respData = resp.data;
+      payload.result.sports.setting.sportsMinValue = respData.sportsMinValue;
+      payload.result.sports.setting.loadingErrorCodeList.push(0);
+      commit(LOAD_SPORTS_SETTING, payload);
+
+    }).catch((error) => { // 異常處理
+      window.console.error(error);
+      payload.result.sports.setting.loadingErrorCodeList.push(1);
+      window.alert(error)
+      commit(LOAD_SPORTS_SETTING, payload);
+    });
+  },
+  /**
+   * 更新心率監測設定
+   */
+  updateHeartrateSetting({commit},payload) {
+    //TODO 後續補上errorcode判斷
+    payload.result = {
+      heartRate:{
+        setting:{
+          updateErrorCodeList:[],
+        },
+      }
+    }
+    // 0 = success
+    // 1 = error
+    Vue.prototype.$axios({
+      url:'testdata/monitordata/setting.json',
+      params:{}
+    }).then((resp) => { // 回應正常
+      // const respData = resp.data;
+      payload.result.heartRate.setting.heartRateMaxValue = payload.parameter.heartRateMaxValue
+      payload.result.heartRate.setting.heartRateMinValue = payload.parameter.heartRateMinValue
+      payload.result.heartRate.setting.updateErrorCodeList.push(0);
+      window.alert("updateHeartrateSetting success");
+      commit(UPDATE_HEARTRATE_SETTING, payload);
+    }).catch((error) => { // 異常處理
+      window.console.error(error);
+      payload.result.heartRate.setting.updateErrorCodeList.push(1);
+      window.alert(error)
+      commit(UPDATE_HEARTRATE_SETTING, payload);
+    });
+  },
+  /**
+   * 更新睡眠監測設定
+   */
+  updateSleepSetting({commit},payload) {
+    //TODO 後續補上errorcode判斷
+    payload.result = {
+      sleep:{
+        setting:{
+          updateErrorCodeList:[],
+        },
+      }
+    }
+    // 0 = success
+    // 1 = error
+    Vue.prototype.$axios({
+      url:'testdata/monitordata/setting.json',
+      params:{}
+    }).then((resp) => { // 回應正常
+      // const respData = resp.data;
+      payload.result.sleep.setting.sleepMaxValue = payload.parameter.sleepMaxValue;
+      payload.result.sleep.setting.sleepMinValue = payload.parameter.sleepMinValue;
+      payload.result.sleep.setting.updateErrorCodeList.push(0);
+      window.alert("updateSleepSetting success");
+      commit(UPDATE_SLEEP_SETTING, payload);
+    }).catch((error) => { // 異常處理
+      window.console.error(error);
+      payload.result.sleep.setting.updateErrorCodeList.push(1);
+      window.alert(error)
+      commit(UPDATE_SLEEP_SETTING, payload);
+    });
+  },
+  /**
+   * 更新運動監測設定
+   */
+  updateSportsSetting({commit},payload) {
+    //TODO 後續補上errorcode判斷
+    payload.result = {
+      sports:{
+        setting:{
+          updateErrorCodeList:[],
+        },
+      }
+    }
+    // 0 = success
+    // 1 = error
+    Vue.prototype.$axios({
+      url:'testdata/monitordata/setting.json',
+      params:{}
+    }).then((resp) => { // 回應正常
+      // const respData = resp.data;
+      payload.result.sports.setting.sportsMinValue = payload.parameter.sportsMinValue;
+      payload.result.sports.setting.updateErrorCodeList.push(0);
+      window.alert("updateSportsSetting success");
+      commit(UPDATE_SPORTS_SETTING, payload);
+
+    }).catch((error) => { // 異常處理
+      window.console.error(error);
+      payload.result.sports.setting.updateErrorCodeList.push(1);
+      window.alert(error)
+      commit(UPDATE_SPORTS_SETTING, payload);
+    });
+  }
 };
 
 export default actions;

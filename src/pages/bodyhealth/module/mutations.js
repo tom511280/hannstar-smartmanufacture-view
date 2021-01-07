@@ -4,7 +4,13 @@ import {
   INIT_SPORTS,
   LOAD_HEARTRATE,
   LOAD_SLEEP,
-  LOAD_SPORTS
+  LOAD_SPORTS,
+  LOAD_HEARTRATE_SETTING,
+  LOAD_SLEEP_SETTING,
+  LOAD_SPORTS_SETTING,
+  UPDATE_HEARTRATE_SETTING,
+  UPDATE_SLEEP_SETTING,
+  UPDATE_SPORTS_SETTING
 } from './mutationTypes';
 
 const mutations = {
@@ -180,6 +186,47 @@ const mutations = {
     sportsNew.sportsSort.errorCodeList = payload.result.sports.sportsSort.errorCodeList;
 
     state.sports = Object.assign({}, state.sports, sportsNew)
+  },
+  //
+  [LOAD_HEARTRATE_SETTING](state, payload) {
+    if(payload.result != null) {
+      let heartRateNew = Object.assign({}, state.heartRate);
+      heartRateNew.setting.heartRateMaxValue = payload.result.heartRate.setting.heartRateMaxValue;
+      heartRateNew.setting.heartRateMinValue = payload.result.heartRate.setting.heartRateMinValue;
+      heartRateNew.setting.loadingErrorCodeList = payload.result.heartRate.setting.loadingErrorCodeList;
+      heartRateNew.setting.updateErrorCodeList = payload.result.heartRate.setting.updateErrorCodeList;
+      state.heartRate = Object.assign({}, state.heartRate, heartRateNew)
+    }
+  },
+  //
+  [LOAD_SLEEP_SETTING](state, payload) { 
+    if(payload.result != null) {
+      let sleepNew = Object.assign({}, state.sleep);
+      sleepNew.setting.sleepMaxValue = payload.result.sleep.setting.sleepMaxValue;
+      sleepNew.setting.sleepMinValue = payload.result.sleep.setting.sleepMinValue;
+      sleepNew.setting.loadingErrorCodeList = payload.result.sleep.setting.loadingErrorCodeList;
+      sleepNew.setting.updateErrorCodeList = payload.result.sleep.setting.updateErrorCodeList;
+      state.heartRate = Object.assign({}, state.sleep, sleepNew)
+    }
+  },
+  //
+  [LOAD_SPORTS_SETTING](state, payload) { 
+    if(payload.result != null) {
+      let sportsNew = Object.assign({}, state.sports);
+      sportsNew.setting.sportsMinValue = payload.result.sports.setting.sportsMinValue;
+      sportsNew.setting.loadingErrorCodeList = payload.result.sports.setting.loadingErrorCodeList;
+      sportsNew.setting.updateErrorCodeList = payload.result.sports.setting.updateErrorCodeList;
+      state.sports = Object.assign({}, state.sports, sportsNew)
+    }
+  },
+  //
+  [UPDATE_HEARTRATE_SETTING](state, payload) { 
+  },
+  //
+  [UPDATE_SLEEP_SETTING](state, payload) { 
+  },
+  //
+  [UPDATE_SPORTS_SETTING](state, payload) { 
   },
 };
 

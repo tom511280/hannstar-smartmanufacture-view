@@ -102,7 +102,7 @@
                 </div>
             </div>
         </div>
-        <monitorpieSettingModalComp></monitorpieSettingModalComp>
+        <monitorpieSettingModalComp ref="modalComp">></monitorpieSettingModalComp>
     </div>
 </template>
 <script>
@@ -130,7 +130,17 @@ export default {
                 groupSelects:[
                     {value:"1",text:"hannstar1"},
                     {value:"2",text:"hannstar2"},
-                ]
+                ],
+                heartRateMaxSelects:[
+                    {value:90,text:"90"},
+                    {value:100,text:"100"},
+                    {value:110,text:"110"},
+                ],
+                heartRateMinSelects:[
+                    {value:40,text:"40"},
+                    {value:50,text:"50"},
+                    {value:60,text:"60"},
+                ],
             },
             sleepMsg:{
                 title:'Sleep Monitor',
@@ -147,7 +157,17 @@ export default {
                 groupSelects:[
                     {value:"1",text:"hannstar1"},
                     {value:"2",text:"hannstar2"},
-                ]
+                ],
+                sleepMaxSelects:[
+                    {value:6,text:"6"},
+                    {value:7,text:"7"},
+                    {value:8,text:"8"},
+                ],
+                sleepMinSelects:[
+                    {value:10,text:"10"},
+                    {value:11,text:"11"},
+                    {value:12,text:"12"},
+                ],
             },
             sportsMsg:{
                 title:'Sports Monitor',
@@ -164,28 +184,37 @@ export default {
                 groupSelects:[
                     {value:"1",text:"hannstar1"},
                     {value:"2",text:"hannstar2"},
-                ]
+                ],
+                sportsMinSelects:[
+                    {value:8000,text:"8000"},
+                    {value:9000,text:"9000"},
+                    {value:10000,text:"10000"},
+                ],
             }
         }
     },
-    created(){
+    mounted(){
       //初始化時執行
       this.$store.dispatch({type:'commonModule/init'})
       this.$store.dispatch({type:'bodyhealthModule/initHeartrate'})
       this.$store.dispatch({type:'bodyhealthModule/initSleep'})
       this.$store.dispatch({type:'bodyhealthModule/initSports'})
+        
 
       //查詢心率資料
       let bodyHealthModule_parameter = {}
       this.$store.dispatch({type:'bodyhealthModule/loadHeartrate', parameter:bodyHealthModule_parameter})
+      this.$store.dispatch({type:'bodyhealthModule/loadHeartrateSetting'})
 
       //查詢睡眠資料
       let bodySleepModule_parameter = {}
       this.$store.dispatch({type:'bodyhealthModule/loadSleep', parameter:bodySleepModule_parameter})
+      this.$store.dispatch({type:'bodyhealthModule/loadSleepSetting'})
 
       //查詢運動資料
       let bodySportsModule_parameter = {}
       this.$store.dispatch({type:'bodyhealthModule/loadSports', parameter:bodySportsModule_parameter})
+      this.$store.dispatch({type:'bodyhealthModule/loadSportsSetting'})
     },
     computed: {
         heartRateData(){
@@ -216,6 +245,10 @@ export default {
                 heartRate.abnormal.fieldkeys,
                 heartRate.abnormal.datas,
             ) 
+            this.$refs.modalComp.setHeartRateModal(
+                this.heartMsg.heartRateMaxSelects, 
+                this.heartMsg.heartRateMinSelects, 
+            )
         },
         sleepData: function(sleep) {
             this.$refs.sleepChart.drawChart(
@@ -231,7 +264,11 @@ export default {
                 sleep.abnormal.fields,
                 sleep.abnormal.fieldkeys,
                 sleep.abnormal.datas,
-            ) 
+            )
+            this.$refs.modalComp.setSleepModal(
+                this.sleepMsg.sleepMaxSelects, 
+                this.sleepMsg.sleepMinSelects, 
+            )
         },
         sportsData: function(sports) {
             this.$refs.sportsChart.drawChart(
@@ -247,7 +284,10 @@ export default {
                 sports.sportsSort.fields,
                 sports.sportsSort.fieldkeys,
                 sports.sportsSort.datas,
-            ) 
+            )
+            this.$refs.modalComp.setSportsModal(
+                this.sportsMsg.sportsMinSelects
+            )
         }
     },
     components: {
