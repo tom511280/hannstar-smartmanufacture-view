@@ -6,7 +6,7 @@ import sendResetpwdEmailView from '@/pages/member/views/sendResetpwdEmailView.vu
 import overviewView from '@/pages/overview/views/overviewView.vue'
 import bodyhealthView from '@/pages/bodyhealth/views/bodyhealthView.vue'
 import bodyhealthDetailView from '@/pages/bodyhealth/views/bodyhealthDetailView.vue'
-
+import groupAndStaffView from '@/pages/groupAndStaff/views/groupAndStaffView.vue'
 
 
 
@@ -22,6 +22,8 @@ let routes = [
     //運動健康
     {path:'/bodyhealthView',component:bodyhealthView},
     {path:'/bodyhealthDetailView',component:bodyhealthDetailView},
+    //組織&&人員
+    {path:'/groupAndStaffView',component:groupAndStaffView},
     //預設
     {path:'',redirect:'/loginView'},
     {path:'*',component:loginView}

@@ -70,7 +70,8 @@ export default {
           icon: 'fa base-sidebar-icon m-icon',
           child: [
             {
-              title: 'page'
+              title: 'Group & Staffs',
+              href: '/groupAndStaffView'
             },
             {
               title: 'Page'

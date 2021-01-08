@@ -107,11 +107,12 @@ export default {
   align-items: center;
   width: 100%;
 }
-.el-table__body-wrapper {
-  /* display:block; */
-  /* height:100%; */
-  /* height:200px;
-  width: 100%;
-  overflow-y: auto; */
+.number.active {
+  background-color: #394867 !important;
+  border-radius: 8px;
+  border: solid 1px #384766;
+}
+.number:hover {
+  color: white !important;
 }
 </style>
