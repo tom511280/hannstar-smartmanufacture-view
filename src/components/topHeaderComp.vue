@@ -1,10 +1,10 @@
 <template>
-<div class="topHeader-external">
-    <div class="topHeader">
+<div class="topHeaderComp-external">
+    <div class="topHeaderComp">
         <img src="https://picsum.photos/300/200" alt="">
-        <div class="topHeader-info">
-            <div class="topHeader-title">welcome</div>
-            <div class="topHeader-membername">tom wu</div>
+        <div class="topHeaderComp-info">
+            <div class="topHeaderComp-title">welcome</div>
+            <div class="topHeaderComp-membername">tom wu</div>
         </div>
     </div>
 </div>
@@ -12,11 +12,11 @@
 <script>
 </script>
 <style scoped>
-.topHeader-external {
+.topHeaderComp-external {
     /* display: flex;
     justify-content: flex-end; */
 }
-.topHeader {
+.topHeaderComp {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -28,16 +28,16 @@
     width: 100%;
     z-index:998
 }
-.topHeader > img {
+.topHeaderComp > img {
     width: 2vw;
     height: 3.7vh;
     margin-right: 1vw;
     border-radius: 50%;
 }
-.topHeader > .topHeader-info {
+.topHeaderComp > .topHeaderComp-info {
     margin-right: 0.5vw;
 }
-.topHeader > .topHeader-info > .topHeader-title {
+.topHeaderComp > .topHeaderComp-info > .topHeaderComp-title {
     font-family: Roboto;
     font-size: 13px;
     font-weight: normal;
@@ -48,7 +48,7 @@
     text-align: right;
     color: #bbbfca;
 }
-.topHeader > .topHeader-info > .topHeader-membername {
+.topHeaderComp > .topHeaderComp-info > .topHeaderComp-membername {
     font-family: Roboto;
     font-size: 13px;
     font-weight: normal;

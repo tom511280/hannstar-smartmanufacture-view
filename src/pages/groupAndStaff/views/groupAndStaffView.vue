@@ -1,67 +1,75 @@
 <template>
     <div class="groupAndStaffView">
         <div class="groupAndStaffView-header-area">
-            asas
+            <gfHeaderComp ref="gfHeader"></gfHeaderComp>
         </div>
         <div class="groupAndStaffView-content-area">
-            <div class="groupAndStaffView-tree-area">
-                <el-tree
-                    :data="data"
-                    :props="defaultProps"
-                    accordion
-                    @node-click="handleNodeClick">
-                </el-tree>
+            <div class="groupAndStaffView-content-area-tree">
+              <gfTreeComp ref="gfTree"></gfTreeComp>
             </div>
-            <div class="groupAndStaffView-info-area">
-                111
+            <div class="groupAndStaffView-content-area-info">
             </div>
         </div>
     </div>
 </template>
 <script>
-  export default {
-    data() {
-      return {
-        data: [{
-          label: '一级 1',
-          children: [{
-            label: '二级 1-1',
-            children: [{
-              label: '三级 1-1-1'
-            }]
-          }]
-        }, {
-          label: '一级 2',
-          children: [{
-            label: '二级 2-1',
-            children: [{
-              label: '三级 2-1-1'
-            }]
-          }, {
-            label: '二级 2-2',
-            children: [{
-              label: '三级 2-2-1'
-            }]
-          }]
-        }, {
-          label: '一级 3',
-          children: [{
-            label: '二级 3-1',
-            children: [{
-              label: '三级 3-1-1'
-            }]
-          }, {
-            label: '二级 3-2',
-            children: [{
-              label: '三级 3-2-1'
-            }]
-          }]
-        }],
-        defaultProps: {
-          children: 'children',
-          label: 'label'
-        }
-      };
+import gfHeaderComp from '@/pages/groupAndStaff/components/gfHeaderComp.vue'
+import gfTreeComp from '@/pages/groupAndStaff/components/gfTreeComp.vue'
+export default {
+    components: {
+        gfHeaderComp,
+        gfTreeComp,
+    },
+    computed: {
+        statisticsData(){
+            return Object.assign({},this.$store.getters['groupAndStaffModule/getState'].statisticsData);
+        },
+        groupData(){
+            return Object.assign({},this.$store.getters['groupAndStaffModule/getState'].groupData);
+        },
+        groupStaffData(){
+            return Object.assign({},this.$store.getters['groupAndStaffModule/getState'].groupStaffData);
+        },
+    },
+    watch: {
+        immediate: true,
+        deep: true,
+        statisticsData: function(statisticsData) {
+          window.console.log(statisticsData)
+          this.$refs.gfHeader.setDatas(
+                statisticsData.allNum,
+                statisticsData.maleNum,
+                statisticsData.femaleNum,
+                statisticsData.bandBindNum,
+                statisticsData.bandNotBindNum,
+          )
+        },
+        groupData: function(groupData) {
+          window.console.log(groupData)
+          this.$refs.gfTree.setTree(
+                groupData.groupList,
+          )
+        },
+        groupStaffData: function(groupStaffData) {
+          window.console.log(groupStaffData)
+          // groupStaffData
+          // this.$refs.gfHeader.setDatas(
+          //       statisticsData.allNum,
+          //       statisticsData.maleNum,
+          //       statisticsData.femaleNum,
+          //       statisticsData.bandBindNum,
+          //       statisticsData.bandNotBindNum,
+          // )
+        },
+    },
+    mounted(){
+      //初始化時執行
+      this.$store.dispatch({type:'commonModule/init'})
+      this.$store.dispatch({type:'groupAndStaffModule/init'})
+      //載入統計資料
+      this.$store.dispatch({type:'groupAndStaffModule/loadstatisticsData'})
+      //載入組織資料
+      this.$store.dispatch({type:'groupAndStaffModule/loadGroup'})
     },
     methods: {
       handleNodeClick(data) {
@@ -70,31 +78,86 @@
     }
   };
 </script>
-<style scoped>
+<style lang="scss">
 .groupAndStaffView {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.groupAndStaffView  > .groupAndStaffView-header-area {
-    height: 20%;
+    height: 100%;
     width: 100%;
 }
-.groupAndStaffView  > .groupAndStaffView-content-area {
+.groupAndStaffView-header-area {
+    height: 11.5%;
+    width: 100%;
+    margin-bottom: 2%;
+}
+.groupAndStaffView-content-area {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 80%;
+    height: 86.5%;
     width: 100%;
 }
-.groupAndStaffView  > .groupAndStaffView-content-area >  .groupAndStaffView-tree-area{
+.groupAndStaffView-content-area-tree{
     height: 100%;
-    width: 20%;
+    width: 16%;
+    margin-right: 2%;
+    border-radius: 8px;
+    background-color: #ffffff;
 }
-.groupAndStaffView  > .groupAndStaffView-content-area >  .groupAndStaffView-info-area{
+.groupAndStaffView-content-area-info{
     height: 100%;
-    width: 20%;
+    width: 82%;
+    border-radius: 8px;
+    background-color: #ffffff;
 }
+
+// .groupAndStaffView-tree-area{
+//     height: 100%;
+//     width: 16%;
+//     margin-right: 2%;
+//     border-radius: 8px;
+//     background-color: #ffffff;
+// }
+// .groupAndStaffView-tree-area-header{
+//    display: flex;
+//    flex-direction: row;
+//    justify-content: center;
+//    align-items: center;
+//    height: 10%;
+//    width: 100%;
+//    border-bottom: 2px solid #9ba4b4;
+//    padding-bottom: 2.5%;
+// }
+// .groupAndStaffView-tree-area-header > h5 {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   align-items: flex-end;
+//   height: 100%;
+//   width: 25%;
+//   margin-left: 5%;
+// }
+// .groupAndStaffView-tree-area-header-content {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: flex-end;
+//   align-items: flex-end;
+//   height: 100%;
+//   width: 70%;
+//   padding-right: 9%;
+// }
+// .groupAndStaffView-tree-area-header-content > p {
+//    margin-bottom: 0px;
+//    color: #2f87fd;
+//    cursor: pointer;
+// }
+// .groupAndStaffView-tree-area-info{
+//    height: 90%;
+//    width: 100%;
+//    padding-top: 5%;
+// }
+
 </style>

@@ -1,5 +1,5 @@
 <template>
-<div class="sidebarHead">
+<div class="sidebarHeadComp">
     <div class="loginTitle loginTitle_C fontbase">{{ currentTime }}</div>
     <div class="loginDescribution fontbase">{{currentDay}}</div>
 </div>
@@ -8,7 +8,7 @@
 .loginTitle_C {
     font-size: 36px;
 }
-.sidebarHead {
+.sidebarHeadComp {
     display: flex;
     flex-direction: column;
     justify-content: center;

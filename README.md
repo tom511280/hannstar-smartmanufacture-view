@@ -47,7 +47,7 @@ git commit -m '
 2020-01-06變更
 Author: TomWu
 Content :
-2.調整頁面
+2.調整RM檔
 '
 git push origin master
 
@@ -65,6 +65,9 @@ git pull
 1.topHeader使用者圖示改圓
 2.登入功能字體  
 3.view more 箭頭
+
+# 參考
+https://github.com/xiaoniezi/vue-tree/blob/master/src/view/slot_tree.vue
 
 
 # AWS

@@ -1,5 +1,5 @@
 <template>
-<div class="sidebar">
+<div class="sidebarComp">
     <sidebar-menu
         :menu="menu"
         :collapsed="collapsed"
@@ -14,16 +14,13 @@
 </template>
 
 <script>
-// const separator = {
-//   template: `<hr style="border-color: rgba(0, 0, 0, 0.1); margin: 20px;">`
-// }
-import sidebarHead from '@/components/sidebarHead.vue'
+import sidebarHeadComp from '@/components/sidebar/components/sidebarHeadComp.vue'
 export default {
   data () {
     return {
       menu: [
         {
-          component: sidebarHead
+          component: sidebarHeadComp
         },
         {
           title: 'Home',
@@ -198,38 +195,38 @@ export default {
   width: 1vw !important;
 }
 .vsm--item.vsm--item_open > a > .home-icon {
-  background-image: url("../assets/img/sidebar/icons-orange-member.svg");
+  background-image: url("../../../assets/img/sidebar/icons-orange-member.svg");
   background-size: 100% 100%;
 }
 .vsm--item > a > .home-icon {
-  background-image: url("../assets/img/sidebar/icons-blue-member.svg");
+  background-image: url("../../../assets/img/sidebar/icons-blue-member.svg");
   background-size: 100% 100%;
 }
 
 .vsm--item.vsm--item_open > a > .pm-icon {
-  background-image: url("../assets/img/sidebar/icons-orange-personal-monitoring.svg");
+  background-image: url("../../../assets/img/sidebar/icons-orange-personal-monitoring.svg");
   background-size: 100% 100%;
 }
 .vsm--item > a > .pm-icon {
-  background-image: url("../assets/img/sidebar/icons-blue-personal-monitoring.svg");
+  background-image: url("../../../assets/img/sidebar/icons-blue-personal-monitoring.svg");
   background-size: 100% 100%;
 }
 
 .vsm--item.vsm--item_open > a > .m-icon {
-  background-image: url("../assets/img/sidebar/icons-orange-filter.svg");
+  background-image: url("../../../assets/img/sidebar/icons-orange-filter.svg");
   background-size: 100% 100%;
 }
 .vsm--item > a > .m-icon {
-  background-image: url("../assets/img/sidebar/icons-blue-filter.svg");
+  background-image: url("../../../assets/img/sidebar/icons-blue-filter.svg");
   background-size: 100% 100%;
 }
 
 .vsm--item.vsm--item_open > a > .us-icon {
-  background-image: url("../assets/img/sidebar/icons-orange-member-setting.svg");
+  background-image: url("../../../assets/img/sidebar/icons-orange-member-setting.svg");
   background-size: 100% 100%;
 }
 .vsm--item > a > .us-icon {
-  background-image: url("../assets/img/sidebar/icons-blue-member-setting.svg");
+  background-image: url("../../../assets/img/sidebar/icons-blue-member-setting.svg");
   background-size: 100% 100%;
 }
 

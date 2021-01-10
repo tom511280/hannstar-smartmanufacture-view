@@ -1,8 +1,8 @@
 <template>
     <div class="mainArea">
-        <sidebar v-if="isShowSiderbar"></sidebar>
+        <sidebarComp v-if="isShowSiderbar"></sidebarComp>
         <div>
-            <topHeader v-if="isShowTopHeader"></topHeader>
+            <topHeaderComp v-if="isShowTopHeader"></topHeaderComp>
             <div :class="{ 
               'currentView-contain-topHeader': isShowSiderbar, 
               'currentView-nocontain-topHeader': !isShowSiderbar,
@@ -13,14 +13,14 @@
     </div>
 </template>
 <script>
-import sidebar from '@/components/sidebar.vue'
-import topHeader from '@/components/topHeader.vue'
+import sidebarComp from '@/components/sidebar/components/sidebarComp.vue'
+import topHeaderComp from '@/components/topHeaderComp.vue'
 import currentView from '@/components/currentView.vue'
 
 export default {
     components: {
-        sidebar,
-        topHeader,
+        sidebarComp,
+        topHeaderComp,
         currentView,
     },
     computed: {

@@ -106,11 +106,11 @@
     </div>
 </template>
 <script>
-import monitorpieChartComp from '@/components/monitorChart/components/monitorpieChartComp.vue'
-import monitorpieListComp from '@/components/monitorChart/components/monitorpieListComp.vue'
-import monitorpieSearchComp from '@/components/monitorChart/components/monitorpieSearchComp.vue'
-import monitorpieSearchHeaderComp from '@/components/monitorChart/components/monitorpieSearchHeaderComp.vue'
-import monitorpieSettingModalComp from '@/components/monitorChart/components/monitorpieSettingModalComp.vue'
+import monitorpieChartComp from '@/pages/bodyhealth/components/monitorpieChartComp.vue'
+import monitorpieListComp from '@/pages/bodyhealth/components/monitorpieListComp.vue'
+import monitorpieSearchComp from '@/pages/bodyhealth/components/monitorpieSearchComp.vue'
+import monitorpieSearchHeaderComp from '@/pages/bodyhealth/components/monitorpieSearchHeaderComp.vue'
+import monitorpieSettingModalComp from '@/pages/bodyhealth/components/monitorpieSettingModalComp.vue'
 
 export default {
     data() {

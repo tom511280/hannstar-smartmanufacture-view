@@ -6,7 +6,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Set up standard heart rate</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                     </div>
                     <div class="modal-body">
                         <div class="modal-body-content">
@@ -39,7 +39,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Set up standard sleeptime</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                     </div>
                     <div class="modal-body">
                         <div class="modal-body-content">
@@ -72,7 +72,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Set up standard momentum</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                     </div>
                     <div class="modal-body sports-modal-body">
                         <div class="modal-body-content">
@@ -169,53 +169,11 @@ export default {
 }
 </script>
 <style scoped>
-.modal-dialog {
-  margin-top: 0;
-  margin-bottom: 0;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.modal-dialog > .modal-body {
+  width: 80%;
 }
-.modal-header {
-    background-color: #707b91;
-}
-.modal-header > h5{
-    color: #ffffff;;
-}
-
-.modal-body {
-    height: 20vh;
-    width: 100%;
-}
-.modal-body.sports-modal-body{
-    height: 10vh;
-    width: 100%;
-}
-.modal-content {
-    border: 0px;
-}
-.modal-body-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    height: 100%;
-    padding-top: 3%;
-    /* padding-bottom: 3%; */
-}
-.modal-body-content-sub {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;  
-    height: 4.5vh;
-}
-.modal-body-content-sub:first-child {
-    margin-bottom: 5%;
+.modal-dialog > .modal-content {
+  height: 25vh;
 }
 .modal-body-content-sub > h5 {
     display: flex;
@@ -246,39 +204,5 @@ export default {
     line-height: 1.33;
     color: #394867;
 }
-.modal-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border-top: 0px;
-    /* padding:0px */
-}
-.modal-footer > button {
-    height: 100%;
-    width: 30%;
-    border-radius: 6px;
-    color: #ffffff;
-    cursor: pointer;
-}
-.modal-footer > .conFirmbutton {
-    background-color: #394867;
-}
-.modal-footer > .cancelbutton {
-    background-color: #bbbfca;
-}
 
-
-h5 {
-    margin-bottom: 0px;
-    font-weight: normal;
-}
-
-/* .modal.fade .modal-dialog {
-  transform: translate(0, -100%);
-}
-
-.modal.in .modal-dialog {
-  transform: translate(0, 0);
-} */
 </style>

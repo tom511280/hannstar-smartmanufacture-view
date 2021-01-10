@@ -1,7 +1,7 @@
 <template>
   <div class="bodyhealthDetailView">
     <div class="bodyhealthDetailView-header">
-      <previousStep></previousStep>
+      <previousStepComp></previousStepComp>
     </div>
     <div class="bodyhealthDetailView-content">
       <ul class="nav nav-tabs" role="tablist">
@@ -57,8 +57,8 @@
   </div>
 </template>
 <script>
-import monitorpieTableComp from '@/components/monitorChart/components/monitorpieTableComp.vue'
-import previousStep from '@/components/previousStep.vue'
+import monitorpieTableComp from '@/pages/bodyhealth/components/monitorpieTableComp.vue'
+import previousStepComp from '@/components/previousStepComp.vue'
 export default {
   created(){
       //初始化時執行
@@ -126,7 +126,7 @@ export default {
   },
   components: {
         monitorpieTableComp,
-        previousStep,
+        previousStepComp,
   },
   methods: {
         //查詢心率資料
@@ -147,6 +147,9 @@ export default {
           let bodySportsModule_parameter = {}
           this.$store.dispatch({type:'bodyhealthModule/loadSports', parameter:bodySportsModule_parameter})
         },
+        goPreviousStep(){
+          this.$router.push({ path: '/bodyhealthView'});
+        }
   },
 };
 </script>
