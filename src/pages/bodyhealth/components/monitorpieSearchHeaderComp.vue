@@ -32,14 +32,18 @@
     height: 100%;
 }
 .monitorpieSearchHeaderComp > .monitorpieSearchHeaderComp-img-external > .setting-icon {
-    padding: 6px;
+    // padding: 6px;
     border-top-right-radius: 8px;
     border-bottom-left-radius: 8px;
     background-color: #dddfe5;
     cursor: pointer;
     // width: 15%;
-    width: 2.5vw;
-    height: 5vh;
+    width: 1.8vw;
+    height: 3.2vh;
+    padding-left: 0.25vw;
+    padding-right: 0.25vw;
+    padding-top: 0.25vh;
+    padding-bottom: 0.25vh;
 }
 </style>
 <script>

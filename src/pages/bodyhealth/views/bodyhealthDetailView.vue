@@ -6,13 +6,13 @@
     <div class="bodyhealthDetailView-content">
       <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item" role="presentation">
-        <a @click="heartRateTableSet()" class="nav-link active" data-bs-toggle="tab" href="#heartRate" aria-selected="true">Heart Rate Monitor</a>
+        <a @click="heartRateTableSet()" class="nav-link active" data-bs-toggle="tab" href="#heartRate" aria-selected="true"><h4>Heart Rate Monitor</h4></a>
       </li>
       <li class="nav-item" role="presentation">
-        <a @click="sleepTableSet()" class="nav-link" data-bs-toggle="tab" href="#sleep"  aria-selected="false">Sleep Monitor</a>
+        <a @click="sleepTableSet()" class="nav-link" data-bs-toggle="tab" href="#sleep"  aria-selected="false"><h4>Sleep Monitor</h4></a>
       </li>
       <li class="nav-item" role="presentation">
-        <a @click="sportsTableSet()" class="nav-link" data-bs-toggle="tab" href="#sports" aria-selected="false">Sports Monitor</a>
+        <a @click="sportsTableSet()" class="nav-link" data-bs-toggle="tab" href="#sports" aria-selected="false"><h4>Sports Monitor</h4></a>
       </li>
     </ul>
     <div class="tab-content" id="myTabContent">
@@ -154,6 +154,22 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.nav-link {
+  height: 4vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  font-weight: 500;
+  // font-size: ;
+}
+.nav-link > h4 {
+  color: #ffffff;
+  font-weight: normal;
+}
 .bodyhealthDetailView {
   display: flex;
   flex-direction: column;
@@ -205,6 +221,9 @@ export default {
 .tab-pane > .tab-pane-area > .tab-pane-subarea {
   height: 100%;
   width: 49%;
+}
+.tab-pane > .tab-pane-area > .tab-pane-subarea > h4 {
+  height: 4vh;
 }
 
 .nav-link {

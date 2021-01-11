@@ -31,6 +31,7 @@
                 </div>
                 <div class="bodyhealthView-monitor-area-content-viewmore">
                     <p @click="goBodyhealthDetailView()">View More</p>
+                    <img src="@/assets/img/bodyhealth/ic-arrow-orange-right.svg" alt="">
                 </div>
             </div>
         </div>
@@ -65,6 +66,7 @@
                 </div>
                 <div class="bodyhealthView-monitor-area-content-viewmore">
                     <p @click="goBodyhealthDetailView()">View More</p>
+                    <img src="@/assets/img/bodyhealth/ic-arrow-orange-right.svg" alt="">
                 </div>
             </div>
         </div>
@@ -99,6 +101,7 @@
                 </div>
                 <div class="bodyhealthView-monitor-area-content-viewmore">
                     <p @click="goBodyhealthDetailView()">View More</p>
+                    <img src="@/assets/img/bodyhealth/ic-arrow-orange-right.svg" alt="">
                 </div>
             </div>
         </div>
@@ -337,7 +340,7 @@ h4,h5 {
     margin-right: 0.5vw;
     /* margin-top: 2.2vh;
     margin-bottom: 2vh; */
-    height:100%;
+    /* height:100%; */
     width: 26vw;
 }
 
@@ -346,7 +349,7 @@ h4,h5 {
     background-color: #ffffff;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    height: 7%;
+    height: 4vh;
     width: 100%;
 }
 .bodyhealthView > .bodyhealthView-monitor-area >.bodyhealthView-monitor-area-content {
@@ -356,45 +359,41 @@ h4,h5 {
     background-color: #ffffff;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    height: 93%;
+    height: 87vh;
     width: 100%;
 }
 
 .bodyhealthView > .bodyhealthView-monitor-area > 
 .bodyhealthView-monitor-area-content > .bodyhealthView-monitor-area-content-search {
-    height: 8%;
+    height: 6vh;
     width: 100%;
     border-bottom: 1px solid#bbbfca; 
 }
 .bodyhealthView > .bodyhealthView-monitor-area > 
 .bodyhealthView-monitor-area-content > .bodyhealthView-monitor-area-content-graph {
-    height: 33%;
+    height: 25vh;
     width: 100%;
     border-bottom: 1px solid#bbbfca; 
-    padding-bottom: 5%;
 }
-.bodyhealthView > .bodyhealthView-monitor-area > 
-.bodyhealthView-monitor-area-content > .bodyhealthView-monitor-area-content-graph 
-.bodyhealthView-monitor-area-content-graph-main {
-    height: 85%;
-}
-
-
-.bodyhealthView > .bodyhealthView-monitor-area > 
-.bodyhealthView-monitor-area-content > .bodyhealthView-monitor-area-content-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;    
-    height: 26%;
+.bodyhealthView-monitor-area-content-graph  > h4 {
+    height: 4vh;
     width: 100%;
 }
+.bodyhealthView-monitor-area-content-graph-main {
+    height: 19vh;
+    width: 100%;
+}
+
 .bodyhealthView > .bodyhealthView-monitor-area > 
 .bodyhealthView-monitor-area-content > .bodyhealthView-monitor-area-content-list 
 > .monitorpieListComp{
-    overflow-y: auto;
-    /* overflow-x: hidden; */
-    /* padding-left: 0.5vw; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;   
+    height: 22vh;
+    width: 100%;
+    border-bottom: solid 1px #bbbfca;
 }
 .bodyhealthView > .bodyhealthView-monitor-area > 
 .bodyhealthView-monitor-area-content > .bodyhealthView-monitor-area-content-list.first-el {
@@ -406,19 +405,24 @@ h4,h5 {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center; 
-  height: 6%;
+  height: 2vh;
   width: 100%;
+  margin-top: 1vh;
 }
 .bodyhealthView-monitor-area-content-viewmore > p {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center; 
-  font-size: 15px;
   color: #ef8059;
   height: 100%;
   margin-top: auto;
   margin-bottom: auto;
   cursor: pointer;
 }
+.bodyhealthView-monitor-area-content-viewmore > img {
+  margin-top: 0.1vh;
+  margin-left: 0.25vw;
+}
+
 </style>

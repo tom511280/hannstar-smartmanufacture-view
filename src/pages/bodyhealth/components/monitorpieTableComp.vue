@@ -24,13 +24,14 @@
             prev-text="prev"
             next-text="next"
             background
-            layout="prev, pager, next, sizes, jumper, total"
+            layout="sizes, prev, pager, next, jumper, total, solt"
             :page-size="pageSize"
             :total="total"
             :current-page="pageNow"
             @current-change="findPage"
             @size-change="findSize"
           >
+          <el-button :disabled="firstDisabled" @click="toFirstPage">首页</el-button>
           </el-pagination>
         </div>
       </el-col>
@@ -107,6 +108,12 @@ export default {
   align-items: center;
   width: 100%;
 }
+
+
+.number, .btn-prev, .btn-next {
+  border-radius: 8px !important;
+}
+
 .number.active {
   background-color: #394867 !important;
   border-radius: 8px;
@@ -114,5 +121,15 @@ export default {
 }
 .number:hover {
   color: white !important;
+}
+th {
+    font-size: 1.8vmin !important;
+    color: #394867 !important;
+    padding: 0.75vh 0 !important;
+}
+td {
+  font-size: 1.8vmin !important;
+  color: #707b91 !important;
+  padding: 0.75vh 0 !important;
 }
 </style>

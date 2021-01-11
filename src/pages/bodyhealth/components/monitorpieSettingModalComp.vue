@@ -27,8 +27,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button @click="updateHeartRateSetting()" type="button" class="btn conFirmbutton">Confirm</button>
-                        <button type="button" class="btn cancelbutton" data-bs-dismiss="modal">Cancel</button>
+                        <button @click="updateHeartRateSetting()" type="button" class="btn button-confirm">Search</button>
+                        <button type="button" class="btn button-cancel" data-bs-dismiss="modal">Cancel</button>
                     </div>
                 </div>
             </div>
@@ -60,8 +60,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button @click="updateSleepSetting()" type="button" class="btn conFirmbutton">Confirm</button>
-                        <button type="button" class="btn cancelbutton" data-bs-dismiss="modal">Cancel</button>
+                        <button @click="updateSleepSetting()" type="button" class="btn button-confirm">Search</button>
+                        <button type="button" class="btn button-cancel" data-bs-dismiss="modal">Cancel</button>
                     </div>
                 </div>
             </div>
@@ -86,8 +86,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button @click="updateSportsSetting()" type="button" class="btn conFirmbutton">Confirm</button>
-                        <button type="button" class="btn cancelbutton" data-bs-dismiss="modal">Cancel</button>
+                        <button @click="updateSportsSetting()" type="button" class="btn button-confirm">Search</button>
+                        <button type="button" class="btn button-cancel" data-bs-dismiss="modal">Cancel</button>
                     </div>
                 </div>
             </div>
@@ -169,11 +169,9 @@ export default {
 }
 </script>
 <style scoped>
-.modal-dialog > .modal-body {
-  width: 80%;
-}
 .modal-dialog > .modal-content {
   height: 25vh;
+  width: 20vw;
 }
 .modal-body-content-sub > h5 {
     display: flex;
@@ -200,8 +198,8 @@ export default {
     height: 100%;
     border-radius: 8px;
     background-color: #ffffff;
-    font-size: 15px;
-    line-height: 1.33;
+    /* font-size: 15px; */
+    /* line-height: 1.33; */
     color: #394867;
 }
 

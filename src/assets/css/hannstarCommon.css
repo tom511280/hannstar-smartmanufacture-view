@@ -5,6 +5,8 @@
     font-style: normal;
     font-weight: normal;
     letter-spacing: normal;
+    font-size: 1vmin;
+    line-height: 1vmin;
 }
 h1, h2, h3, h4, h5 {
     display: flex;
@@ -14,17 +16,57 @@ h1, h2, h3, h4, h5 {
     font-weight: bold;
     letter-spacing: normal;
     color: #394867;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
-h1 {font-size: 32px;}
-h2 {font-size: 28px;}
-h3 {font-size: 24px;}
-h4 {font-size: 18px;}
-h5 {font-size: 16px;}
+h1 {font-size: 32px;} /*32*/
+h2 {font-size: 28px;} /*28*/
+h3 {font-size: 2vmin;} /*24*/
+h4 {font-size: 1.7vmin;} /*18*/
+h5 {font-size: 1.5vmin;} /*16*/
 
-input[type=text], input[type=email], input[type=password]
-{
-  font-size: 16px;
+input[type=text], input[type=email], input[type=password], select {
+  font-size: 1.5vmin;
   color: #394867;
+  border-radius: 8px;
+  background-color: #ffffff;
+  line-height: 1.33;
+  border: solid 1px #dddfe5;
+  border-radius: 8px;
+}
+
+/*button*/
+button, [type="button"] {
+  font-size: 1.3vmin;
+}
+.button-confirm {
+  height: 3.5vh;
+  border-radius: 6px;
+  background-color: #394867;
+  color: #ffffff;
+}
+.button-cancel {
+  height: 3.5vh;
+  border-radius: 6px;
+  background-color: #bbbfca;
+  color: #ffffff;
+}
+
+/*select*/
+select {
+  /*移除箭頭樣式*/
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+
+  /*改變右邊箭頭樣式*/
+  background: url("../img/common/select-triangle.svg") no-repeat scroll right center transparent;
+  background-position-x: 95%;
+  padding-left: 6px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 1.5vmin;
+  
 }
 
 input[type=checkbox] {
@@ -34,6 +76,13 @@ input[type=checkbox] {
   background-color: #ffffff;
 }
 
+/*table*/
+th, tr {
+  font-size: 1.8vmin;
+}
+td {
+  font-size: 1.7vmin;
+}
 
 /*modal*/
 .modal-dialog {
@@ -67,7 +116,6 @@ input[type=checkbox] {
   align-items: center;
   width: 100%;
   color: #ffffff;
-  font-size: 17px;
   font-weight: 500;
   margin-bottom: 0%;
 }
@@ -112,7 +160,6 @@ input[type=checkbox] {
   height: 100%;
   border-radius: 8px;
   background-color: #ffffff;
-  font-size: 15px;
   line-height: 1.33;
   color: #394867;
   border: solid 1px #dddfe5;
@@ -124,22 +171,9 @@ input[type=checkbox] {
   justify-content: center;
   align-items: center;
   border-top: 0px;
-  height: 5vh;
+  height: 6vh;
   width: 100%;
   padding-top: 0%;
 }
-.modal-footer > button {
-  height: 100%;
-  /* width: 20%; */
-  border-radius: 6px;
-  color: #ffffff;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: normal;
-}
-.modal-footer > .conFirmbutton {
-  background-color: #394867;
-}
-.modal-footer > .cancelbutton {
-  background-color: #bbbfca;
-}
+
+

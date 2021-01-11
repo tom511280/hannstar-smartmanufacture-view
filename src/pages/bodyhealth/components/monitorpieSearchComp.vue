@@ -13,9 +13,10 @@
             <select class="monitorpieSearchComp-select" id="groupSelect" name="groupSelect">
                 <option v-for="groupItem in groupSelects" :key="groupItem.value" :value="groupItem.value">{{ groupItem.text }}</option>
             </select>
-            <button class="monitorpieSearchComp-btn" type="button">
+            <!-- <button class="monitorpieSearchComp-btn" type="button">
                     <p class="monitorpieSearchComp-btn-text fontbase">Search</p>
-            </button>
+            </button> -->
+            <button type="button" class="btn button-confirm">Search</button>
         </div>
     </div>
 </template>
@@ -51,28 +52,17 @@ export default {
 }
 .monitorpieSearchComp-select {
     border-radius: 8px;
-    background-color: #ffffff;
     height: 3.5vh;
     width: 55vw;
     margin-right: 1vw;
-    font-size: 15px;
-    line-height: 1.33;
-    color: #394867;
+    // font-size: 15px;
 }
-.monitorpieSearchComp-btn {
-  width: 100%;
-  height: 3.5vh;
-  border-radius: 6px;
-  background-color: #394867;
-  cursor: pointer;
-}
-.monitorpieSearchComp-btn > .monitorpieSearchComp-btn-text {
-  font-size: 15px;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: #ffffff;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
+// .monitorpieSearchComp-btn {
+//   width: 100%;
+//   height: 3.5vh;
+//   border-radius: 6px;
+//   background-color: #394867;
+//   color: #ffffff;
+//   cursor: pointer;
+// }
 </style>

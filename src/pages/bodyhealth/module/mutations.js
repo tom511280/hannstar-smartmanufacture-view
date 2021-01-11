@@ -18,8 +18,8 @@ const mutations = {
   // 初始化
   [INIT_HEARTRATE](state) { 
 
-    state.heartRate.normal.fields = ['Name','Group','Bpm'];
-    state.heartRate.normal.fieldkeys = ['name','group','heartRate'];
+    state.heartRate.normal.fields = ['Name','Group','Bpm', 'Time'];
+    state.heartRate.normal.fieldkeys = ['name','group','heartRate','time'];
     state.heartRate.normal.Allfields = ['Name','Group','Bpm','Time'];
     state.heartRate.normal.Allfieldkeys = ['name','group','heartRate','time'];
     state.heartRate.normal.datas = [];
@@ -30,8 +30,8 @@ const mutations = {
     state.heartRate.normal.pageSize = 10
     state.heartRate.normal.totalNumber = 0
 
-    state.heartRate.abnormal.fields = ['Name','Group','Bpm'];
-    state.heartRate.abnormal.fieldkeys = ['name','group','heartRate'];
+    state.heartRate.abnormal.fields = ['Name','Group','Bpm','Time'];
+    state.heartRate.abnormal.fieldkeys = ['name','group','heartRate','time'];
     state.heartRate.abnormal.Allfields = ['Name','Group','Bpm','Time'];
     state.heartRate.abnormal.Allfieldkeys = ['name','group','heartRate','time'];
     state.heartRate.abnormal.datas = [];
@@ -206,7 +206,7 @@ const mutations = {
       sleepNew.setting.sleepMinValue = payload.result.sleep.setting.sleepMinValue;
       sleepNew.setting.loadingErrorCodeList = payload.result.sleep.setting.loadingErrorCodeList;
       sleepNew.setting.updateErrorCodeList = payload.result.sleep.setting.updateErrorCodeList;
-      state.heartRate = Object.assign({}, state.sleep, sleepNew)
+      state.sleep = Object.assign({}, state.sleep, sleepNew)
     }
   },
   //

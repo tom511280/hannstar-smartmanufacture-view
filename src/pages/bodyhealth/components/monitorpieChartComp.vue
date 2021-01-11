@@ -24,8 +24,11 @@ export default {
                         legend: {
                                   selectedMode: false,
                                   orient: 'vertical',
-                                  left: "65%",
-                                  top: "50%",
+                                  left: "60%",
+                                  top: "45%",
+                                  textStyle: {
+                                    fontSize: "1.5vmin"
+                                  },
                                   data:[
                                         {name:'nodata',icon:'image://'},
                                         {name:'Normal'},
@@ -50,7 +53,7 @@ export default {
                                     name: '访问来源',
                                     type: 'pie',
                                     radius: ['100%', '60%'],
-                                    center: ['30%', '50%'],
+                                    center: ['25%', '50%'],
                                     // left:'0%',
                                     data: [
                                             {value: 1, name: 'nodata', itemStyle: {color: '#f1f2f3'},},

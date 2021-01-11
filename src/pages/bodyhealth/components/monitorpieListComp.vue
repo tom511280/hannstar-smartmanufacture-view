@@ -1,16 +1,26 @@
 <template>
   <div class="monitorpieListComp">
-    <table class="table table-striped">
+    <table class="table">
       <thead>
         <tr>
           <th v-for="field in fields" :key="field">{{ field }}</th>
         </tr>
       </thead>
-      <tbody>
-        <tr v-for="dataItem in datas.slice(0,6)" :key="dataItem.value" :value="dataItem.value">
-          <th v-for="fieldkey in fieldkeys" :key="fieldkey" >{{dataItem[fieldkey]}}</th>
+      <tbody v-if="datas.length > 0">
+        <tr v-for="(dataItem, index) in datas.slice(0,5)" :key="dataItem.value" :value="dataItem.value" :class="{ wtdclass: (index%2 == 1), gtdclass: (index%2 == 0) }">
+          <td v-for="fieldkey in fieldkeys" :key="fieldkey" >{{dataItem[fieldkey]}}</td>
         </tr>
       </tbody>
+      <tbody class="nodata-area-tbody" v-if="datas.length < 1">
+        <tr>
+          <td :colspan="fields.length" class="tdclass-nodatatdclass">
+            <div class="nodata-area-div">
+              <img class="nodata-area-img" src="@/assets/img/common/img-nodata.svg" alt="">
+              <p>No data</p>
+            </div>
+          </td>
+        </tr>
+      </tbody>  
     </table>
   </div>
 </template>
@@ -20,7 +30,9 @@ export default {
     return {
       fieldkeys:[],
       fields:[],
-      datas:[]
+      datas:[],
+      wtdclass:'tdclass wtdclass',
+      gtdclass:'tdclass gtdclass'
     }
   },
   methods: {
@@ -47,7 +59,7 @@ table > thead > tr {
 }
 th, td {
   font-family: Roboto;
-  font-size: 14px;
+  // font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -56,5 +68,39 @@ th, td {
   color: #707b91;
   white-space:nowrap; 
   text-align: left;
+}
+.nodata-area-tbody {
+  // background-color: white;
+  // height: 12.5vh;
+}
+.nodata-area-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  height: 15vh;
+  background-color: white;
+  color: #707b91;
+}
+.nodata-area-div > img {
+  height: 7.5vh;
+  width: 7.5vw;
+}
+.nodata-area-div > p {
+  margin-top: 0.5vh;
+}
+.tdclass-nodatatdclass {
+  border-style:none;
+  border-color: white;
+}
+.tdclass {
+  border-style:none;
+  border-color: white;
+}
+.wtdclass {
+  background-color: #f1f2f3;
+}
+.gtdclass {
+  background-color: white;
 }
 </style>
