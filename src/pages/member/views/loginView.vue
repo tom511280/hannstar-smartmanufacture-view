@@ -5,8 +5,8 @@
           <img src="@/assets/img/login/img-login.png" srcset="@/assets/img/login/img-login@2x.png 2x,@/assets/img/login/img-login@3x.png 3x">
         </div>
         <div class="loginRright">
-            <div class="loginTitle fontbase">Welcome</div>
-            <div class="loginDescribution fontbase">Log in to your account to continue</div>
+            <div class="loginTitle"><h2>Welcome</h2></div>
+            <div class="loginDescribution description">Log in to your account to continue</div>
             <div id="emailArea" class="inputbox-area-external" :class="[this.emailInputErrorClass]">
                 <img class="common-icon" src="@/assets/img/login/icons-email.svg">
                 <div class="common-line"></div>
@@ -25,21 +25,17 @@
                 </div>
             </div>
             <div>
-                <p class="errortext fontbase input-no-error-style">{{passwordErrorMsg}}</p>
+                <p class="errortext input-no-error-style">{{passwordErrorMsg}}</p>
             </div>
             <div class="ckeckBox-area-external">
                 <input class="common-ckeckBox squaredFour" type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                <p class="ckeckBox-area-lefttext fontbase">Keep me logged in</p>
-                <a class="ckeckBox-area-rightText fontbase" href="javascript:void(0)" @click="goToSendResetpwdEmailView()">Forgot password?</a>
+                <p class="ckeckBox-area-lefttext">Keep me logged in</p>
+                <a class="ckeckBox-area-rightText" href="javascript:void(0)" @click="goToSendResetpwdEmailView()">Forgot password?</a>
             </div>
-            <div class="login-btn-area-external">
-                <button class="login-btn btn" type="button" @click="login()">
-                    <p class="login-btn-text fontbase">Log in</p>
-                </button>
-            </div>
+            <button type="button" class="btn button-confirm login-btn-area" @click="login()">Log in</button>
             <div class="signup-area-external">
-                <p class="signup-leftText fontbase">Don’t have an account?</p>
-                <a class="signup-rightText fontbase" href="javascript:void(0)" @click="goToSigninView()">Sign up?</a>
+                <p class="signup-leftText">Don’t have an account?</p>
+                <a class="signup-rightText" href="javascript:void(0)" @click="goToSigninView()">Sign up?</a>
             </div>
         </div>
     </div>

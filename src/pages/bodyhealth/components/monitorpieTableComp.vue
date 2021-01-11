@@ -24,14 +24,13 @@
             prev-text="prev"
             next-text="next"
             background
-            layout="sizes, prev, pager, next, jumper, total, solt"
+            layout="sizes, prev, pager, next, jumper"
             :page-size="pageSize"
             :total="total"
             :current-page="pageNow"
             @current-change="findPage"
             @size-change="findSize"
           >
-          <el-button :disabled="firstDisabled" @click="toFirstPage">首页</el-button>
           </el-pagination>
         </div>
       </el-col>
@@ -122,12 +121,12 @@ export default {
 .number:hover {
   color: white !important;
 }
-th {
+.has-gutter > tr > th {
     font-size: 1.8vmin !important;
     color: #394867 !important;
     padding: 0.75vh 0 !important;
 }
-td {
+.el-table__row > td {
   font-size: 1.8vmin !important;
   color: #707b91 !important;
   padding: 0.75vh 0 !important;

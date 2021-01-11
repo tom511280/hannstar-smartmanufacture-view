@@ -2,6 +2,7 @@
 * 運動健康List區域，需要提供無dada img  
 * sidebar缺少用戶管理橘色icon  
 * sidebar open時的icon需要確認
+* 分頁可以用10或15為單位
 
 
 

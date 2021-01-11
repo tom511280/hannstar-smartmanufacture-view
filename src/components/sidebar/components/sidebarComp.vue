@@ -148,25 +148,21 @@ export default {
 }
 .vsm--title {
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 1.7vmin;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.25;
     letter-spacing: normal;
 }
-.vsm--item {
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.25;
-    letter-spacing: normal;
-    color: #707b91;
-}
-
 .vsm--link.vsm--link_level-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 1.7vmin;
+  color: #707b91;
+  height: 5vh;
   padding-left: 0.5vw !important;
   padding-right: 0.5vw !important;
   padding-top: 0.25vh !important;
@@ -191,8 +187,8 @@ export default {
 
 
 .base-sidebar-icon {
-  height: 1.5vh !important;
-  width: 1vw !important;
+  height: 2vh !important;
+  width: 1.5vw !important;
 }
 .vsm--item.vsm--item_open > a > .home-icon {
   background-image: url("../../../assets/img/sidebar/icons-orange-member.svg");

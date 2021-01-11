@@ -8,6 +8,7 @@
     font-size: 1vmin;
     line-height: 1vmin;
 }
+/*text*/
 h1, h2, h3, h4, h5 {
     display: flex;
     flex-direction: column;
@@ -19,12 +20,33 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 0px;
     margin-top: 0px;
 }
-h1 {font-size: 32px;} /*32*/
-h2 {font-size: 28px;} /*28*/
+h1 {font-size: 4vmin;} /*44*/
+h2 {font-size: 2.5vmin;} /*28*/
 h3 {font-size: 2vmin;} /*24*/
 h4 {font-size: 1.7vmin;} /*18*/
 h5 {font-size: 1.5vmin;} /*16*/
 
+.description {
+  font-size: 1.5vmin;
+}
+
+/*error text css*/
+.errortext {
+  height: 0.2vh;
+  width: 18vw;
+  font-size: 1.4vmin;
+  color: #e43030;
+  margin-top: 0.2vh;
+}
+.input-error-style {
+  border-color: red !important;
+}
+.input-no-error-style {
+  border-color: #e8e8e8 !important;
+}
+
+
+/*input*/
 input[type=text], input[type=email], input[type=password], select {
   font-size: 1.5vmin;
   color: #394867;
@@ -34,10 +56,14 @@ input[type=text], input[type=email], input[type=password], select {
   border: solid 1px #dddfe5;
   border-radius: 8px;
 }
-
+/*輸入框內的文字*/
+::-webkit-input-placeholder {
+  font-size: 1.5vmin;
+  color: #bbbfca;
+}
 /*button*/
 button, [type="button"] {
-  font-size: 1.3vmin;
+  font-size: 1.5vmin;
 }
 .button-confirm {
   height: 3.5vh;
@@ -78,10 +104,10 @@ input[type=checkbox] {
 
 /*table*/
 th, tr {
-  font-size: 1.8vmin;
+  font-size: 1.7vmin;
 }
 td {
-  font-size: 1.7vmin;
+  font-size: 1.6vmin;
 }
 
 /*modal*/

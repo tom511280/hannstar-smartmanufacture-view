@@ -1,7 +1,7 @@
 <template>
 <div class="sidebarHeadComp">
-    <div class="loginTitle loginTitle_C fontbase">{{ currentTime }}</div>
-    <div class="loginDescribution fontbase">{{currentDay}}</div>
+    <div class="loginTitle loginTitle_C"><h1>{{ currentTime }}</h1></div>
+    <div class="loginDescribution description">{{currentDay}}</div>
 </div>
 </template>
 <style  scoped>

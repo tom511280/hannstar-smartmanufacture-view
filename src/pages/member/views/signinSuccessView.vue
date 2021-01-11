@@ -6,14 +6,14 @@
         </div>
         <div class="loginRright loginRright_C">
             <img class="icon_large_success" src="@/assets/img/login/icon-large-success.svg">
-            <div class="loginTitle fontbase">Welcome</div>
+            <div class="loginTitle"><h2>Welcome</h2></div>
+            <div class="loginDescribution description loginDescribution_C_F">You’ll receive a confirmation letter.</div>
+            <div class="loginDescribution description loginDescribution_C_S">Check out your mailbox.</div>
+
+            <!-- <div class="loginTitle fontbase">Welcome</div>
             <div class="loginDescribution loginDescribution_C_F fontbase">You’ll receive a confirmation letter.</div>
-            <div class="loginDescribution loginDescribution_C_S fontbase">Check out your mailbox.</div>
-            <div class="login-btn-area-external login-btn-area-external_C">
-                <button class="login-btn btn" type="button" @click="exploreAround()">
-                    <p class="login-btn-text fontbase">Explore Around</p>
-                </button>
-            </div>
+            <div class="loginDescribution loginDescribution_C_S fontbase">Check out your mailbox.</div> -->
+            <button type="button" class="btn button-confirm login-btn-area login-btn-area_C" @click="exploreAround()">Explore Around</button>
         </div>
     </div>
   </div>
@@ -61,13 +61,13 @@ export default {
   margin-top: 3vh;
   margin-bottom: 2vh;
 }
-.login-btn-area-external_C {
+.login-btn-area_C {
   margin-bottom: 2vh;
 }
 .loginDescribution_C_F {
-  margin-bottom: 0vh;
+  margin-bottom: 0.5vh;
 }
 .loginDescribution_C_S {
-  margin-top: 0vh;
+  margin-top: 0.5vh;
 }
 </style>

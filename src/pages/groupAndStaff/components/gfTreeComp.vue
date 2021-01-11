@@ -37,8 +37,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn conFirmbutton" @click="addNode()">Confirm</button>
-                        <button type="button" id="gfAddModalCBT" class="btn cancelbutton" data-bs-dismiss="modal">Cancel</button>
+                        <button @click="addNode()" type="button" class="btn button-confirm">Confirm</button>
+                        <button id="gfAddModalCBT" type="button" class="btn button-cancel" data-bs-dismiss="modal">Cancel</button>
                     </div>
                 </div>
             </div>
@@ -59,8 +59,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn conFirmbutton" @click="editNode()">Confirm</button>
-                        <button type="button" id="gfEditModalCBT" class="btn cancelbutton" data-bs-dismiss="modal" >Cancel</button>
+                        <button @click="editNode()" type="button" class="btn button-confirm">Confirm</button>
+                        <button id="gfEditModalCBT" type="button" class="btn button-cancel" data-bs-dismiss="modal">Cancel</button>
                     </div>
                 </div>
             </div>
@@ -149,7 +149,7 @@ export default {
    flex-direction: row;
    justify-content: center;
    align-items: center;
-   height: 10%;
+   height: 6.5vh;
    width: 100%;
    border-bottom: 2px solid #9ba4b4;
    padding-bottom: 2.5%;
@@ -162,6 +162,7 @@ export default {
   height: 100%;
   width: 25%;
   margin-left: 5%;
+  font-size: 1.7vmin;
 }
 .gfTreeComp-header-content {
   display: flex;
@@ -173,9 +174,10 @@ export default {
   padding-right: 9%;
 }
 .gfTreeComp-header-content > p {
-   margin-bottom: 0px;
+   margin-bottom:0.75vh ;
    color: #2f87fd;
    cursor: pointer;
+   font-size: 1.5vmin;
 }
 .gfTreeComp-info {
    height: 90%;

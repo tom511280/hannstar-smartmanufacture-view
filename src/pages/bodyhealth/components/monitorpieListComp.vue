@@ -7,7 +7,7 @@
         </tr>
       </thead>
       <tbody v-if="datas.length > 0">
-        <tr v-for="(dataItem, index) in datas.slice(0,5)" :key="dataItem.value" :value="dataItem.value" :class="{ wtdclass: (index%2 == 1), gtdclass: (index%2 == 0) }">
+        <tr v-for="(dataItem, index) in datas.slice(0,6)" :key="dataItem.value" :value="dataItem.value" :class="{ wtdclass: (index%2 == 1), gtdclass: (index%2 == 0) }">
           <td v-for="fieldkey in fieldkeys" :key="fieldkey" >{{dataItem[fieldkey]}}</td>
         </tr>
       </tbody>
@@ -83,6 +83,7 @@ th, td {
   color: #707b91;
 }
 .nodata-area-div > img {
+  margin-top: 4vh;
   height: 7.5vh;
   width: 7.5vw;
 }

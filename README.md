@@ -44,10 +44,11 @@ https://echarts.apache.org/examples/zh/index.html#chart-type-pie
 git add .
 
 git commit -m '
-2020-01-06變更
+2020-01-11變更
 Author: TomWu
 Content :
-2.調整RM檔
+1.調整登入功能字體大小
+2.調整組織人員字體大小
 '
 git push origin master
 

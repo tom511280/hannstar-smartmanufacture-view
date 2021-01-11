@@ -5,8 +5,8 @@
           <img src="@/assets/img/login/img-login.png" srcset="@/assets/img/login/img-login@2x.png 2x,@/assets/img/login/img-login@3x.png 3x">
         </div>
         <div class="loginRright">
-            <div class="loginTitle fontbase">Don’t Worry</div>
-            <div class="loginDescribution fontbase">Let’s reset your password with several steps.</div>
+            <div class="loginTitle"><h2>Don’t Worry</h2></div>
+            <div class="loginDescribution description">Let’s reset your password with several steps.</div>
             <div id="emailArea" class="inputbox-area-external" :class="[this.emailInputErrorClass]">
                 <img class="common-icon" src="@/assets/img/login/icons-email.svg">
                 <div class="common-line"></div>
@@ -15,11 +15,7 @@
             <div>
                 <p class="errortext fontbase input-no-error-style">{{emailErrorMsg}}</p>
             </div>
-            <div class="login-btn-area-external login-btn-area-external_C">
-                <button class="login-btn btn" type="button" @click="sendMail()">
-                    <p class="login-btn-text fontbase">Send</p>
-                </button>
-            </div>
+            <button type="button" class="btn button-confirm login-btn-area login-btn-area_C" @click="sendMail()">Send</button>
             <div class="signup-area-external">
                 <p class="signup-leftText fontbase">If you didn’t receive the mail</p>
                 <a @click="sendMailAgain()" class="signup-rightText fontbase" href="javascript:void(0)">Sent it again</a>
@@ -100,7 +96,7 @@ export default {
 </script>
 <style scoped>
 @import '../../../assets/css/memberCommon.css'; /*引入登入公共樣式*/
-.login-btn-area-external_C{
+.login-btn-area_C{
   margin-top: 1.6vh;
 }
 </style>

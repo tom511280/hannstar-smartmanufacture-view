@@ -5,8 +5,8 @@
           <img src="@/assets/img/login/img-login.png" srcset="@/assets/img/login/img-login@2x.png 2x,@/assets/img/login/img-login@3x.png 3x">
         </div>
         <div class="loginRright">
-            <div class="loginTitle fontbase">Reset your password</div>
-            <div class="loginDescribution fontbase">You can log in with your password soon</div>
+            <div class="loginTitle"><h2>Reset your password</h2></div>
+            <div class="loginDescribution description">You can log in with your password soon</div>
             <div class="inputbox-area-external" :class="[this.passwordInputErrorClass]">
                 <img class="common-icon" src="@/assets/img/login/icons-lock.svg">
                 <div class="common-line"></div>
@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div>
-                <p class="errortext fontbase input-no-error-style">{{passwordErrorMsg}}</p>
+                <p class="errortext input-no-error-style">{{passwordErrorMsg}}</p>
             </div>
             <div class="inputbox-area-external" :class="[this.confirmPasswordInputErrorClass]">
                 <img class="common-icon" src="@/assets/img/login/icons-lock.svg">
@@ -29,13 +29,9 @@
                 </div>
             </div>
             <div>
-                <p class="errortext fontbase input-no-error-style">{{confirmPasswordErrorMsg}}</p>
+                <p class="errortext input-no-error-style">{{confirmPasswordErrorMsg}}</p>
             </div>
-            <div class="login-btn-area-external login-btn-area-external_C">
-                <button class="login-btn btn" type="button" @click="resetPassword()">
-                    <p class="login-btn-text fontbase">Reset password</p>
-                </button>
-            </div>
+            <button type="button" class="btn button-confirm login-btn-area login-btn-area_C" @click="resetPassword()">Reset password</button>
         </div>
     </div>
   </div>
@@ -143,7 +139,7 @@ export default {
 </script>
 <style scoped>
 @import '../../../assets/css/memberCommon.css'; /*引入登入公共樣式*/
-.login-btn-area-external_C{
+.login-btn-area_C{
   margin-top: 1.7vh;
 }
 </style>

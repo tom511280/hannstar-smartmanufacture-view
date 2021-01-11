@@ -87,18 +87,16 @@ export default {
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 30%;
+    width: 9vw;
 }
 .gfHeaderComp-item-area-content-description > h1 {
-    margin: 0%;
-    font-family: Roboto;
-    font-size: 44px;
+    margin-bottom: 0.5vh;
     font-weight: 500;
     color: #ffffff;
+    margin-bottom: 0.5vh;
 }
 .gfHeaderComp-item-area-content-description > p {
-    margin: 0%;
-    font-size: 16px;
+    margin-bottom: 0.5vh;
     color: #ffffff;
 }
 .gfHeaderComp-item-area-content-line {
@@ -125,26 +123,32 @@ export default {
     align-items: center;
     height: 50%;
     width: 100%;
+    font-size: 1.7vmin;
 }
 .detail-item > div {
     color: #ffffff;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 0.25vw;
+    margin-right: 0.25vw;
+    font-size: 1.7vmin;
 }
 .detail-item > div:nth-child(3){
     margin-left: 1%;
     opacity: 0.4;
     border-radius: 14px;
     background-color: #000000;
-    padding: 3px 10px 3px 11px;
+    padding: 1.25vh 0.25vw 1.25vh 0.25vw;
+    padding-top: 1.25vh;
+    padding-bottom: 1.25vh;
+    padding-right: 0.25vw;
+    padding-left: 0.25vw;
 }
 .gfHeaderComp-item-area-img {
     height: 100%;
-    width: 22.5%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    padding-right: 4%;
-    padding-left: 4%;
+    width: 7.5vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-right: 2vw;
+    padding-left: 1.5vw;
 }
 .gfHeaderComp-item-area-img > img{
     height: 100%;

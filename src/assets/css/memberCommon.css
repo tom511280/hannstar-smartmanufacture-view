@@ -1,9 +1,3 @@
-/*輸入框內的文字*/
-::-webkit-input-placeholder {
-  font-size: 16px;
-  color: #bbbfca;
-}
-
 
 .loginBg {
   display: flex;
@@ -43,18 +37,17 @@
 }
 .loginTitle {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: 22px;
-  font-weight: bold;
-  line-height: 1.27;
-  color: #394867;
+  align-items: center;
+  width: 100%;
+  height: 5vh;
 }
 .loginDescribution {
   display: flex;
   justify-content: center;
   margin-top: 0.7vh;
   margin-bottom: 2vh;
-  font-size: 15px;
   color: #9ba4b4;
 }
 
@@ -133,7 +126,6 @@
 }
 .ckeckBox-area-external > .ckeckBox-area-rightText {
   font-family: Roboto;
-  font-size: 14px;
   color: #9ba4b4;
   /*置右*/
   flex: 1;
@@ -142,12 +134,12 @@
 }
 
 /*btn about css*/
-.login-btn-area-external {
+.login-btn-area {
   margin-top: 3.4vh;
   width: 18vw;
   height: 4vh;
 }
-.login-btn-area-external > .login-btn {
+/* .login-btn-area-external > .login-btn {
   width: 100%;
   height: 100%;
   border-radius: 6px;
@@ -163,7 +155,7 @@
   font-size: 16px;
   text-align: center;
   color: #ffffff;
-}
+} */
 
 /*signup text css*/
 .signup-area-external {
@@ -172,32 +164,17 @@
   margin-top: 1.2vh;
 }
 .signup-leftText {
-  font-size: 14px;
+  /* font-size: 14px; */
   color: #9ba4b4;
   text-align: right;
   white-space:nowrap;
 }
 .signup-rightText {
   margin-left: 0.4vw;
-  font-size: 14px;
+  /* font-size: 14px; */
   color: #707b91;
   text-decoration: none;
 }
-
-/*error text css*/
-.errortext {
-  height: 0.01vh;
-  width: 18vw;
-  font-size: 14px;
-  color: #e43030;
-}
-.input-error-style {
-  border-color: red !important;
-}
-.input-no-error-style {
-  border-color: #e8e8e8 !important;
-}
-
 
 
 
