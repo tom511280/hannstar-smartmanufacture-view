@@ -87,13 +87,13 @@ export default {
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 9vw;
+    width: 11vw;
 }
 .gfHeaderComp-item-area-content-description > h1 {
     margin-bottom: 0.5vh;
     font-weight: 500;
     color: #ffffff;
-    margin-bottom: 0.5vh;
+    margin-bottom: 1.5vh;
 }
 .gfHeaderComp-item-area-content-description > p {
     margin-bottom: 0.5vh;

@@ -15,13 +15,16 @@ const mutations = {
     state.statisticsData.bandNotBindNum = 0;
     state.statisticsData.errorCodeList = [];
 
-    state.group.groupData = [];
-    state.group.loadingErrorCodeList = [];
-    state.group.updateErrorCodeList = [];
+    state.groupData.groupData = [];
+    state.groupData.loadingErrorCodeList = [];
+    state.groupData.updateErrorCodeList = [];
 
-    state.groupStaff.groupStaffData = [];
-    state.groupStaff.loadingErrorCodeList = [];
-    state.groupStaff.updateErrorCodeList = [];
+    state.groupStaffData.groupStaffData = [];
+    state.groupStaffData.fields = ["NO","Name","Genfer","Phone NO.","ID","Attendance","Group","Detail"];
+    state.groupStaffData.fieldkeys = ["id","name","sex","phone","bandNo","needAttnd","orgName","detail"];
+    state.groupStaffData.fieldsWidth = ["60","120","60","100","120","90","80","360"]
+    state.groupStaffData.loadingErrorCodeList = [];
+    state.groupStaffData.updateErrorCodeList = [];
   },
   [LOAD_STS](state, payload) {
     if(payload.result != null) {
@@ -44,6 +47,12 @@ const mutations = {
     }
   },
   [LOAD_GROUP_STAFF](state, payload) { 
+    if(payload.result != null) {
+      let groupStaffDataNew = Object.assign({}, state.groupStaffData);
+      groupStaffDataNew.groupStaffList = payload.result.groupStaffData.groupStaffList;
+      groupStaffDataNew.loadingErrorCodeList = payload.result.groupStaffData.loadingErrorCodeList;
+      state.groupStaffData = Object.assign({}, state.groupStaffData, groupStaffDataNew)
+    }
   },
 };
 

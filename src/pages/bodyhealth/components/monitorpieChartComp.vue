@@ -27,7 +27,7 @@ export default {
                                   left: "60%",
                                   top: "45%",
                                   textStyle: {
-                                    fontSize: "14"
+                                    fontSize: "12"
                                   },
                                   data:[
                                         {name:'nodata',icon:'image://'},

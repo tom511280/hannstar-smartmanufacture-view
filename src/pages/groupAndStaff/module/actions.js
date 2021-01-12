@@ -96,7 +96,33 @@ const actions = {
     });
   },
   loadGroupStaff({commit},payload) {
-    commit(LOAD_GROUP_STAFF, payload);
+    // 0 = success
+    // 1 = error
+    Vue.prototype.$axios({
+      url:'testdata/groupAndStaff/groupStaffData.json',
+      params:{}
+    }).then((resp) => { // 回應正常
+
+      const respData = resp.data.data.list;
+      let groupList = respData
+
+      //TODO 後續補上errorcode判斷
+      payload.result = {
+        groupStaffData:{
+          groupStaffList:[],
+          loadingErrorCodeList:[],
+        },
+      }
+      payload.result.groupStaffData.groupStaffList = groupList;
+      payload.result.groupStaffData.loadingErrorCodeList.push(0);
+      commit(LOAD_GROUP_STAFF, payload);
+
+    }).catch((error) => { // 異常處理
+      window.console.error(error);
+      payload.result.groupStaffData.loadingErrorCodeList.push(1);
+      window.alert(error)
+      commit(LOAD_GROUP_STAFF, payload);
+    });
   },
 };
 

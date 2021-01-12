@@ -121,14 +121,4 @@ export default {
 .number:hover {
   color: white !important;
 }
-.has-gutter > tr > th {
-    font-size: 1.8vmin !important;
-    color: #394867 !important;
-    padding: 0.75vh 0 !important;
-}
-.el-table__row > td {
-  font-size: 1.8vmin !important;
-  color: #707b91 !important;
-  padding: 0.75vh 0 !important;
-}
 </style>

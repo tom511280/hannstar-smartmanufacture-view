@@ -8,6 +8,7 @@
               <gfTreeComp ref="gfTree"></gfTreeComp>
             </div>
             <div class="groupAndStaffView-content-area-info">
+              <gfTableComp ref="groupStaff"></gfTableComp> 
             </div>
         </div>
     </div>
@@ -15,10 +16,12 @@
 <script>
 import gfHeaderComp from '@/pages/groupAndStaff/components/gfHeaderComp.vue'
 import gfTreeComp from '@/pages/groupAndStaff/components/gfTreeComp.vue'
+import gfTableComp from '@/pages/groupAndStaff/components/gfTableComp.vue'
 export default {
     components: {
         gfHeaderComp,
         gfTreeComp,
+        gfTableComp
     },
     computed: {
         statisticsData(){
@@ -53,13 +56,12 @@ export default {
         groupStaffData: function(groupStaffData) {
           window.console.log(groupStaffData)
           // groupStaffData
-          // this.$refs.gfHeader.setDatas(
-          //       statisticsData.allNum,
-          //       statisticsData.maleNum,
-          //       statisticsData.femaleNum,
-          //       statisticsData.bandBindNum,
-          //       statisticsData.bandNotBindNum,
-          // )
+          this.$refs.groupStaff.setTable(
+                groupStaffData.groupStaffList, 
+                groupStaffData.fields,
+                groupStaffData.fieldkeys,
+                groupStaffData.fieldsWidth
+          )
         },
     },
     mounted(){
@@ -70,6 +72,8 @@ export default {
       this.$store.dispatch({type:'groupAndStaffModule/loadstatisticsData'})
       //載入組織資料
       this.$store.dispatch({type:'groupAndStaffModule/loadGroup'})
+      //載入組織人員資料
+      this.$store.dispatch({type:'groupAndStaffModule/loadGroupStaff'})
     },
     methods: {
       handleNodeClick(data) {
@@ -88,7 +92,7 @@ export default {
     width: 100%;
 }
 .groupAndStaffView-header-area {
-    height: 11.5%;
+    height: 15%;
     width: 100%;
     margin-bottom: 2%;
 }
@@ -97,7 +101,7 @@ export default {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 86.5%;
+    height: 85%;
     width: 100%;
 }
 .groupAndStaffView-content-area-tree{

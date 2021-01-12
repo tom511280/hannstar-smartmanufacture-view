@@ -84,7 +84,7 @@ export default {
     },
     mounted(){
       //初始化時執行
-      this.$store.dispatch({type:'commonModule/init'})
+      // this.$store.dispatch({type:'commonModule/init'})
     },
     methods: {
       setTree(datas){

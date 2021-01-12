@@ -169,7 +169,7 @@ export default {
 }
 </script>
 <style scoped>
-.modal-dialog > .modal-content {
+.modal-content {
   height: 25vh;
   width: 20vw;
 }
@@ -196,11 +196,6 @@ export default {
     align-items: center;
     width: 45%;
     height: 100%;
-    border-radius: 8px;
-    background-color: #ffffff;
-    /* font-size: 15px; */
-    /* line-height: 1.33; */
-    color: #394867;
 }
 
 </style>

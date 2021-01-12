@@ -55,6 +55,11 @@ input[type=text], input[type=email], input[type=password], select {
   line-height: 1.33;
   border: solid 1px #dddfe5;
   border-radius: 8px;
+  height: 3.5vh;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 /*輸入框內的文字*/
 ::-webkit-input-placeholder {
@@ -104,10 +109,20 @@ input[type=checkbox] {
 
 /*table*/
 th, tr {
-  font-size: 1.7vmin;
+  font-size: 1.4vmin;
 }
 td {
-  font-size: 1.6vmin;
+  font-size: 1.4vmin;
+}
+.has-gutter > tr > th {
+  font-size: 1.8vmin !important;
+  color: #394867 !important;
+  padding: 0.75vh 0 !important;
+}
+.el-table__row > td {
+font-size: 1.8vmin !important;
+color: #707b91 !important;
+padding: 0.75vh 0 !important;
 }
 
 /*modal*/
@@ -119,6 +134,9 @@ td {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.modal-content {
+  border: none;
 }
 .modal-body-content {
   height: 100%;

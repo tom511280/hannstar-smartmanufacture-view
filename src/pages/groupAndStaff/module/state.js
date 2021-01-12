@@ -14,6 +14,9 @@ const state = {
   },
   groupStaffData:{
     groupStaffList:[],
+    fields:[],
+    fieldkeys:[],
+    fieldsWidth:[],
     loadingErrorCodeList:[],
     updateErrorCodeList:[],
   }

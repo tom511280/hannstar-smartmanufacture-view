@@ -1,6 +1,6 @@
 <template>
     <div class="monitorpieSearchHeaderComp">
-        <h4>{{this.title}}</h4>
+        <h3>{{this.title}}</h3>
         <div class="monitorpieSearchHeaderComp-img-external">
             <img class="setting-icon" src="@/assets/img/common/icon-setting.svg" data-bs-toggle="modal" :data-bs-target="settingModalId">
         </div>
@@ -16,10 +16,10 @@
     height: 100%;
     
 }
-.monitorpieSearchHeaderComp > h4 {
+.monitorpieSearchHeaderComp > h3 {
     padding-top: 2vh;
 }
-.monitorpieSearchHeaderComp > h4 {
+.monitorpieSearchHeaderComp > h3 {
     width: 40%;
     height: 100%;
 }
