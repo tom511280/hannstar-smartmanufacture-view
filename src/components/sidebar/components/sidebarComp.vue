@@ -225,5 +225,14 @@ export default {
   background-image: url("../../../assets/img/sidebar/icons-blue-member-setting.svg");
   background-size: 100% 100%;
 }
+/*游標移動到項目時的樣式*/
+.vsm--link.vsm--link_level-2{
+  padding-left: 2.3vw !important;
+  color: #707b91 !important;
+}
+.vsm--link.vsm--link_level-2:hover {
+  color: #394867 !important;
+  background-color: #f1f6f9 !important;
+}
 
 </style>

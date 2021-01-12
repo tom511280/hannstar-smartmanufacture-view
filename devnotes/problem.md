@@ -12,7 +12,8 @@
 * 修正密碼可視icon點及區域過長問題(調整外部div寬度)
 * 將登入頁icon換成svg
 * 將slidebar的icon換成svg
-
+* 修改登入頁checkbox樣式
+* 修掉autocomplete藍色
 
 
 # 2021-01-07

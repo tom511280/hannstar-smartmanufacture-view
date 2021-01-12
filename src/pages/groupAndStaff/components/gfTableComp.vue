@@ -16,10 +16,9 @@
               style="width: 100%;height:80%;white-space:nowrap;"
               :header-cell-style="tableHeaderColor"
               show-overflow-tooltip
-              height="80%"
             >
               <!--loop data-->
-              <el-table-column v-for="(field, index) in fields" :key="field" :label="field" :width="fieldsWidth[index]" show-overflow-tooltip>
+              <el-table-column v-for="(field, index) in fields" :key="field" :label="field" :min-width="fieldsWidth[index]" show-overflow-tooltip>
                 <template slot-scope="scope">
                   <span v-if="fieldkeys[index] != 'detail'">{{ scope.row[fieldkeys[index]] }}</span>
                   <span v-if="fieldkeys[index] == 'detail'">

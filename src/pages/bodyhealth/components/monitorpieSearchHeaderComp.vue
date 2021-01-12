@@ -39,11 +39,11 @@
     cursor: pointer;
     // width: 15%;
     width: 1.8vw;
-    height: 3.2vh;
-    padding-left: 0.25vw;
-    padding-right: 0.25vw;
-    padding-top: 0.25vh;
-    padding-bottom: 0.25vh;
+    height: 3.5vh;
+    padding-left: 0.3vw;
+    padding-right: 0.3vw;
+    padding-top: 0.3vh;
+    padding-bottom: 0.3vh;
 }
 </style>
 <script>

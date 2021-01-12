@@ -22,7 +22,7 @@ const mutations = {
     state.groupStaffData.groupStaffData = [];
     state.groupStaffData.fields = ["NO","Name","Genfer","Phone NO.","ID","Attendance","Group","Detail"];
     state.groupStaffData.fieldkeys = ["id","name","sex","phone","bandNo","needAttnd","orgName","detail"];
-    state.groupStaffData.fieldsWidth = ["60","120","60","100","120","90","80","360"]
+    state.groupStaffData.fieldsWidth = ["20","40","30","60","60","40","40","90"]
     state.groupStaffData.loadingErrorCodeList = [];
     state.groupStaffData.updateErrorCodeList = [];
   },

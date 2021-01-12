@@ -47,7 +47,7 @@ git commit -m '
 2020-01-12變更
 Author: TomWu
 Content :
-1.增加組織人員table
+1.修正問題
 '
 git push origin master
 
