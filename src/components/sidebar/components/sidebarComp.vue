@@ -27,14 +27,17 @@ export default {
           icon: 'fa base-sidebar-icon home-icon',
           child: [
             {
-              title: 'Overview'
+              title: 'Overview',
+              href: '/overview/overviewView',
+              
             },
             {
               title: 'Instant Alert'
             },
             {
               title: 'Body Health',
-              href: '/bodyhealthView',
+              href: '/bodyhealth/bodyhealthView',
+              alias: ['/bodyhealth/bodyhealthView', '/bodyhealth/bodyhealthDetailView']
             },
             {
               title: 'Movement'
@@ -44,7 +47,7 @@ export default {
             },
             {
               title: 'Attendance',
-              href: '/attendanceView',
+              href: '/attendance/attendanceView',
             },
             {
               title: 'Notification'
@@ -69,7 +72,7 @@ export default {
           child: [
             {
               title: 'Group & Staffs',
-              href: '/groupAndStaffView'
+              href: '/groupAndStaff/groupAndStaffView'
             },
             {
               title: 'Device'
@@ -173,6 +176,7 @@ export default {
 
 .vsm--list {
   background-color:#fff !important;
+  padding:0px !important;
 }
 .v-sidebar-menu.vsm_expanded .vsm--item .vsm--link_level-1 .vsm--icon {
   background-color:#fff !important;
@@ -235,5 +239,12 @@ export default {
   color: #394867 !important;
   background-color: #f1f6f9 !important;
 }
-
+.vsm--link_level-2.vsm--link_active {
+  color: #394867 !important;
+  background-color: #f1f6f9 !important;
+  font-weight: 500;
+}
+.vsm--link.vsm--link_level-1.vsm--link_active{
+  box-shadow: 3px 0px 0px 0px white inset !important;
+}
 </style>

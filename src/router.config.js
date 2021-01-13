@@ -12,22 +12,22 @@ import attendanceView from '@/pages/attendance/views/attendanceView.vue'
 
 let routes = [
     //登入模組
-    {path:'/loginView',component:loginView},
-    {path:'/signinView',component:signinView},
-    {path:'/signinSuccessView',component:signinSuccessView},
-    {path:'/resetPwdView',component:resetPwdView},
-    {path:'/sendResetpwdEmailView',component:sendResetpwdEmailView},
+    {path:'/member/loginView',component:loginView},
+    {path:'/member/signinView',component:signinView},
+    {path:'/member/signinSuccessView',component:signinSuccessView},
+    {path:'/member/resetPwdView',component:resetPwdView},
+    {path:'/member/sendResetpwdEmailView',component:sendResetpwdEmailView},
     //全員態勢
-    {path:'/overviewView',component:overviewView},
+    {path:'/overview/overviewView',component:overviewView},
     //運動健康
-    {path:'/bodyhealthView',component:bodyhealthView},
-    {path:'/bodyhealthDetailView',component:bodyhealthDetailView},
+    {path:'/bodyhealth/bodyhealthView',component:bodyhealthView},
+    {path:'/bodyhealth/bodyhealthDetailView',component:bodyhealthDetailView},
     //組織&&人員
-    {path:'/groupAndStaffView',component:groupAndStaffView},
+    {path:'/groupAndStaff/groupAndStaffView',component:groupAndStaffView},
     //組織&&人員
-    {path:'/attendanceView',component:attendanceView},
+    {path:'/attendance/attendanceView',component:attendanceView},
     //預設
-    {path:'',redirect:'/loginView'},
+    {path:'',redirect:'/member/loginView'},
     {path:'*',component:loginView}
 ]
 

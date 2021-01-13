@@ -76,7 +76,7 @@ export default {
 
       //成功
       if(newErrorCodeList.includes(0)){
-        this.$router.push({ path: '/overviewView'});
+        this.$router.push({ path: '/overview/overviewView'});
       }  
       //驗證是否為空
       if(newErrorCodeList.includes(1)){
@@ -128,10 +128,10 @@ export default {
       else this.passwordInputType = "password";
     },
     goToSigninView(){
-        this.$router.push({ path: '/signinView'});
+        this.$router.push({ path: '/member/signinView'});
     },
     goToSendResetpwdEmailView(){
-        this.$router.push({ path: '/sendResetpwdEmailView'});
+        this.$router.push({ path: '/member/sendResetpwdEmailView'});
     }
   },
   

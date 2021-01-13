@@ -16,6 +16,10 @@ export default {
         attendanceChartComp,
         attendanceTableComp,
   },
+  mounted(){
+      //初始化時執行
+      this.$store.dispatch({type:'commonModule/init'})
+    },
 };
 </script>
 <style scope>

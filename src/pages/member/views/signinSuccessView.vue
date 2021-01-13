@@ -44,7 +44,7 @@ export default {
   },
   methods: {
     exploreAround(){
-      this.$router.push({ path: '/overviewView'});
+      this.$router.push({ path: '/overview/overviewView'});
     }
   },
 }

@@ -148,7 +148,7 @@ export default {
           this.$store.dispatch({type:'bodyhealthModule/loadSports', parameter:bodySportsModule_parameter})
         },
         goPreviousStep(){
-          this.$router.push({ path: '/bodyhealthView'});
+          this.$router.push({ path: '/bodyhealth/bodyhealthView'});
         }
   },
 };

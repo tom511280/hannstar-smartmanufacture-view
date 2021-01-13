@@ -302,7 +302,7 @@ export default {
     },
     methods: {
         goBodyhealthDetailView(){
-            this.$router.push({ path: '/bodyhealthDetailView'});
+            this.$router.push({ path: '/bodyhealth/bodyhealthDetailView'});
         }
     },
 }
