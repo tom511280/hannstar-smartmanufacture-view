@@ -22,7 +22,7 @@ export default {
     padding-left: 1vw;
 }
 .previousStepComp > img {
-    height: 55%;
+    height: 45%;
     cursor: pointer;
     /* width: 5%; */
 }

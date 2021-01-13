@@ -1,5 +1,5 @@
 <template>
-  <div class="signinView">
+  <div class="signinView" @keyup.enter="signin()">
     <div class="loginBg">
         <div class="loginLeft">
           <img src="@/assets/img/login/img-login.png" srcset="@/assets/img/login/img-login@2x.png 2x,@/assets/img/login/img-login@3x.png 3x">

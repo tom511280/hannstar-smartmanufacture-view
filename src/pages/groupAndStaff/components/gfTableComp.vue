@@ -2,9 +2,9 @@
     <div class="gfTableComp">
         <div class="gfTableComp-header-area">
             <h4>Hannstar</h4>
-            <button type="button" class="btn button-confirm">Add Staff</button>
-            <button type="button" class="btn button-confirm">Bulk Import</button>
-            <button type="button" class="btn button-confirm">Bulk Pairing</button>
+            <button type="button" class="btn button-confirm" data-bs-toggle="modal" data-bs-target="#gfAddStaffModal">Add Staff</button>
+            <button type="button" class="btn button-confirm" data-bs-toggle="modal" data-bs-target="#gfImportModal">Bulk Import</button>
+            <button type="button" class="btn button-confirm" data-bs-toggle="modal" data-bs-target="#gfPairingModal">Bulk Pairing</button>
         </div>
         <div class="gfTableComp-search-area">
             <input type="text" placeholder="Name/ Watch No." />
@@ -17,19 +17,23 @@
               :header-cell-style="tableHeaderColor"
               show-overflow-tooltip
             >
+              <!-- <template slot="empty">
+                <div>5555</div>
+              </template> -->
+
               <!--loop data-->
               <el-table-column v-for="(field, index) in fields" :key="field" :label="field" :min-width="fieldsWidth[index]" show-overflow-tooltip>
                 <template slot-scope="scope">
                   <span v-if="fieldkeys[index] != 'detail'">{{ scope.row[fieldkeys[index]] }}</span>
                   <span v-if="fieldkeys[index] == 'detail'">
                     <div class="gfTableComp-table-area-detail">
-                      <p data-bs-toggle="modal" data-bs-target="#gfAddModal">Edit</p>
+                      <p data-bs-toggle="modal" data-bs-target="#gfEditStaffModal">Edit</p>
                       <div class="common-line"></div>
-                      <p data-bs-toggle="modal" data-bs-target="#gfEditModal">Delete</p>
+                      <p data-bs-toggle="modal" data-bs-target="#gfDeleteModal">Delete</p>
                       <div class="common-line"></div>
-                      <p data-bs-toggle="modal" data-bs-target="#gfEditModal">Connect Device</p>
+                      <p data-bs-toggle="modal" data-bs-target="#gfDeviceModal">Connect Device</p>
                       <div class="common-line"></div>
-                      <p data-bs-toggle="modal" data-bs-target="#gfEditModal">Card</p>
+                      <p data-bs-toggle="modal" data-bs-target="#gfCardModal">Card</p>
                     </div>
                   </span>
                 </template> 
@@ -56,168 +60,7 @@
                 </div>
               </el-col>
             </div>
-        </div>
-        <!-- gfTableComp Delete Modal -->
-        <div class="modal fade" id="gfAddModal" tabindex="-1" aria-labelledby="gfEditModal" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5>Add Group</h5>
-                    </div>
-                    <div class="modal-body">
-                        <div class="modal-body-content">
-                            <div class="modal-body-content-sub">
-                                <h5>name</h5>
-                                <input type="text" v-model="addNodeName" />
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button @click="addNode()" type="button" class="btn button-confirm">Confirm</button>
-                        <button id="gfAddModalCBT" type="button" class="btn button-cancel" data-bs-dismiss="modal">Cancel</button>
-                    </div>
-                </div>
-              </div>
-        </div>
-        <!-- gfTableComp Delete Modal -->
-        <div class="modal fade" id="gfAddModal" tabindex="-1" aria-labelledby="gfEditModal" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5>Add Group</h5>
-                    </div>
-                    <div class="modal-body">
-                        <div class="modal-body-content">
-                            <div class="modal-body-content-sub">
-                                <h5>name</h5>
-                                <input type="text" v-model="addNodeName" />
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button @click="addNode()" type="button" class="btn button-confirm">Confirm</button>
-                        <button id="gfAddModalCBT" type="button" class="btn button-cancel" data-bs-dismiss="modal">Cancel</button>
-                    </div>
-                </div>
-              </div>
-        </div>
-        <!-- gfTableComp Connect Device Modal -->
-        <div class="modal fade" id="gfAddModal" tabindex="-1" aria-labelledby="gfEditModal" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5>Add Group</h5>
-                    </div>
-                    <div class="modal-body">
-                        <div class="modal-body-content">
-                            <div class="modal-body-content-sub">
-                                <h5>name</h5>
-                                <input type="text" v-model="addNodeName" />
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button @click="addNode()" type="button" class="btn button-confirm">Confirm</button>
-                        <button id="gfAddModalCBT" type="button" class="btn button-cancel" data-bs-dismiss="modal">Cancel</button>
-                    </div>
-                </div>
-              </div>
-        </div>
-        <!-- gfTableComp Card Modal -->
-        <div class="modal fade" id="gfAddModal" tabindex="-1" aria-labelledby="gfEditModal" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5>Add Group</h5>
-                    </div>
-                    <div class="modal-body">
-                        <div class="modal-body-content">
-                            <div class="modal-body-content-sub">
-                                <h5>name</h5>
-                                <input type="text" v-model="addNodeName" />
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button @click="addNode()" type="button" class="btn button-confirm">Confirm</button>
-                        <button id="gfAddModalCBT" type="button" class="btn button-cancel" data-bs-dismiss="modal">Cancel</button>
-                    </div>
-                </div>
-              </div>
-        </div>
-        <!-- gfTableComp add Modal -->
-        <div class="modal fade" id="gfAddModal" tabindex="-1" aria-labelledby="gfEditModal" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5>Add Group</h5>
-                    </div>
-                    <div class="modal-body">
-                        <div class="modal-body-content">
-                            <div class="modal-body-content-sub">
-                                <h5>name</h5>
-                                <input type="text" v-model="addNodeName" />
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button @click="addNode()" type="button" class="btn button-confirm">Confirm</button>
-                        <button id="gfAddModalCBT" type="button" class="btn button-cancel" data-bs-dismiss="modal">Cancel</button>
-                    </div>
-                </div>
-              </div>
-        </div>
-        <!-- gfTableComp import Modal -->
-        <div class="modal fade" id="gfAddModal" tabindex="-1" aria-labelledby="gfEditModal" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5>Add Group</h5>
-                    </div>
-                    <div class="modal-body">
-                        <div class="modal-body-content">
-                            <div class="modal-body-content-sub">
-                                <h5>name</h5>
-                                <input type="text" v-model="addNodeName" />
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button @click="addNode()" type="button" class="btn button-confirm">Confirm</button>
-                        <button id="gfAddModalCBT" type="button" class="btn button-cancel" data-bs-dismiss="modal">Cancel</button>
-                    </div>
-                </div>
-              </div>
-        </div>
-        <!-- gfTableComp Pairing Modal -->
-        <div class="modal fade" id="gfAddModal" tabindex="-1" aria-labelledby="gfEditModal" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5>Add Group</h5>
-                    </div>
-                    <div class="modal-body">
-                        <div class="modal-body-content">
-                            <div class="modal-body-content-sub">
-                                <h5>name</h5>
-                                <input type="text" v-model="addNodeName" />
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button @click="addNode()" type="button" class="btn button-confirm">Confirm</button>
-                        <button id="gfAddModalCBT" type="button" class="btn button-cancel" data-bs-dismiss="modal">Cancel</button>
-                    </div>
-                </div>
-              </div>
-        </div>               
+        </div>      
     </div>
 </template>
 <script>

@@ -11,17 +11,20 @@
               <gfTableComp ref="groupStaff"></gfTableComp> 
             </div>
         </div>
+        <gfModalComp></gfModalComp>
     </div>
 </template>
 <script>
 import gfHeaderComp from '@/pages/groupAndStaff/components/gfHeaderComp.vue'
 import gfTreeComp from '@/pages/groupAndStaff/components/gfTreeComp.vue'
 import gfTableComp from '@/pages/groupAndStaff/components/gfTableComp.vue'
+import gfModalComp from '@/pages/groupAndStaff/components/gfModalComp.vue'
 export default {
     components: {
         gfHeaderComp,
         gfTreeComp,
-        gfTableComp
+        gfTableComp,
+        gfModalComp
     },
     computed: {
         statisticsData(){

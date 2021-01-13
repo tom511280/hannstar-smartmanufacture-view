@@ -69,10 +69,6 @@ th, td {
   white-space:nowrap; 
   text-align: left;
 }
-.nodata-area-tbody {
-  // background-color: white;
-  // height: 12.5vh;
-}
 .nodata-area-div {
   display: flex;
   flex-direction: column;
@@ -81,14 +77,6 @@ th, td {
   height: 15vh;
   background-color: white;
   color: #707b91;
-}
-.nodata-area-div > img {
-  margin-top: 4vh;
-  height: 7.5vh;
-  width: 7.5vw;
-}
-.nodata-area-div > p {
-  margin-top: 0.5vh;
 }
 .tdclass-nodatatdclass {
   border-style:none;

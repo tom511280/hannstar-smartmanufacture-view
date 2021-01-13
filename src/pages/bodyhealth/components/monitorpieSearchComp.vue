@@ -53,7 +53,7 @@ export default {
 .monitorpieSearchComp-select {
     border-radius: 8px;
     height: 3.5vh;
-    width: 55vw;
+    width: 15vw;
     margin-right: 1vw;
     // font-size: 15px;
 }

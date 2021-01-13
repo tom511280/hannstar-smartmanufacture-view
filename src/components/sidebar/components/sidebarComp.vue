@@ -27,26 +27,27 @@ export default {
           icon: 'fa base-sidebar-icon home-icon',
           child: [
             {
-              title: 'page'
+              title: 'Overview'
             },
             {
-              title: 'Page'
+              title: 'Instant Alert'
             },
             {
               title: 'Body Health',
               href: '/bodyhealthView',
             },
             {
-              title: 'Page'
+              title: 'Movement'
             },
             {
-              title: 'Page'
+              title: 'Body Temperature'
             },
             {
-              title: 'Page'
+              title: 'Attendance',
+              href: '/attendanceView',
             },
             {
-              title: 'Page'
+              title: 'Notification'
             },
           ]
         },
@@ -55,10 +56,10 @@ export default {
           icon: 'fa base-sidebar-icon pm-icon',
           child: [
             {
-              title: 'page'
+              title: 'Personal Monitor'
             },
             {
-              title: 'Page'
+              title: 'Exposure Track'
             },
           ]
         },
@@ -71,13 +72,13 @@ export default {
               href: '/groupAndStaffView'
             },
             {
-              title: 'Page'
+              title: 'Device'
             },
             {
-              title: 'Page'
+              title: 'Locations'
             },
             {
-              title: 'Page'
+              title: 'E-Fences'
             },
           ]
         },
@@ -86,10 +87,10 @@ export default {
           icon: 'fa base-sidebar-icon us-icon',
           child: [
             {
-              title: 'page'
+              title: 'Center'
             },
             {
-              title: 'Page'
+              title: 'Setting'
             },
           ]
         }

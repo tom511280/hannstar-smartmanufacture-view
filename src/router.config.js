@@ -7,7 +7,7 @@ import overviewView from '@/pages/overview/views/overviewView.vue'
 import bodyhealthView from '@/pages/bodyhealth/views/bodyhealthView.vue'
 import bodyhealthDetailView from '@/pages/bodyhealth/views/bodyhealthDetailView.vue'
 import groupAndStaffView from '@/pages/groupAndStaff/views/groupAndStaffView.vue'
-
+import attendanceView from '@/pages/attendance/views/attendanceView.vue'
 
 
 let routes = [
@@ -24,6 +24,8 @@ let routes = [
     {path:'/bodyhealthDetailView',component:bodyhealthDetailView},
     //組織&&人員
     {path:'/groupAndStaffView',component:groupAndStaffView},
+    //組織&&人員
+    {path:'/attendanceView',component:attendanceView},
     //預設
     {path:'',redirect:'/loginView'},
     {path:'*',component:loginView}

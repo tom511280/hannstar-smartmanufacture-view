@@ -155,7 +155,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .nav-link {
-  height: 4vh;
+  
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -164,6 +164,7 @@ export default {
   padding-left: 0.5vw;
   padding-right: 0.5vw;
   font-weight: 500;
+  height: 4vh;
   // font-size: ;
 }
 .nav-link > h4 {

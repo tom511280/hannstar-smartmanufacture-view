@@ -7,6 +7,12 @@
         show-overflow-tooltip
         height="80%"
       >
+        <template slot="empty">
+          <div class="nodata-area-div">
+              <img class="nodata-area-img" src="@/assets/img/common/img-nodata.svg" alt="">
+              <p>No data</p>
+          </div>
+        </template>
         <!--loop data-->
         <el-table-column v-for="(field, index) in Allfields" :key="field" :label="field" show-overflow-tooltip>
           <template slot-scope="scope">
@@ -24,13 +30,14 @@
             prev-text="prev"
             next-text="next"
             background
-            layout="sizes, prev, pager, next, jumper"
+            layout="sizes, prev, pager, next, jumper, slot"
             :page-size="pageSize"
             :total="total"
             :current-page="pageNow"
             @current-change="findPage"
             @size-change="findSize"
           >
+          <span>pages</span>
           </el-pagination>
         </div>
       </el-col>

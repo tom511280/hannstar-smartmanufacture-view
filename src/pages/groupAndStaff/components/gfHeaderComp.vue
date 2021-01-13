@@ -23,10 +23,22 @@
             </div>
         </div>
         <div class="gfHeaderComp-item2">
-            <!-- {{this.bandBindNum}} -->
+            <div class="gfHeaderComp-item2-area-content-description">
+                <h1>2,010</h1>
+                <p>With watches</p>
+            </div>
+            <div class="gfHeaderComp-item-area-img">
+                <img src="@/assets/img/groupAndStaff/icon-smartwatch-1.svg" alt="">
+            </div>
         </div>
         <div class="gfHeaderComp-item3">
-            <!-- {{this.bandNotBindNum}} -->
+            <div class="gfHeaderComp-item2-area-content-description">
+                <h1>335</h1>
+                <p>Unmatched</p>
+            </div>
+            <div class="gfHeaderComp-item-area-img">
+                <img src="@/assets/img/groupAndStaff/icon-smartwatch-2.svg" alt="">
+            </div>
         </div>
     </div>
 </template>
@@ -74,28 +86,46 @@ export default {
     background-color: #7c72a9;
 }
 .gfHeaderComp-item2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
     background-color: #007892;
     margin-left: 2%;
     margin-right: 2%;
 }
 .gfHeaderComp-item3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
     background-color: #3797a4;
 }
 .gfHeaderComp-item-area-content-description {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100%;
     width: 11vw;
+    padding-left: 2vw;
 }
-.gfHeaderComp-item-area-content-description > h1 {
+.gfHeaderComp-item2-area-content-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    width: vw;
+    padding-left: 2vw;
+}
+.gfHeaderComp-item-area-content-description > h1, .gfHeaderComp-item2-area-content-description > h1 {
     margin-bottom: 0.5vh;
     font-weight: 500;
     color: #ffffff;
     margin-bottom: 1.5vh;
 }
-.gfHeaderComp-item-area-content-description > p {
+.gfHeaderComp-item-area-content-description > p, .gfHeaderComp-item2-area-content-description > p {
     margin-bottom: 0.5vh;
     color: #ffffff;
 }

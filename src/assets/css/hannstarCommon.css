@@ -25,7 +25,10 @@ h2 {font-size: 2.5vmin;} /*28*/
 h3 {font-size: 2vmin;} /*24*/
 h4 {font-size: 1.7vmin;} /*18*/
 h5 {font-size: 1.5vmin;} /*16*/
-
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 .description {
   font-size: 1.5vmin;
 }
@@ -47,7 +50,11 @@ h5 {font-size: 1.5vmin;} /*16*/
 
 
 /*input*/
-input[type=text], input[type=email], input[type=password], select {
+input[type=text], 
+input[type=email], 
+input[type=password], 
+/* input[type=file],  */
+select {
   font-size: 1.5vmin;
   color: #394867;
   border-radius: 8px;
@@ -56,6 +63,21 @@ input[type=text], input[type=email], input[type=password], select {
   border: solid 1px #dddfe5;
   border-radius: 8px;
   height: 3.5vh;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+textarea {
+  font-size: 1.5vmin;
+  color: #394867;
+  border-radius: 8px;
+  background-color: #ffffff;
+  line-height: 1.33;
+  border: solid 1px #dddfe5;
+  border-radius: 8px;
+  /* height: 5.5vh; */
+  width: 15vw;
   padding-left: 1%;
   padding-right: 1%;
   padding-top: 1%;
@@ -85,24 +107,23 @@ input[type=checkbox]:not(old):checked + label{
 input[type='checkbox'] {
   cursor: pointer;
   position: relative;
-  width: 0.85vw;
-  height: 1.8vh;
+  width: 0.95vw;
+  height: 1.9vh;
   font-size: 0.9rem;
   visibility: hidden;
 }
 input[type=checkbox]:after {
   position: absolute;
-  width: 0.85vw;
-  height: 1.8vh;
+  width: 0.95vw;
+  height: 1.9vh;
   top: 0;
   content: " ";
   color: black;
   display: inline-block;
   visibility: visible;
-  /* padding: 0.1vh 0.1vw; */
-  border-radius: 3px;
-  background:#FFFFFF;
-  border:1px solid #DDDDDD;
+  border-radius: 5px;
+  box-shadow: 0 7px 64px 0 rgba(0, 0, 0, 0.07);
+  border: solid 1px #bbbfca;
 }
 
 input[type='checkbox']:checked::after {
@@ -122,12 +143,16 @@ button, [type="button"] {
   font-size: 1.5vmin;
 }
 .button-confirm {
+  padding-left: 0.75vw;
+  padding-right: 0.75vw;
   height: 3.5vh;
   border-radius: 6px;
   background-color: #394867;
   color: #ffffff;
 }
 .button-cancel {
+  padding-left: 0.75vw;
+  padding-right: 0.75vw;
   height: 3.5vh;
   border-radius: 6px;
   background-color: #bbbfca;
@@ -151,13 +176,6 @@ select {
   
 }
 
-input[type=checkbox] {
-  border-radius: 5px;
-  box-shadow: 0 7px 24px 0 rgba(0, 0, 0, 0.07);
-  border: solid 1px #495464;
-  background-color: #ffffff;
-}
-
 /*table*/
 th, tr {
   font-size: 1.4vmin;
@@ -174,6 +192,14 @@ td {
 font-size: 1.8vmin !important;
 color: #707b91 !important;
 padding: 0.75vh 0 !important;
+}
+.nodata-area-div > img {
+  margin-top: 4vh;
+  height: 7.5vh;
+  width: 7.5vw;
+}
+.nodata-area-div > p {
+  margin-top: 1.5vh;
 }
 
 /*modal*/
@@ -238,20 +264,21 @@ padding: 0.75vh 0 !important;
 .modal-body-content-sub > h5 {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 30%;
   height: 100%;
   margin-top: auto;
   margin-bottom: auto;
   font-weight: normal;
+  padding-left: 2vw;
 }
 .modal-body-content-sub > input[type=text] {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 45%;
+  width: 15vw;
   height: 100%;
   border-radius: 8px;
   background-color: #ffffff;
@@ -270,5 +297,4 @@ padding: 0.75vh 0 !important;
   width: 100%;
   padding-top: 0%;
 }
-
 
