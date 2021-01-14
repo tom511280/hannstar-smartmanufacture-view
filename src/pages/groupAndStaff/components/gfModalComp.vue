@@ -87,7 +87,7 @@
                     <div class="modal-body">
                         <div class="modal-body-content">
                             <div class="modal-body-content-sub">
-                                <h5>name</h5>
+                                <h5>Name</h5>
                                 <input type="text" v-model="addNodeName" />
                                 <br>
                             </div>
@@ -115,7 +115,7 @@
                     <div class="modal-body">
                         <div class="modal-body-content">
                             <div class="modal-body-content-sub">
-                                <h5>name</h5>
+                                <h5>Name</h5>
                                 <input type="text" v-model="addNodeName" />
                             </div>
                             <div class="modal-body-content-sub">
@@ -164,7 +164,7 @@
                                 <h5>Gender</h5>
                                 <div class="radio-area">
                                   <input type="radio" value="male">
-                                  <p>male</p>
+                                  <p>Male</p>
                                   <input type="radio" value="Female">
                                   <p>Female</p>
                                 </div>

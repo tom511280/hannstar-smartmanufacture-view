@@ -32,7 +32,7 @@
                     <div class="modal-body">
                         <div class="modal-body-content">
                             <div class="modal-body-content-sub">
-                                <h5>name</h5>
+                                <h5>Name</h5>
                                 <input type="text" v-model="addNodeName" />
                                 <br>
                             </div>
@@ -55,7 +55,7 @@
                     <div class="modal-body">
                         <div class="modal-body-content">
                             <div class="modal-body-content-sub">
-                                <h5>name</h5>
+                                <h5>Name</h5>
                                 <input type="text" v-model="editNodeName" />
                             </div>
                         </div>
@@ -181,6 +181,10 @@ export default {
    cursor: pointer;
    font-size: 1.5vmin;
 }
+.modal-body-content-sub >  input[type=text] {
+  width: 10vw;
+}
+
 .gfTreeComp-info {
    height: 90%;
    width: 100%;

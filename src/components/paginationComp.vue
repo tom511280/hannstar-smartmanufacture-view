@@ -122,4 +122,9 @@ export default {
   background-color: #ffffff !important;
   width: 2vw;
 }
+/* .el-pagination button:disabled {
+    color: #C0C4CC !important;
+    background-color: #FFF !important;
+    cursor: not-allowed !important;
+} */
 </style>
