@@ -26,7 +26,8 @@ Vue.use(animated)
 
 //引入vue-sidebar-menu
 import VueSidebarMenu from 'vue-sidebar-menu'
-import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
+import '@/assets/css/vue-sidebar-menu.css';
+// import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
 Vue.use(VueSidebarMenu)
 
 //引入狀態管理  自動找底下index

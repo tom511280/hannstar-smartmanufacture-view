@@ -159,19 +159,6 @@ export default {
     line-height: 1.25;
     letter-spacing: normal;
 }
-.vsm--link.vsm--link_level-1 {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  font-size: 1.7vmin;
-  color: #707b91;
-  height: 5vh;
-  padding-left: 0.4vw !important;
-  padding-right: 0.5vw !important;
-  padding-top: 0.25vh !important;
-  padding-bottom: 0.25vh !important;
-}
 .vsm--list {
   background-color:#fff !important;
   padding:0px !important;
