@@ -146,7 +146,7 @@ export default {
 </script>
 
 <style>
-@import url('https://use.fontawesome.com/releases/v5.0.6/css/all.css');
+/* @import url('https://use.fontawesome.com/releases/v5.0.6/css/all.css'); */
 .vsm--item .vsm--link_level-1{
     border-bottom:1px #e8e8e8 solid;
 }
@@ -167,7 +167,7 @@ export default {
   font-size: 1.7vmin;
   color: #707b91;
   height: 5vh;
-  padding-left: 0.5vw !important;
+  padding-left: 0.4vw !important;
   padding-right: 0.5vw !important;
   padding-top: 0.25vh !important;
   padding-bottom: 0.25vh !important;

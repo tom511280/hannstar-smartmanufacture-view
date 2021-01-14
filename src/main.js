@@ -7,7 +7,7 @@ import 'bootstrap/dist/js/bootstrap.js'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'normalize.css/normalize.css'
 import '@/assets/css/hannstarCommon.css'; /*引入登入公共樣式*/
- 
+// import '@/assets/css/fontawesome.css';
 
 
 //引入util
