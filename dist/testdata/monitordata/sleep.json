@@ -82,5 +82,53 @@
         "group": "SG004",
         "heartRate": 5,
         "time": "2020/10/10 11:10:35"
+    },
+    {
+        "name": "ziv Ho",
+        "group": "SG004",
+        "heartRate": 50,
+        "time": "2020/10/10 11:10:35"
+    },
+    {
+        "name": "ziv Huang1",
+        "group": "SG004",
+        "heartRate": 100,
+        "time": "2020/10/10 11:10:35"
+    },
+    {
+        "name": "ziv Ho",
+        "group": "SG004",
+        "heartRate": 50,
+        "time": "2020/10/10 11:10:35"
+    },
+    {
+        "name": "ziv Huang1",
+        "group": "SG004",
+        "heartRate": 100,
+        "time": "2020/10/10 11:10:35"
+    },
+    {
+        "name": "ziv Ho",
+        "group": "SG004",
+        "heartRate": 50,
+        "time": "2020/10/10 11:10:35"
+    },
+    {
+        "name": "ziv Huang1",
+        "group": "SG004",
+        "heartRate": 100,
+        "time": "2020/10/10 11:10:35"
+    },
+    {
+        "name": "ziv Ho",
+        "group": "SG004",
+        "heartRate": 50,
+        "time": "2020/10/10 11:10:35"
+    },
+    {
+        "name": "ziv Huang1",
+        "group": "SG004",
+        "heartRate": 100,
+        "time": "2020/10/10 11:10:35"
     }
 ]

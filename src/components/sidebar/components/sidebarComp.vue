@@ -145,7 +145,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
 @import url('https://use.fontawesome.com/releases/v5.0.6/css/all.css');
 .vsm--item .vsm--link_level-1{
     border-bottom:1px #e8e8e8 solid;
