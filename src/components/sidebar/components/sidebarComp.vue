@@ -145,7 +145,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
 @import url('https://use.fontawesome.com/releases/v5.0.6/css/all.css');
 .vsm--item .vsm--link_level-1{
     border-bottom:1px #e8e8e8 solid;
@@ -167,10 +167,10 @@ export default {
   font-size: 1.7vmin;
   color: #707b91;
   height: 5vh;
-  padding-left: 0.5vw !important;
-  padding-right: 0.5vw !important;
-  padding-top: 0.25vh !important;
-  padding-bottom: 0.25vh !important;
+  padding-left: 0.5% !important;
+  padding-right: 0.5% !important;
+  padding-top: 0.25% !important;
+  padding-bottom: 0.25% !important;
 }
 .vsm--list {
   background-color:#fff !important;
@@ -225,8 +225,7 @@ export default {
 }
 /*游標移動到項目時的樣式*/
 .vsm--link.vsm--link_level-2{
-  margin-left: 0.25vw !important;
-  padding-left: 2.3vw !important;
+  padding-left: 14% !important;
   color: #707b91 !important;
 }
 .vsm--link.vsm--link_level-2:hover {
