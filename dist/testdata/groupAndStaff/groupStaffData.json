@@ -1,0 +1,93 @@
+{
+    "data": {
+      "pageNum": 1,
+      "pageSize": 10,
+      "size": 4,
+      "startRow": 1,
+      "endRow": 4,
+      "total": "4",
+      "pages": 1,
+      "list": [
+        {
+          "id": "2019",
+          "name": "tom",
+          "personNo": "123",
+          "phone": "123",
+          "sex": true,
+          "needAttnd": false,
+          "orgId": "85",
+          "orgName": "SG0400",
+          "remarks": "123",
+          "bandBindState": 2,
+          "cardBindState": 2,
+          "sendCardState": 0,
+          "cardInfo": null,
+          "bandNo": null
+        },
+        {
+          "id": "1978",
+          "name": "Angelina Jolie",
+          "personNo": "89757",
+          "phone": "0912344567",
+          "sex": false,
+          "needAttnd": true,
+          "orgId": "74",
+          "orgName": "Hannstar",
+          "remarks": "",
+          "bandBindState": 2,
+          "cardBindState": 2,
+          "sendCardState": 0,
+          "cardInfo": null,
+          "bandNo": null
+        },
+        {
+          "id": "1937",
+          "name": "賀立夫",
+          "personNo": "000002",
+          "phone": "0912345679",
+          "sex": true,
+          "needAttnd": true,
+          "orgId": "85",
+          "orgName": "SG0400",
+          "remarks": "",
+          "bandBindState": 1,
+          "cardBindState": 2,
+          "sendCardState": 0,
+          "cardInfo": "Movie Star1|||",
+          "bandNo": "d68ae3e42d97"
+        },
+        {
+          "id": "1936",
+          "name": "黃俊嘉",
+          "personNo": "30024697",
+          "phone": "0912345678",
+          "sex": true,
+          "needAttnd": true,
+          "orgId": "85",
+          "orgName": "SG0400",
+          "remarks": "",
+          "bandBindState": 1,
+          "cardBindState": 2,
+          "sendCardState": 0,
+          "cardInfo": null,
+          "bandNo": "d8c93c791358"
+        }
+      ],
+      "prePage": 0,
+      "nextPage": 0,
+      "isFirstPage": true,
+      "isLastPage": true,
+      "hasPreviousPage": false,
+      "hasNextPage": false,
+      "navigatePages": 8,
+      "navigatepageNums": [
+        1
+      ],
+      "navigateFirstPage": 1,
+      "navigateLastPage": 1,
+      "firstPage": 1,
+      "lastPage": 1
+    },
+    "code": 0,
+    "msg": null
+}

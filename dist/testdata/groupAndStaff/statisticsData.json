@@ -1,0 +1,11 @@
+{
+    "data": {
+      "allNum": 4,
+      "maleNum": 3,
+      "femaleNum": 1,
+      "bandBindNum": 2,
+      "bandNotBindNum": 2
+    },
+    "code": 0,
+    "msg": null
+}
