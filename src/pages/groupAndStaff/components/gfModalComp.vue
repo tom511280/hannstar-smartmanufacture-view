@@ -50,7 +50,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button @click="addNode()" type="button" class="btn button-confirm">Confirm</button>
+                        <button type="button" class="btn button-confirm">Confirm</button>
                         <button id="gfAddModalCBT" type="button" class="btn button-cancel" data-bs-dismiss="modal">Cancel</button>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button @click="addNode()" type="button" class="btn button-confirm">Confirm</button>
+                        <button type="button" class="btn button-confirm">Confirm</button>
                         <button id="gfAddModalCBT" type="button" class="btn button-cancel" data-bs-dismiss="modal">Cancel</button>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button @click="addNode()" type="button" class="btn button-confirm">Confirm</button>
+                        <button type="button" class="btn button-confirm">Confirm</button>
                         <button id="gfAddModalCBT" type="button" class="btn button-cancel" data-bs-dismiss="modal">Cancel</button>
                     </div>
                 </div>
@@ -141,7 +141,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button @click="addNode()" type="button" class="btn button-confirm">Confirm</button>
+                        <button type="button" class="btn button-confirm">Confirm</button>
                         <button id="gfAddModalCBT" type="button" class="btn button-cancel" data-bs-dismiss="modal">Cancel</button>
                     </div>
                 </div>
@@ -266,7 +266,8 @@ export default {
     data(){
         return {
             staffFile: "",
-            pairingFile: ""
+            pairingFile: "",
+            addNodeName: ""
         }
     },
     methods:{

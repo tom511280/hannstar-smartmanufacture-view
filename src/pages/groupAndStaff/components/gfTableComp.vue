@@ -41,29 +41,21 @@
             </el-table>
             <div class="monitorpieTableComp-pagination">
               <el-col>
-                <div>
-                  <!-- 分页组件 -->
-                  <!--:page-sizes="[2,4,6,8,10]" -->
-                  <el-pagination
-                    style="width: 100%;height:80%;margin: 15px 0px"
-                    prev-text="prev"
-                    next-text="next"
-                    background
-                    layout="sizes, prev, pager, next, jumper"
-                    :page-size="pageSize"
-                    :total="total"
-                    :current-page="pageNow"
-                    @current-change="findPage"
-                    @size-change="findSize"
-                  >
-                  </el-pagination>
-                </div>
+                <paginationComp
+                  :total="total"
+                  :pageNow="pageNow"
+                  :pageSize="pageSize"
+                  :pageSizes="pageSizes"
+                  @changeData="changeData"
+                >
+        </paginationComp>
               </el-col>
             </div>
         </div>      
     </div>
 </template>
 <script>
+import paginationComp from '@/components/paginationComp.vue'
 export default {
   data(){
     return {
@@ -73,9 +65,13 @@ export default {
       total: 0, // 总页数, 从后台查询获取
       pageNow: 1, // 当前页数, 默认为1
       pageSize: 10, // 当前页显示的数据条数, 默认为4
+      pageSizes: [10,20,30,40],
       datas: [],
       datasNow: [],
     }
+  },
+  components: {
+        paginationComp,
   },
   methods: {
     setTable(datas, fields, fieldkeys, fieldsWidth){
@@ -84,22 +80,14 @@ export default {
       this.fields = fields;
       this.fieldkeys = fieldkeys;
       this.fieldsWidth = fieldsWidth;
-      this.changeData();
+      this.pageNow =  1;
+      this.pageSize =  10;
+      this.total =  this.datas.length
+      this.changeData(this.pageNow);
     },
-    changeData(){
+    changeData(pageNow){
+      this.pageNow = pageNow;
       this.datasNow = this.datas.slice((this.pageNow-1)*this.pageSize,this.pageNow*this.pageSize);
-    },
-    findPage(page) {
-      // 用来处理分页相关方法
-      window.console.log("当前页数: " + page);
-      this.pageNow = page;
-      this.changeData();
-    },
-    findSize(size) {
-      // 用来处理每页显示记录发生变化的方法
-      window.console.log("当前页面记录条数: " + size);
-      this.pageSize = size;
-      this.changeData();
     },
     // 修改table header的背景色
     tableHeaderColor({ row, column, rowIndex, columnIndex }) {
