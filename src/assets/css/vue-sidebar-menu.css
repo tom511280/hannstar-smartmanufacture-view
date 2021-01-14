@@ -61,11 +61,19 @@
     font-size: 1.7vmin;
     color: #707b91;
     height: 5vh;
-    padding-left: 0.4vw;
     padding-right: 0.5vw;
     padding-top: 0.25vh;
     padding-bottom: 0.25vh;
 }
+ /*cus add*/
+.vsm--link.vsm--link_level-1{
+    padding-left: 0.5vw;
+}
+ /*cus add*/
+.vsm--link.vsm--link_level-2{
+    padding-left: 2.45vw;
+}
+
 .v-sidebar-menu .vsm--link_exact-active,.v-sidebar-menu .vsm--link_active {
 	font-weight: 600
 }
@@ -73,18 +81,25 @@
 	opacity: 0.4;
 	pointer-events: none
 }
+
+
+/*cus add*/
 .v-sidebar-menu .vsm--link_level-1 .vsm--icon {
-	height: 30px;
+    height: 2vh;
+    width: 1.5vw;
+	/* height: 30px;
 	line-height: 30px;
 	width: 30px;
 	-ms-flex-negative: 0;
 	flex-shrink: 0;
 	text-align: center;
-	border-radius: 3px
+	border-radius: 3px */
 }
 .v-sidebar-menu .vsm--icon {
-	display: inline-block;
-	margin-right: 10px
+    display: inline-block;
+    /*cus add*/
+    /* margin-right: 10px */
+    margin-right: 0.5vw;
 }
 .v-sidebar-menu .vsm--title {
 	-webkit-box-flex: 1;
@@ -114,8 +129,8 @@
      /*cus add*/
      /* -webkit-transform: rotate(90deg);
 	transform: rotate(90deg) */
-	-webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+	-webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
     background: url("../img/common/icon-orange-arrow-top.svg") no-repeat center;
 }
 .v-sidebar-menu .vsm--arrow_slot:after {
@@ -164,7 +179,9 @@
 	direction: rtl
 }
 .v-sidebar-menu.vsm_rtl .vsm--icon {
-	margin-left: 10px;
+    /*cus add*/
+    /* margin-left: 10px; */
+    margin-left: 0.5vw;
 	margin-right: 0px
 }
 .v-sidebar-menu.vsm_relative {

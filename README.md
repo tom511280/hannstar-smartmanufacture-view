@@ -47,7 +47,7 @@ git commit -m '
 2020-01-14變更
 Author: TomWu
 Content :
-1.上版前調整
+1.調整slidebar
 '
 git push origin master
 

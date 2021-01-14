@@ -24,7 +24,7 @@ export default {
         },
         {
           title: 'Home',
-          icon: 'fa base-sidebar-icon home-icon',
+          icon: 'fa home-icon',
           child: [
             {
               title: 'Overview',
@@ -56,7 +56,7 @@ export default {
         },
         {
           title: 'Personal Monitoring',
-          icon: 'fa base-sidebar-icon pm-icon',
+          icon: 'fa pm-icon',
           child: [
             {
               title: 'Personal Monitor'
@@ -68,7 +68,7 @@ export default {
         },
         {
           title: 'Management',
-          icon: 'fa base-sidebar-icon m-icon',
+          icon: 'fa m-icon',
           child: [
             {
               title: 'Group & Staffs',
@@ -87,7 +87,7 @@ export default {
         },
         {
           title: 'User Settings',
-          icon: 'fa base-sidebar-icon us-icon',
+          icon: 'fa us-icon',
           child: [
             {
               title: 'Center'
@@ -171,10 +171,6 @@ export default {
   background-color:#fff !important;
 }
 
-.base-sidebar-icon {
-  height: 2vh !important;
-  width: 1.5vw !important;
-}
 .vsm--item.vsm--item_open > a > .home-icon {
   background-image: url("../../../assets/img/sidebar/icons-orange-member.svg");
   background-size: 100% 100%;
@@ -211,9 +207,7 @@ export default {
   background-size: 100% 100%;
 }
 /*游標移動到項目時的樣式*/
-.vsm--link.vsm--link_level-2{
-  margin-left: 0.25vw !important;
-  padding-left: 2.3vw !important;
+.vsm--link.vsm--link_level-2 {
   color: #707b91 !important;
 }
 .vsm--link.vsm--link_level-2:hover {
