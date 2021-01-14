@@ -3,13 +3,8 @@
 // 	publicPath:'./',    // 公共路径
 // }
 module.exports = {
-    outputDir: "dist",
-    assetsDir: "static",
-    // assetsDir: "./",
-    publicPath: "./",
-    devServer: {
-    port: 9000,
-    open: true,
-    https: false
-    }
-};
+	outputDir: 'dist',
+	publicPath: process.env.NODE_ENV === 'production'
+	  ? '/hannstar-smartmanufacture-view/'
+	  : '/'
+  }
