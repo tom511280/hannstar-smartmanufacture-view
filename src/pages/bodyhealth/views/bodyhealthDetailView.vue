@@ -188,7 +188,7 @@ export default {
   padding-bottom: 2vh;
   padding-left: 1vw;
   padding-right: 1vw;
-  height: 90%;
+  height: 95%;
   width: 100%;
 }
 .tab-content {
