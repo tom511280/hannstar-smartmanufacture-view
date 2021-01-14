@@ -172,8 +172,6 @@ export default {
   padding-top: 0.25vh !important;
   padding-bottom: 0.25vh !important;
 }
-
-
 .vsm--list {
   background-color:#fff !important;
   padding:0px !important;
@@ -185,11 +183,6 @@ export default {
   color:#ef8059 !important;
   background-color:#fff !important;
 }
-.v-sidebar-menu.vsm_expanded .vsm--item_open .vsm--link_level-1 .vsm--icon {
-    // color:#ef8059 !important;
-    // background-color:#f1f6f9 !important;
-}
-
 
 .base-sidebar-icon {
   height: 2vh !important;
@@ -232,6 +225,7 @@ export default {
 }
 /*游標移動到項目時的樣式*/
 .vsm--link.vsm--link_level-2{
+  margin-left: 0.25vw !important;
   padding-left: 2.3vw !important;
   color: #707b91 !important;
 }
