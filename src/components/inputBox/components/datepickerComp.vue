@@ -28,7 +28,7 @@ export default {
     }
 }
 </script>
-<style>
+<style scoped>
 .calendar-area {
   margin-top: 1vmin;
   margin-left: 0.1vmin;
