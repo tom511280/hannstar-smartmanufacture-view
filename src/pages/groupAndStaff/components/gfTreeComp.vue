@@ -6,8 +6,6 @@
                 <p data-bs-toggle="modal" data-bs-target="#gfAddModal">Add</p>
                 <div class="common-line"></div>
                 <p data-bs-toggle="modal" data-bs-target="#gfEditModal">Edit</p>
-                <div class="common-line"></div>
-                <p data-bs-toggle="modal">Delete</p>
                 </div>
             </div>
             <div class="gfTreeComp-info">

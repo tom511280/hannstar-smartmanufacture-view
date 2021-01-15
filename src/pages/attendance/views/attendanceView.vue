@@ -1,10 +1,10 @@
 <template>
     <div class="attendanceView">
         <div class="attendanceView-chart-area">
-            <attendanceChartComp></attendanceChartComp>
+            <attendanceChartComp ref="attendanceChart"></attendanceChartComp>
         </div>
         <div class="attendanceView-chart-table">
-            <attendanceTableComp></attendanceTableComp>
+            <attendanceTableComp ref="attendanceTable"></attendanceTableComp>
         </div> 
     </div>
 </template>
@@ -12,13 +12,56 @@
 import attendanceChartComp from '@/pages/attendance/components/attendanceChartComp.vue'
 import attendanceTableComp from '@/pages/attendance/components/attendanceTableComp.vue'
 export default {
-  components: {
+    components: {
         attendanceChartComp,
         attendanceTableComp,
-  },
-  mounted(){
+    },
+    mounted(){
       //初始化時執行
       this.$store.dispatch({type:'commonModule/init'})
+      this.$store.dispatch({type:'attendanceModule/initSts'})
+      this.$store.dispatch({type:'attendanceModule/initAttendance'})
+
+      //查詢考勤統計資料
+      let sts_parameter = {}
+      this.$store.dispatch({type:'attendanceModule/loadSts', parameter:sts_parameter})
+
+      //查詢考勤資料
+      let attendance_parameter = {}
+      this.$store.dispatch({type:'attendanceModule/loadAttendance', parameter:attendance_parameter})
+    },
+    computed: {
+        statisticsData(){
+            return Object.assign({},this.$store.getters['attendanceModule/getState'].statisticsData);
+        },
+        attendanceData(){
+            return Object.assign({},this.$store.getters['attendanceModule/getState'].attendanceData);
+        },
+    },
+    watch: {
+        immediate: true,
+        deep: true,
+        statisticsData: function(statisticsDatas) {
+            let statisticsList = statisticsDatas.statisticsList;
+            let dataP1 = [];
+            let dataP2 = [];
+            for (let statistics of statisticsList) {
+                dataP1.push(parseInt(statistics.totalBandInCount));
+                dataP2.push(parseInt(statistics.totalBandOutCount));
+            }
+            this.$refs.attendanceChart.drawChart(
+                dataP1, 
+                dataP2
+            )
+        },
+        attendanceData: function(attendanceData) {
+            this.$refs.attendanceTable.setTable(
+                attendanceData.attendanceList, 
+                attendanceData.fields,
+                attendanceData.fieldkeys,
+                attendanceData.fieldsWidth
+            )
+        },
     },
 };
 </script>

@@ -10,20 +10,12 @@
             <div id="emailArea" class="inputbox-area-external" :class="[this.emailInputErrorClass]">
                 <img class="common-icon" src="@/assets/img/login/icons-email.svg">
                 <div class="common-line"></div>
-                <input type="email" class="common-inputBox" v-model="email"  name="email" placeholder="Email">
+                <input type="email" class="emailArea-inputBox common-inputBox" v-model="email"  name="email" placeholder="Email">
             </div>
             <div>
                 <p class="errortext fontbase input-no-error-style">{{emailErrorMsg}}</p>
             </div>
-            <div id="passwordArea" class="inputbox-area-external" :class="[this.passwordInputErrorClass]">
-                <img class="common-icon" src="@/assets/img/login/icons-lock.svg">
-                <div class="common-line"></div>
-                <input :type="passwordInputType" class="common-inputBox" v-model="password" name="password" placeholder="Password">
-                <div class="common-right-icon-external" @mousedown="showPwd(true)" @mouseup="showPwd(false)">
-                    <img v-if="isShowPwd" class="common-icon" src="@/assets/img/login/icons-eye.svg">
-                    <img v-if="!isShowPwd" class="common-icon" src="@/assets/img/login/icons-eye-hide.svg">
-                </div>
-            </div>
+            <passwordComp v-model="password" :passwordPlaceholder="passwordPlaceholder" :passwordInputErrorClass="passwordInputErrorClass"></passwordComp>
             <div>
                 <p class="errortext input-no-error-style">{{passwordErrorMsg}}</p>
             </div>
@@ -42,6 +34,7 @@
   </div>
 </template>
 <script>
+import passwordComp from '@/components/inputBox/components/passwordComp.vue'
 export default {
   data() {
     return {
@@ -54,8 +47,12 @@ export default {
       passwordErrorMsgClass:'',
       passwordInputErrorClass:'',
       passwordInputType:'password',
+      passwordPlaceholder:'Password',
       isShowPwd:false,
     }
+  },
+  components: {
+        passwordComp
   },
   computed: {
     //取得留言資料
@@ -141,4 +138,7 @@ export default {
 
 <style scoped>
 @import '../../../assets/css/memberCommon.css'; /*引入登入公共樣式*/
+/* .emailArea-inputBox {
+  width: 20vw;
+} */
 </style>

@@ -44,10 +44,10 @@ https://echarts.apache.org/examples/zh/index.html#chart-type-pie
 git add .
 
 git commit -m '
-2020-01-14變更
+2020-01-15變更
 Author: TomWu
 Content :
-1.調整slidebar
+1.調整考勤管理首頁
 '
 git push origin master
 

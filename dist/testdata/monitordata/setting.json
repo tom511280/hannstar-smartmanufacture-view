@@ -1,7 +1,0 @@
-{
-    "heartRateMaxValue":100,
-    "heartRateMinValue":50,
-    "sleepMaxValue":7,
-    "sleepMinValue":11,
-    "sportsMinValue":8000
-}

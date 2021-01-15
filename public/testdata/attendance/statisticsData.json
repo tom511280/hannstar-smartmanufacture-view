@@ -1,0 +1,62 @@
+{
+	"data": [
+		{
+			"id": 1,
+			"totalBandInCount": "50",
+			"totalBandOutCount": "100",
+			"lastBandInCount": "0",
+			"lastBandOutCount": "0",
+			"createTime": 1610726400000
+		},
+		{
+			"id": 2,
+			"totalBandInCount": "20",
+			"totalBandOutCount": "10",
+			"lastBandInCount": "0",
+			"lastBandOutCount": "0",
+			"createTime": 1610726400000
+		},
+		{
+			"id": 3,
+			"totalBandInCount": "300",
+			"totalBandOutCount": "20",
+			"lastBandInCount": "0",
+			"lastBandOutCount": "0",
+			"createTime": 1610726400000
+		},
+		{
+			"id": 4,
+			"totalBandInCount": "100",
+			"totalBandOutCount": "250",
+			"lastBandInCount": "0",
+			"lastBandOutCount": "0",
+			"createTime": 1610726400000
+		},
+		{
+			"id": 5,
+			"totalBandInCount": "50",
+			"totalBandOutCount": "70",
+			"lastBandInCount": "0",
+			"lastBandOutCount": "0",
+			"createTime": 1610726400000
+		},
+		{
+			"id": 6,
+			"totalBandInCount": "70",
+			"totalBandOutCount": "170",
+			"lastBandInCount": "0",
+			"lastBandOutCount": "0",
+			"createTime": 1610726400000
+		},
+		{
+			"id": 7,
+			"totalBandInCount": "150",
+			"totalBandOutCount": "25",
+			"lastBandInCount": "0",
+			"lastBandOutCount": "0",
+			"createTime": 1610726400000
+		}
+	],
+	"code": 0,
+	"msg": "操作成功"
+}

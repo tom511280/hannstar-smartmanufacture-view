@@ -12,10 +12,6 @@
 <script>
 </script>
 <style scoped>
-.topHeaderComp-external {
-    /* display: flex;
-    justify-content: flex-end; */
-}
 .topHeaderComp {
     display: flex;
     flex-direction: row-reverse;

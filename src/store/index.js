@@ -12,6 +12,8 @@ import commonModule from '@/pages/module';
 import memberModule from '@/pages/member/module';
 import bodyhealthModule from '@/pages/bodyhealth/module';
 import groupAndStaffModule from '@/pages/groupAndStaff/module';
+import attendanceModule from '@/pages/attendance/module';
+
 
 Vue.use(Vuex);
 
@@ -24,6 +26,7 @@ export default new Vuex.Store({
     memberModule: memberModule,
     bodyhealthModule: bodyhealthModule,
     groupAndStaffModule: groupAndStaffModule,
+    attendanceModule: attendanceModule,
   },
   //持久化vuex 避免因為刷新頁面數據消失
   plugins: [createPersistedState()]

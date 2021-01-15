@@ -122,9 +122,64 @@ export default {
   background-color: #ffffff !important;
   width: 2vw;
 }
-/* .el-pagination button:disabled {
-    color: #C0C4CC !important;
-    background-color: #FFF !important;
-    cursor: not-allowed !important;
-} */
+
+
+/**********************/
+/*paginatio
+.number, .btn-prev, .btn-next {
+  font-weight: 500;
+  color: #394867 !important;
+  border-radius: 8px !important;
+}
+.number.active {
+  background-color: #394867 !important;
+  border-radius: 8px;
+  border: solid 1px #384766;
+  color: #ffffff !important;
+}
+.number:hover {
+  color: white !important;
+}
+.paginatio-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.paginatio-area-p1 {
+  width: 30%; 
+}
+.paginatio-area-p2 {
+  width: 70%; 
+}
+.paginatio-area-p1-sub {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  color: #707b91;
+}
+.paginatio-area-p1-sub > p{
+  margin-right: 0.25vw;
+}
+.paginatio-area-p1-sub > select {
+  background: url("../assets/img/common/ic-arrow-orange-down.svg") no-repeat scroll right center transparent;
+  background-position-x: 90%;
+  width: 2.5vw;
+  margin-right: 0.25vw;
+  color: #ef8059;
+  border:none
+}
+.el-pagination__jump {
+  font-weight: 500 !important;
+  color: #384766 !important;
+}
+.el-input.el-pagination__editor.is-in-pagination > .el-input__inner {
+  border-radius: 6px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff !important;
+  width: 2vw;
+}
+*/
 </style>

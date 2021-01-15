@@ -94,20 +94,6 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active  {
     -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
-/* input[type=checkbox]:not(old),
-input[type=checkbox]:not(old) + label{
-  display      : inline-block;
-  margin-left  : -28px;
-  padding-left : 28px;
-  line-height  : 24px;
-  background   : url('../img/common/icon-s-check.png') no-repeat 0 -48px;
-  
-}
-
-input[type=checkbox]:not(old):checked + label{
-  background-position : 0 -73px;
-  background-color: white;
-} */
 input[type='checkbox'] {
   cursor: pointer;
   position: relative;
@@ -358,3 +344,105 @@ padding: 0.75vh 0 !important;
   background-color: #ffffff !important;
   width: 2vw;
 }
+/*common area*/
+.common-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  border-bottom: 1px solid #dddfe5;
+}
+.common-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+/*inputbox about css*/
+.inputbox-area-external {
+  display: flex;
+  flex-direction: row;
+  justify-self: flex-start;
+  align-items: center;
+  width: 18.3vw;
+  height: 4.1vh;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  border-radius: 6px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+}
+.inputbox-area-external > .common-icon {
+  width: 1vw;
+  height: 1vw;
+  /* cursor: pointer; */
+}
+.inputbox-area-external > .common-line {
+  height: 2vh;
+  margin-top: 0.2vh;
+  margin-bottom: 0.2vh;
+  margin-left: 0.6vw;
+  margin-right: 0.6vw;
+  box-shadow: 0 0 0 0.5px #bbbfca;
+}
+.inputbox-area-external > .common-inputBox {
+  /* width: 250px; */
+  /* width: 50%; */
+  border-width: 0px;
+  border-style: none;
+  outline: none;
+  cursor: text;
+}
+.inputbox-area-external > .common-right-icon-external {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  /* flex: 1; */
+  /* text-align: right; */
+  cursor: pointer;
+  width: 1vw;
+  height: 1vh;
+}
+
+/*ckeckBox about css*/
+.ckeckBox-area-external {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 18vw;
+  height: 2vh;
+  margin-top: 0.9vh;
+}
+.ckeckBox-area-external > .common-ckeckBox {
+  margin-right: 0.4vw;
+  border-radius: 5px;
+  box-shadow: 0 7px 64px 0 rgba(0, 0, 0, 0.07);
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+}
+.ckeckBox-area-external > .ckeckBox-area-lefttext {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-size: 1.5vmin;
+  color: #707b91;
+  height: 100%;
+}
+.ckeckBox-area-external > .ckeckBox-area-rightText {
+  font-family: Roboto;
+  color: #9ba4b4;
+  /*置右*/
+  flex: 1;
+  text-align: right;
+  text-decoration: none;
+}
+

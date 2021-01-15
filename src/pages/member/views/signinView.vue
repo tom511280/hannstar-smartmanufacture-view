@@ -23,15 +23,7 @@
             <div>
                 <p class="errortext input-no-error-style">{{memberErrorMsg}}</p>
             </div>
-            <div id="passwordArea" class="inputbox-area-external" :class="[this.passwordInputErrorClass]">
-                <img class="common-icon" src="@/assets/img/login/icons-lock.svg">
-                <div class="common-line"></div>
-                <input :type="passwordInputType" class="common-inputBox" v-model="password" name="password" placeholder="Password">
-                <div class="common-right-icon-external" @mousedown="showPwd(true)" @mouseup="showPwd(false)">
-                    <img v-if="isShowPwd" class="common-icon" src="@/assets/img/login/icons-eye.svg">
-                    <img v-if="!isShowPwd" class="common-icon" src="@/assets/img/login/icons-eye-hide.svg">
-                </div>
-            </div>
+            <passwordComp v-model="password" :passwordInputErrorClass="passwordInputErrorClass" :passwordPlaceholder="passwordPlaceholder"></passwordComp>
             <div>
                 <p class="errortext input-no-error-style">{{passwordErrorMsg}}</p>
             </div>
@@ -47,6 +39,7 @@
   </div>
 </template>
 <script>
+import passwordComp from '@/components/inputBox/components/passwordComp.vue'
 export default {
   data() {
     return {
@@ -63,8 +56,12 @@ export default {
       passwordErrorMsgClass:'',
       passwordInputErrorClass:'',
       passwordInputType:'password',
+      passwordPlaceholder:'Password',
       isShowPwd:false,
     }
+  },
+  components: {
+        passwordComp
   },
   created(){
       //初始化時執行
@@ -138,11 +135,6 @@ export default {
           member:this.member
       }
       this.$store.dispatch({type:'memberModule/signin',parameter:parameter})
-    },
-    showPwd(isShow){
-      this.isShowPwd = isShow;
-      if(isShow == true) this.passwordInputType = "text";
-      else this.passwordInputType = "password";
     },
     goToLoginView(){
         this.$router.push({ path: '/member/loginView'});
