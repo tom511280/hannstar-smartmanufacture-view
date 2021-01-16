@@ -8,6 +8,7 @@ import bodyhealthView from '@/pages/bodyhealth/views/bodyhealthView.vue'
 import bodyhealthDetailView from '@/pages/bodyhealth/views/bodyhealthDetailView.vue'
 import groupAndStaffView from '@/pages/groupAndStaff/views/groupAndStaffView.vue'
 import attendanceView from '@/pages/attendance/views/attendanceView.vue'
+import attendanceDetailView from '@/pages/attendance/views/attendanceDetailView.vue'
 
 
 let routes = [
@@ -24,8 +25,11 @@ let routes = [
     {path:'/bodyhealth/bodyhealthDetailView',component:bodyhealthDetailView},
     //組織&&人員
     {path:'/groupAndStaff/groupAndStaffView',component:groupAndStaffView},
-    //組織&&人員
+    //考勤管理
     {path:'/attendance/attendanceView',component:attendanceView},
+    {path:'/attendance/attendanceDetailView',component:attendanceDetailView},
+
+
     //預設
     {path:'',redirect:'/member/loginView'},
     {path:'*',component:loginView}

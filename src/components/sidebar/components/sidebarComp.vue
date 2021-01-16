@@ -48,6 +48,7 @@ export default {
             {
               title: 'Attendance',
               href: '/attendance/attendanceView',
+              alias: ['/attendance/attendanceView', '/attendance/attendanceDetailView']
             },
             {
               title: 'Notification'

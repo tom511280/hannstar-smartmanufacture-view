@@ -34,7 +34,7 @@
             <span v-if="fieldkeys[index] != 'detail'">{{ scope.row[fieldkeys[index]] }}</span>
             <span v-if="fieldkeys[index] == 'detail'">
                 <div class="gfTableComp-table-area-detail">
-                    <p data-bs-toggle="modal" data-bs-target="#gfEditStaffModal">Detail</p>
+                    <p @click="goAttendanceDetailView()" data-bs-toggle="modal" data-bs-target="#gfEditStaffModal">Detail</p>
                 </div>
             </span>
           </template>
@@ -98,6 +98,9 @@ export default {
             if (rowIndex === 0) {
                 return 'background-color: #dddfe5;color: #394867;font-weight: 500;font-size: 16px;'
             }
+        },
+        goAttendanceDetailView(){
+            this.$router.push({ path: '/attendance/attendanceDetailView'});
         }
     }
 }
@@ -107,7 +110,7 @@ export default {
     height: 7vh;
 }
 .common-header > select {
-    width: 5vw;
+    width: 6vw;
 }
 .common-header > p, 
 .common-header > input[type="text"], 

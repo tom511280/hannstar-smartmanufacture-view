@@ -28,13 +28,13 @@ export default {
     }
 }
 </script>
-<style scoped>
+<style>
 .calendar-area {
   margin-top: 1vmin;
   margin-left: 0.1vmin;
   padding-top: 1.5vmin;
 }
-.inputbox-area-external {
+.datepickerComp > .inputbox-area-external {
   width: 10vw;
   margin-right: 1vw;
 }
