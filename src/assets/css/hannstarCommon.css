@@ -349,14 +349,22 @@ padding: 0.75vh 0 !important;
     height: 100%;
 }
 .common-item {
-    border-radius: 8px;
-    background-color: #ffffff;
-    padding-left: 1vw;
-    padding-right: 1vw;
+    /* padding-left: 0.25vw;
+    padding-right: 0.25vw; */
+    /* padding-top: 1.5vh;
+    padding-bottom: 1.5vh; */
+    height: 100%;
+}
+.common-item-inner {
     padding-top: 1.5vh;
     padding-bottom: 1.5vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border-radius: 8px;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    background-color: #ffffff;
     height: 100%;
-    width: 100%;
 }
 .common-header {
     display: flex;

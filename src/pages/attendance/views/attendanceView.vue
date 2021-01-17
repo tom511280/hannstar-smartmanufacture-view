@@ -1,11 +1,15 @@
 <template>
-    <div class="attendanceView container">
+    <div class="attendanceView container-fluid">
         <div class="row">
             <div class="col-6 common-item">
-                <attendanceChartComp ref="attendanceChart"></attendanceChartComp>
+                <div class="common-item-inner">
+                    <attendanceChartComp ref="attendanceChart"></attendanceChartComp>
+                </div> 
             </div>
             <div class="col-6 common-item">
-                <attendanceTableComp ref="attendanceTable"></attendanceTableComp>
+                <div class="common-item-inner">
+                    <attendanceTableComp ref="attendanceTable"></attendanceTableComp>
+                </div>
             </div>
         </div>
     </div>
@@ -70,15 +74,10 @@ export default {
 <style scoped>
 .attendanceView {
     height: 100%;
+    width: 100%;
 }
-.common-item {
-    height: 100%;
-    width: 40vw;
-    margin-left: 1vh;
-    margin-right: 1vh;
-}
-.row > .common-item:nth-child(1) {
+/* .row > .common-item:nth-child(1) {
     padding-left: 0vw;
     padding-right: 0vw;
-}
+} */
 </style>
