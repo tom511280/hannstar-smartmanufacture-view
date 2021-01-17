@@ -35,23 +35,15 @@
 }
 .topHeaderComp > .topHeaderComp-info > .topHeaderComp-title {
     font-family: Roboto;
-    font-size: 13px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
+    font-size: 1.3vmin;
     text-align: right;
+    line-height: normal;
     color: #bbbfca;
 }
 .topHeaderComp > .topHeaderComp-info > .topHeaderComp-membername {
     font-family: Roboto;
-    font-size: 13px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
+    font-size: 1.3vmin;
     line-height: normal;
-    letter-spacing: normal;
     text-align: right;
     color: #ffffff;
 

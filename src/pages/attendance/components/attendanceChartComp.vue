@@ -1,10 +1,48 @@
 <template>
-  <div class="attendanceChartComp">
-      <div class="common-header">
+    <div class="attendanceChartComp">
+        <div class="common-header">
+            <h4>Attendance</h4>
+            <select id="timeSelect" name="timeSelect">
+                <option>Attendance 1</option>
+                <option>Attendance 2</option>
+                <option>Attendance 3</option>
+                <option>Attendance 4</option>
+            </select>
+            <div class="attendanceChartComp-legend">
+              <span class="attendanceChartComp-enter"></span>
+              <p>進入</p>
+              <span class="attendanceChartComp-leave"></span>
+              <p>離開</p>
+          </div>
+        </div>
+        <div class="common-content">
+          <div :id="this.elid" style="width:100%;height: 100%;"></div>
+        </div>
+        
+        <!-- <div class="common-header">
+            <div class="common-item">
+                <h4>Attendance</h4>
+                <select id="timeSelect" name="timeSelect">
+                    <option>testdata</option>
+                </select>
+            </div>
+            <div class="common-item attendanceChartComp-legend">
+                <span class="attendanceChartComp-enter"></span>
+                <p>進入</p>
+                <span class="attendanceChartComp-leave"></span>
+                <p>離開</p>
+            </div>
+        </div> -->
+      <!-- <div class="common-item common-container-row">
           <h4>Attendance</h4>
           <select id="timeSelect" name="timeSelect">
               <option>testdata</option>
-                <!-- <option v-for="timeItem in timeSelects" :key="timeItem.value" :value="timeItem.value">{{ timeItem.text }}</option> -->
+          </select>
+      </div> -->
+      <!-- <div class="common-header">
+          <h4>Attendance</h4>
+          <select id="timeSelect" name="timeSelect">
+              <option>testdata</option>
           </select>
           <div class="attendanceChartComp-legend">
               <span class="attendanceChartComp-enter"></span>
@@ -15,7 +53,7 @@
       </div>
       <div class="common-content">
           <div :id="this.elid" style="width:100%;height: 100%;"></div>
-      </div>
+      </div> -->
   </div>
 </template>
 <script>
@@ -30,10 +68,10 @@ export default {
                                     show:true,
                         },
                         grid: {
-                                left: '5%',
+                                left: '6%',
                                 top: '7.5%',
                                 height: '85%',
-                                width:'85%'
+                                width:'87%'
                         },
                         xAxis: {
                                 // splitLine:{show: false},//去除網格線
@@ -83,40 +121,35 @@ export default {
 <style scoped>
 /* cus common */
 .attendanceChartComp {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;  
-    width: 100%;
     height: 100%;
-} 
-.common-header {
-    height: 6.5vh;
-    margin-left: 0vw;
-    margin-right: 0vw;
     width: 100%;
 }
+.common-header {
+    height: 7.5%;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    width: 100%;
+}
+.common-content {
+    height: 92.5%;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+}
+
+/* cus */
 .common-header > h4 {
-    margin-left: 1vw;
     margin-right: 0.5vw;
 }
 .common-header > select {
     width: 10vw;
 }
-.common-content {
-    height: 82.5vh;
-    width: 40vw;
-}
-
-/* cus */
 .attendanceChartComp-legend {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    align-items: center;  
+    align-items: center;
     width: 100%;
     height: 100%;
-    margin-right: 2vw;
 }
 .attendanceChartComp-legend > span {
     height: 1.2vh;

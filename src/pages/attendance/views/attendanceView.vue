@@ -1,11 +1,13 @@
 <template>
-    <div class="attendanceView">
-        <div class="attendanceView-chart-area">
-            <attendanceChartComp ref="attendanceChart"></attendanceChartComp>
+    <div class="attendanceView container">
+        <div class="row">
+            <div class="col-6 common-item">
+                <attendanceChartComp ref="attendanceChart"></attendanceChartComp>
+            </div>
+            <div class="col-6 common-item">
+                <attendanceTableComp ref="attendanceTable"></attendanceTableComp>
+            </div>
         </div>
-        <div class="attendanceView-chart-table">
-            <attendanceTableComp ref="attendanceTable"></attendanceTableComp>
-        </div> 
     </div>
 </template>
 <script>
@@ -65,26 +67,18 @@ export default {
     },
 };
 </script>
-<style scope>
+<style scoped>
 .attendanceView {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
-.attendanceView-chart-area {
     height: 100%;
-    width: 50%;
-    border-radius: 8px;
-    background-color: #ffffff;
-    margin-right: 1.5vw;
 }
-.attendanceView-chart-table {
+.common-item {
     height: 100%;
-    width: 50%;
-    border-radius: 8px;
-    background-color: #ffffff;
+    width: 40vw;
+    margin-left: 1vh;
+    margin-right: 1vh;
+}
+.row > .common-item:nth-child(1) {
+    padding-left: 0vw;
+    padding-right: 0vw;
 }
 </style>

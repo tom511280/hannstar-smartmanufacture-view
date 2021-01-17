@@ -345,7 +345,66 @@ padding: 0.75vh 0 !important;
   width: 2vw;
 }
 /*common area*/
+.row {
+    height: 100%;
+}
+.common-item {
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    height: 100%;
+    width: 100%;
+}
 .common-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #dddfe5;
+    height: 100%;
+    width: 100%;
+}
+.common-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* margin-left: 1vw;
+    margin-right: 1vw; */
+    background-color: #ffffff;
+}
+
+/* .common-container-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.common-container-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.common-item {
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}  */
+
+
+
+/* .common-header {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -353,7 +412,8 @@ padding: 0.75vh 0 !important;
   margin-left: 1vw;
   margin-right: 1vw;
   border-bottom: 1px solid #dddfe5;
-}
+  background-color: #ffffff;
+} 
 .common-content {
   display: flex;
   flex-direction: column;
@@ -361,7 +421,8 @@ padding: 0.75vh 0 !important;
   align-items: center;
   margin-left: 1vw;
   margin-right: 1vw;
-}
+  background-color: #ffffff;
+}*/
 
 /*inputbox about css*/
 .inputbox-area-external {

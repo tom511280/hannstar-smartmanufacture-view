@@ -1,24 +1,9 @@
 <template>
 <div class="sidebarHeadComp">
-    <div class="loginTitle loginTitle_C"><h1>{{ currentTime }}</h1></div>
-    <div class="loginDescribution description">{{currentDay}}</div>
+    <div class="sidebarHeadTitle"><h1>{{ currentTime }}</h1></div>
+    <div class="sidebarHeadDescribution description">{{currentDay}}</div>
 </div>
 </template>
-<style  scoped>
-.loginTitle_C {
-    font-size: 36px;
-}
-.sidebarHeadComp {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2vh;
-    height: 8.5vh;
-    border-bottom:1px #e8e8e8 solid;
-    /* z-index:1001 */
-}
-</style>
 <script>
 export default {
     data(){
@@ -52,3 +37,29 @@ export default {
     }
 }
 </script>
+<style scoped>
+.sidebarHeadComp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    height: 8.5vh;
+    border-bottom:1px #e8e8e8 solid;
+}
+.sidebarHeadTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5vh;
+}
+.sidebarHeadDescribution {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.7vh;
+    margin-bottom: 2vh;
+    color: #9ba4b4;
+}
+</style>

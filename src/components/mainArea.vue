@@ -41,10 +41,10 @@ export default {
   overflow: hidden;
 }
 .currentView-contaner-base{
-  padding-top: 2vh;
-  padding-bottom: 2vh;
-  padding-left: 1vw;
-  padding-right: 1vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 .currentView-contain-topHeader{
     margin-top: 5.5vh;
