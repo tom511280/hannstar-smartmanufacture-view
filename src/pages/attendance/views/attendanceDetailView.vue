@@ -20,7 +20,7 @@
             <div class="col-4">
                 <div class="common-item">
                     <div class="common-item-inner">
-                        <attendanceNotificationComp></attendanceNotificationComp>
+                        <attendanceNotificationComp ref="attendanceNotification"></attendanceNotificationComp>
                     </div>
                 </div>
             </div>
@@ -80,24 +80,24 @@ export default {
     mounted(){
       //初始化時執行
       this.$store.dispatch({type:'commonModule/init'})
-    //   this.$store.dispatch({type:'attendanceModule/initSts'})
-    //   this.$store.dispatch({type:'attendanceModule/initAttendance'})
+      this.$store.dispatch({type:'attendanceModule/initEmployee'})
+      this.$store.dispatch({type:'attendanceModule/initCardMsg'})
 
       //查詢員工資料
       let employee_parameter = {}
       this.$store.dispatch({type:'attendanceModule/loadEmployee', parameter:employee_parameter})
 
-    //   //查詢考勤資料
-    //   let attendance_parameter = {}
-    //   this.$store.dispatch({type:'attendanceModule/loadAttendance', parameter:attendance_parameter})
+      //查詢訊息資料
+      let cardMsg_parameter = {}
+      this.$store.dispatch({type:'attendanceModule/loadCardMsg', parameter:cardMsg_parameter})
     },
     computed: {
         employeeData(){
             return Object.assign({},this.$store.getters['attendanceModule/getState'].employeeData);
         },
-        // attendanceData(){
-        //     return Object.assign({},this.$store.getters['attendanceModule/getState'].attendanceData);
-        // },
+        cardMsgData(){
+            return Object.assign({},this.$store.getters['attendanceModule/getState'].cardMsgData);
+        },
     },
     watch: {
         immediate: true,
@@ -105,14 +105,13 @@ export default {
         employeeData: function(employeeData) {
             this.$refs.attendancePersonInfo.setData(employeeData)
         },
-        // attendanceData: function(attendanceData) {
-        //     this.$refs.attendanceTable.setTable(
-        //         attendanceData.attendanceList, 
-        //         attendanceData.fields,
-        //         attendanceData.fieldkeys,
-        //         attendanceData.fieldsWidth
-        //     )
-        // },
+        cardMsgData: function(cardMsgData) {
+            this.$refs.attendanceNotification.drawTable(
+                cardMsgData.fields,
+                cardMsgData.fieldkeys,
+                cardMsgData.cardMsgList, 
+            )
+        },
     },
 };
 </script>

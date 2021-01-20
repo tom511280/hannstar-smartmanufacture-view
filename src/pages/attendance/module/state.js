@@ -19,5 +19,12 @@ const state = {
     serialNo: null, 
     errorCodeList:[],
   },
+  cardMsgData:{
+    cardMsgList:[],
+    fields:[],
+    fieldkeys:[],
+    fieldsWidth:[],
+    errorCodeList:[],
+  },
 };
 export default state;

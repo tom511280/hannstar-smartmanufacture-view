@@ -2,13 +2,15 @@ import Vue from 'vue'
 import {
   INIT_STS,
   INIT_ATTENDANCE,
+  INIT_EMPLOYEE,
+  INIT_CARDMSG,
   LOAD_STS,
   LOAD_ATTENDANCE,
   LOAD_EMPLOYEE,
+  LOAD_CARDMSG
 } from './mutationTypes';
 
 const actions = {
-
   /**
    * 初始化
    */
@@ -17,6 +19,12 @@ const actions = {
   },
   initAttendance({commit},payload) {
     commit(INIT_ATTENDANCE,payload);
+  },
+  initEmployee({commit},payload) {
+    commit(INIT_EMPLOYEE,payload);
+  },
+  initCardMsg({commit},payload) {
+    commit(INIT_CARDMSG,payload);
   },
 
   /**
@@ -124,7 +132,41 @@ const actions = {
       payload.result.employeeData = employeeData;
       commit(LOAD_EMPLOYEE, payload);
     });
-  },  
+  },
+  /**
+   * 訊息資料
+   */
+  loadCardMsg({commit},payload) {
+    // 0 = success
+    // 1 = error
+    Vue.prototype.$axios({
+      url:'testdata/attendance/cardMsgs.json',
+      params:{}
+    }).then((resp) => { // 回應正常
+      const respData = resp.data.data.list;
+      let cardMsgList = []
+      for (let data of respData) {
+        cardMsgList.push(data);
+      }
+
+      //TODO 後續補上errorcode判斷
+      payload.result = {
+        cardMsgData:{
+          cardMsgList:[],
+          errorCodeList:[],
+        },
+      }
+      payload.result.cardMsgData.cardMsgList = cardMsgList;
+      payload.result.cardMsgData.errorCodeList.push(0);
+      commit(LOAD_CARDMSG, payload);
+
+    }).catch((error) => { // 異常處理
+      window.console.error(error);
+      payload.result.cardMsgData.cardMsgList.push(1);
+      window.alert(error)
+      commit(LOAD_CARDMSG, payload);
+    });
+  },
 };
 
 export default actions;

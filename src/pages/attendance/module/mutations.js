@@ -1,9 +1,12 @@
 import {
   INIT_STS,
   INIT_ATTENDANCE,
+  INIT_EMPLOYEE,
+  INIT_CARDMSG,
   LOAD_STS,
   LOAD_ATTENDANCE,
-  LOAD_EMPLOYEE
+  LOAD_EMPLOYEE,
+  LOAD_CARDMSG
 } from './mutationTypes';
 
 const mutations = {
@@ -24,6 +27,26 @@ const mutations = {
     state.attendanceData.errorCodeList = [];
     state.attendanceData = Object.assign({}, state.attendanceData);
   },
+  [INIT_EMPLOYEE](state) { 
+    state.employeeData.employeeName = null;
+    state.employeeData.gender = null; 
+    state.employeeData.groupName = null;
+    state.employeeData.location = null;
+    state.employeeData.deviceType = null;
+    state.employeeData.serialNo = null;
+    state.employeeData.errorCodeList = [],
+    state.employeeData = Object.assign({}, state.employeeData);
+  },
+  [INIT_CARDMSG](state) { 
+
+    state.cardMsgData.cardMsgList = [];
+    state.cardMsgData.fields = ['Content','Time','Status'];
+    state.cardMsgData.fieldkeys = ['msg','createTime','status'];
+    state.cardMsgData.fieldsWidth = ["33","33","33"]
+    state.cardMsgData.errorCodeList = [];
+    state.cardMsgData = Object.assign({}, state.cardMsgData);
+  },
+  
   /**
    * 載入考勤統計資料
    */
@@ -60,6 +83,17 @@ const mutations = {
       employeeDataNew.serialNo = payload.result.employeeData.serialNo;
       employeeDataNew.errorCodeList = payload.result.employeeData.errorCodeList;
       state.employeeData = Object.assign({}, state.employeeData, employeeDataNew)
+    }
+  },
+  /**
+   * 載入訊息資料
+   */
+  [LOAD_CARDMSG](state, payload) { 
+    if(payload.result != null) {
+      let cardMsgDataNew = Object.assign({}, state.cardMsgData);
+      cardMsgDataNew.cardMsgList = payload.result.cardMsgData.cardMsgList;
+      cardMsgDataNew.errorCodeList = payload.result.cardMsgData.errorCodeList;
+      state.cardMsgData = Object.assign({}, state.cardMsgData, cardMsgDataNew)
     }
   },
 };
