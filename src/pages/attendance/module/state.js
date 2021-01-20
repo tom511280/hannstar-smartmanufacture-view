@@ -10,5 +10,14 @@ const state = {
     fieldsWidth:[],
     errorCodeList:[],
   },
+  employeeData:{
+    employeeName: null,
+    gender: null, //boy=1 girl=0
+    groupName: null,
+    location: null,
+    deviceType: null,
+    serialNo: null, 
+    errorCodeList:[],
+  },
 };
 export default state;

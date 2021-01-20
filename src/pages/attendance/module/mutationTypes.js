@@ -4,5 +4,6 @@ export const INIT_ATTENDANCE = 'INIT_ATTENDANCE';
 //讀取資料
 export const LOAD_STS = 'LOAD_STS';
 export const LOAD_ATTENDANCE = 'LOAD_ATTENDANCE';
+export const LOAD_EMPLOYEE = 'LOAD_EMPLOYEE';
 
 

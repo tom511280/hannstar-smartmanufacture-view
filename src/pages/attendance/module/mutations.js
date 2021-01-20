@@ -2,7 +2,8 @@ import {
   INIT_STS,
   INIT_ATTENDANCE,
   LOAD_STS,
-  LOAD_ATTENDANCE
+  LOAD_ATTENDANCE,
+  LOAD_EMPLOYEE
 } from './mutationTypes';
 
 const mutations = {
@@ -43,6 +44,22 @@ const mutations = {
       attendanceDataNew.attendanceList = payload.result.attendanceData.attendanceList;
       attendanceDataNew.errorCodeList = payload.result.attendanceData.errorCodeList;
       state.attendanceData = Object.assign({}, state.attendanceData, attendanceDataNew)
+    }
+  },
+  /**
+   * 載入員工資料
+   */
+  [LOAD_EMPLOYEE](state, payload) { 
+    if(payload.result != null) {
+      let employeeDataNew = Object.assign({}, state.employeeData);
+      employeeDataNew.employeeName = payload.result.employeeData.employeeName;
+      employeeDataNew.gender = payload.result.employeeData.gender;
+      employeeDataNew.groupName = payload.result.employeeData.groupName;
+      employeeDataNew.location = payload.result.employeeData.location;
+      employeeDataNew.deviceType = payload.result.employeeData.deviceType;
+      employeeDataNew.serialNo = payload.result.employeeData.serialNo;
+      employeeDataNew.errorCodeList = payload.result.employeeData.errorCodeList;
+      state.employeeData = Object.assign({}, state.employeeData, employeeDataNew)
     }
   },
 };

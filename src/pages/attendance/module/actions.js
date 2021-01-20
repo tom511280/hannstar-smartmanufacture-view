@@ -4,6 +4,7 @@ import {
   INIT_ATTENDANCE,
   LOAD_STS,
   LOAD_ATTENDANCE,
+  LOAD_EMPLOYEE,
 } from './mutationTypes';
 
 const actions = {
@@ -87,6 +88,43 @@ const actions = {
       commit(LOAD_ATTENDANCE, payload);
     });
   },
+  /**
+   * 載入員工資料
+   */
+  loadEmployee({commit},payload) {
+    // 0 = success
+    // 1 = error
+    Vue.prototype.$axios({
+      url:'testdata/attendance/employeeData.json',
+      params:{}
+    }).then((resp) => { // 回應正常
+      const respData = resp.data.data;
+      let employeeData = {};
+      employeeData.employeeName = "立夫學長";
+      employeeData.gender = 1;
+      employeeData.groupName = "SG004";
+      employeeData.location = "瀚廚";
+      employeeData.deviceType = "wristband";
+      employeeData.serialNo = respData[0].serialNo;
+      employeeData.errorCodeList = [];
+      employeeData.errorCodeList.push(0);
+
+      //TODO 後續補上errorcode判斷
+      payload.result = {
+        employeeData:{},
+      }
+      payload.result.employeeData = employeeData;
+      commit(LOAD_EMPLOYEE, payload);
+
+    }).catch((error) => { // 異常處理
+      window.console.error(error);
+      let employeeData = {};
+      employeeData.errorCodeList = [];
+      employeeData.errorCodeList.push(1);
+      payload.result.employeeData = employeeData;
+      commit(LOAD_EMPLOYEE, payload);
+    });
+  },  
 };
 
 export default actions;
