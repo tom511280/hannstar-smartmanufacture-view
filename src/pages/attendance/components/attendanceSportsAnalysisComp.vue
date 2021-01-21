@@ -1,59 +1,27 @@
 <template>
-    <div class="attendanceChartComp">
+    <div class="attendanceSportsAnalysisComp">
         <div class="common-header">
-            <h4>Attendance</h4>
-            <select id="timeSelect" name="timeSelect">
-                <option>Attendance 1</option>
-                <option>Attendance 2</option>
-                <option>Attendance 3</option>
-                <option>Attendance 4</option>
-            </select>
+            <h4>Sports Analysis</h4>
+            <!-- <select id="timeSelect" name="timeSelect">
+                <option>Attend</option>
+                <option>Attend</option>
+                <option>Attend</option>
+                <option>Attend</option>
+            </select> -->
             <div class="attendanceChartComp-legend">
               <span class="attendanceChartComp-enter"></span>
-              <p>進入</p>
+              <p>步數</p>
               <span class="attendanceChartComp-leave"></span>
-              <p>離開</p>
+              <p>距離</p>
+            </div>
+            <div class="viewmore">
+                <p>View Detail</p>
+                <img src="@/assets/img/bodyhealth/ic-arrow-orange-right.svg" alt="">
             </div>
         </div>
         <div class="common-content">
           <div :id="this.elid" style="width:100%;height: 100%;"></div>
         </div>
-        
-        <!-- <div class="common-header">
-            <div class="common-item">
-                <h4>Attendance</h4>
-                <select id="timeSelect" name="timeSelect">
-                    <option>testdata</option>
-                </select>
-            </div>
-            <div class="common-item attendanceChartComp-legend">
-                <span class="attendanceChartComp-enter"></span>
-                <p>進入</p>
-                <span class="attendanceChartComp-leave"></span>
-                <p>離開</p>
-            </div>
-        </div> -->
-      <!-- <div class="common-item common-container-row">
-          <h4>Attendance</h4>
-          <select id="timeSelect" name="timeSelect">
-              <option>testdata</option>
-          </select>
-      </div> -->
-      <!-- <div class="common-header">
-          <h4>Attendance</h4>
-          <select id="timeSelect" name="timeSelect">
-              <option>testdata</option>
-          </select>
-          <div class="attendanceChartComp-legend">
-              <span class="attendanceChartComp-enter"></span>
-              <p>進入</p>
-              <span class="attendanceChartComp-leave"></span>
-              <p>離開</p>
-          </div>
-      </div>
-      <div class="common-content">
-          <div :id="this.elid" style="width:100%;height: 100%;"></div>
-      </div> -->
   </div>
 </template>
 <script>
@@ -61,16 +29,22 @@ import 'echarts-gl';
 export default {
     data(){
       return {
-        elid:'attendanceChartComp' + Math.random(),
+        elid:'attendanceSportsAnalysisComp' + Math.random(),
         chartOptions: {
                         color: ['#5793f3', '#d14a61', '#675bba'],
                         tooltip: {
-                                    show:true,
+                            show:true,
+                            trigger: 'item',
+                            formatter: function (params) {
+                                return '距離: ' + params.data + '<br>' + "卡路里: 1000";
+                            }
+                            
+                            // formatter: '{a} <br/>{b} : {c}'
                         },
                         grid: {
                                 left: '6%',
-                                top: '7.5%',
-                                height: '85%',
+                                top: '23%',
+                                height: '63%',
                                 width:'87%'
                         },
                         xAxis: {
@@ -86,7 +60,7 @@ export default {
                                 // nameTextStyle: {
                                 //                 color:'red',
                                 // },
-                                name:'人數'
+                                name:'距離/m'
                         },
                         series: [
                                     {
@@ -108,10 +82,13 @@ export default {
                 }
     
     },
+    mounted() {
+        this.drawChart();
+    },
     methods: {
-        drawChart(dataP1, dataP2) {
-            this.chartOptions.series[0].data = dataP1;
-            this.chartOptions.series[1].data = dataP2;
+        drawChart() {
+            this.chartOptions.series[0].data = [200,500,600,700,800,900,200];
+            this.chartOptions.series[1].data = [150,450,550,650,750,850,150];
             let monitorpieChart = this.$echarts.init(document.getElementById(this.elid));
             monitorpieChart.setOption(this.chartOptions);
         }
@@ -120,28 +97,30 @@ export default {
 </script>
 <style scoped>
 /* cus common */
-.attendanceChartComp {
+.attendanceSportsAnalysisComp {
     height: 100%;
     width: 100%;
 }
 .common-header {
-    height: 7.5%;
-    padding-left: 1vw;
-    padding-right: 1vw;
+    height: 10%;
+    /* padding-right: 1vw; */
     width: 100%;
+    border-bottom:none;
+    margin-bottom: 1.5vh;
 }
 .common-content {
-    height: 92.5%;
+    height: 80%;
     padding-left: 0.5vw;
     padding-right: 0.5vw;
 }
 
 /* cus */
 .common-header > h4 {
+    /* width: 80%; */
     margin-right: 0.5vw;
 }
 .common-header > select {
-    width: 10vw;
+    /* width: 20%; */
 }
 .attendanceChartComp-legend {
     display: flex;

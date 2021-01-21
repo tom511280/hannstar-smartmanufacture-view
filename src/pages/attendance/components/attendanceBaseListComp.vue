@@ -1,7 +1,7 @@
 <template>
-  <div class="attendanceNotificationComp">
+  <div class="attendanceBaseListComp">
     <div class="common-header">
-      <h4>Notification</h4>
+      <h4>Attendance</h4>
       <div class="viewmore">
         <p>View Detail</p>
         <img src="@/assets/img/bodyhealth/ic-arrow-orange-right.svg" alt="">
@@ -28,7 +28,7 @@ export default {
 }
 </script>
 <style scoped>
-.attendanceNotificationComp {
+.attendanceBaseListComp {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

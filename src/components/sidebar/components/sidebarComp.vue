@@ -167,6 +167,10 @@ export default {
 .v-sidebar-menu.vsm_expanded .vsm--item .vsm--link_level-1 .vsm--icon {
   background-color:#fff !important;
 }
+/* .v-sidebar-menu.vsm_expanded .vsm--item .vsm--link_level-1 .vsm--icon:hover {
+  background-color:#394867 !important;
+} */
+
 .v-sidebar-menu.vsm_expanded .vsm--item_open .vsm--link_level-1 {
   color:#ef8059 !important;
   background-color:#fff !important;
@@ -213,7 +217,7 @@ export default {
 }
 .vsm--link.vsm--link_level-2:hover {
   color: #394867 !important;
-  background-color: #f1f6f9 !important;
+  /* background-color: #f1f6f9 !important; */
 }
 .vsm--link_level-2.vsm--link_active {
   color: #394867 !important;

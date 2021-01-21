@@ -26,5 +26,40 @@ const state = {
     fieldsWidth:[],
     errorCodeList:[],
   },
+  positionData:{
+    positionList:[],
+    fields:[],
+    fieldkeys:[],
+    fieldsWidth:[],
+    errorCodeList:[],
+  },
+  hraData:{
+    hraList:[],
+    fields:[],
+    fieldkeys:[],
+    fieldsWidth:[],
+    errorCodeList:[],
+  },
+  attendanceBaseData:{
+    attendanceBaseList:[],
+    fields:[],
+    fieldkeys:[],
+    fieldsWidth:[],
+    errorCodeList:[],
+  },
+  sosData:{
+    sosList:[],
+    fields:[],
+    fieldkeys:[],
+    fieldsWidth:[],
+    errorCodeList:[],
+  },
+  meetingData:{
+    meetingList:[],
+    fields:[],
+    fieldkeys:[],
+    fieldsWidth:[],
+    errorCodeList:[],
+  },
 };
 export default state;

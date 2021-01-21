@@ -29,7 +29,7 @@
                     <h5>{{this.heartMsg.tableP2Title}}</h5>
                     <monitorpieListComp ref="heartRateListP2"></monitorpieListComp>
                 </div>
-                <div class="bodyhealthView-monitor-area-content-viewmore">
+                <div class="viewmore">
                     <p @click="goBodyhealthDetailView()">View More</p>
                     <img src="@/assets/img/bodyhealth/ic-arrow-orange-right.svg" alt="">
                 </div>
@@ -64,7 +64,7 @@
                     <h5>{{this.sleepMsg.tableP2Title}}</h5>
                     <monitorpieListComp ref="sleepListP2"></monitorpieListComp>
                 </div>
-                <div class="bodyhealthView-monitor-area-content-viewmore">
+                <div class="viewmore">
                     <p @click="goBodyhealthDetailView()">View More</p>
                     <img src="@/assets/img/bodyhealth/ic-arrow-orange-right.svg" alt="">
                 </div>
@@ -99,7 +99,7 @@
                     <h5>{{this.sportsMsg.tableP2Title}}</h5>
                     <monitorpieListComp ref="sportsListP2"></monitorpieListComp>
                 </div>
-                <div class="bodyhealthView-monitor-area-content-viewmore">
+                <div class="viewmore">
                     <p @click="goBodyhealthDetailView()">View More</p>
                     <img src="@/assets/img/bodyhealth/ic-arrow-orange-right.svg" alt="">
                 </div>
@@ -400,7 +400,7 @@ h4,h5 {
     border-bottom: 1px solid#bbbfca; 
 }
 
-.bodyhealthView-monitor-area-content-viewmore {
+.viewmore {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -409,7 +409,7 @@ h4,h5 {
   width: 100%;
   margin-top: 1vh;
 }
-.bodyhealthView-monitor-area-content-viewmore > p {
+.viewmore > p {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -420,7 +420,7 @@ h4,h5 {
   margin-bottom: auto;
   cursor: pointer;
 }
-.bodyhealthView-monitor-area-content-viewmore > img {
+.viewmore > img {
   margin-top: 0.1vh;
   margin-left: 0.25vw;
 }

@@ -5,7 +5,7 @@
         </div>
         <div class="common-line"></div>
         <div class="attendancePersonInfoComp-item">
-            <h3>Woman</h3>
+            <h3>Gender</h3>
             <div class="description">{{gender}}</div>
         </div>
         <div class="common-line"></div>
@@ -45,8 +45,8 @@ export default {
     methods: {
         setData(employeeData) {
             this.employeeName = employeeData.employeeName;
-            if(employeeData.gender == 0) this.gender = "女"
-            if(employeeData.gender == 1) this.gender = "男"
+            if(employeeData.gender == 0) this.gender = "girl"
+            if(employeeData.gender == 1) this.gender = "boy"
             this.groupName = employeeData.groupName;
             this.location = employeeData.location;
             this.deviceType = employeeData.deviceType;

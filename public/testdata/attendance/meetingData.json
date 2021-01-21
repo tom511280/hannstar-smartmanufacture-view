@@ -9,28 +9,28 @@
 		"pages": 1,
 		"list": [
 			{
-				"check": 1,
-				"time": "2020-10-15"
+				"localte": "瀚廚",
+				"duration": "60"
 			},
 			{
-				"check": 1,
-				"time": "2020-10-16"
-			},
-			{
-				"check": 2,
-				"time": "2020-10-17"
-			},
-			{
-				"check": 1,
-				"time": "2020-10-18"
-            }, 
-            {
-				"check": 2,
-				"time": "2020-10-19"
+				"localte": "406",
+				"duration": "4"
             },
             {
-				"check": 1,
-				"time": "2020-10-20"
+				"localte": "407",
+				"duration": "10"
+            },
+            {
+				"localte": "餐廳",
+				"duration": "20"
+            },
+            {
+				"localte": "廁所",
+				"duration": "12"
+            },
+            {
+				"localte": "408",
+				"duration": "15"
 			},
 			{
 			"deviceName": null,

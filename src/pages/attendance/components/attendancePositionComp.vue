@@ -1,13 +1,19 @@
 <template>
-  <div class="attendanceNotificationComp">
+  <div class="attendancePositionComp">
     <div class="common-header">
-      <h4>Notification</h4>
-      <div class="viewmore">
-        <p>View Detail</p>
-        <img src="@/assets/img/bodyhealth/ic-arrow-orange-right.svg" alt="">
-      </div>
+        <h4>Real-time Position</h4>
+        <div class="viewmore">
+                <p>View Detail</p>
+                <img src="@/assets/img/bodyhealth/ic-arrow-orange-right.svg" alt="">
+        </div>
+        <!-- <div class="viewmore">
+            <p>View Map</p>
+            <img src="@/assets/img/bodyhealth/ic-arrow-orange-right.svg" alt="">
+        </div> -->
     </div>
-    <overViewListComp ref="overViewList"></overViewListComp>
+    <div class="common-content">
+      <overViewListComp ref="overViewList"></overViewListComp>
+    </div>
   </div>
 </template>
 <script>
@@ -28,7 +34,7 @@ export default {
 }
 </script>
 <style scoped>
-.attendanceNotificationComp {
+.attendancePositionComp {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -44,5 +50,9 @@ export default {
   margin-bottom: 1.5vh;
   border-bottom: none;
   height: 10%;
+}
+.common-content {
+  height: 85%;
+  width: 100%;
 }
 </style>

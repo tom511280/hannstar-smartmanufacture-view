@@ -9,29 +9,29 @@
 		"pages": 1,
 		"list": [
 			{
-				"check": 1,
+				"calories": "500",
+				"steps": "100",
+				"distances": "200",
 				"time": "2020-10-15"
 			},
 			{
-				"check": 1,
+				"calories": "1500", 
+				"steps": "500", 
+				"distances": "600",
 				"time": "2020-10-16"
 			},
 			{
-				"check": 2,
+				"calories": "700", 
+				"steps": "150", 
+				"distances": "400",
 				"time": "2020-10-17"
 			},
 			{
-				"check": 1,
+				"calories": "400", 
+				"steps": "200", 
+				"distances": "100",
 				"time": "2020-10-18"
-            }, 
-            {
-				"check": 2,
-				"time": "2020-10-19"
-            },
-            {
-				"check": 1,
-				"time": "2020-10-20"
-			},
+			}, 
 			{
 			"deviceName": null,
 			"deviceDesc": null,

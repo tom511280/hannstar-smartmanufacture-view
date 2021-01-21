@@ -4,10 +4,20 @@ import {
   INIT_ATTENDANCE,
   INIT_EMPLOYEE,
   INIT_CARDMSG,
+  INIT_POSITION,
+  INIT_HRA,
+  INIT_ATTENDANCEBASE,
+  INIT_SOS,
+  INIT_MEETING,
   LOAD_STS,
   LOAD_ATTENDANCE,
   LOAD_EMPLOYEE,
-  LOAD_CARDMSG
+  LOAD_CARDMSG,
+  LOAD_POSITION,
+  LOAD_HRA,
+  LOAD_ATTENDANCEBASE,
+  LOAD_SOS,
+  LOAD_MEETING
 } from './mutationTypes';
 
 const actions = {
@@ -25,6 +35,21 @@ const actions = {
   },
   initCardMsg({commit},payload) {
     commit(INIT_CARDMSG,payload);
+  },
+  initPosition({commit},payload) {
+    commit(INIT_POSITION,payload);
+  },
+  initHra({commit},payload) {
+    commit(INIT_HRA,payload);
+  },
+  initAttendanceBase({commit},payload) {
+    commit(INIT_ATTENDANCEBASE,payload);
+  },
+  initSos({commit},payload) {
+    commit(INIT_SOS,payload);
+  },
+  initMeeting({commit},payload) {
+    commit(INIT_MEETING,payload);
   },
 
   /**
@@ -134,7 +159,7 @@ const actions = {
     });
   },
   /**
-   * 訊息資料
+   * 載入訊息資料
    */
   loadCardMsg({commit},payload) {
     // 0 = success
@@ -145,8 +170,10 @@ const actions = {
     }).then((resp) => { // 回應正常
       const respData = resp.data.data.list;
       let cardMsgList = []
+      let count = 0;
       for (let data of respData) {
-        cardMsgList.push(data);
+        count++;
+        if(count < 5) cardMsgList.push(data);
       }
 
       //TODO 後續補上errorcode判斷
@@ -165,6 +192,191 @@ const actions = {
       payload.result.cardMsgData.cardMsgList.push(1);
       window.alert(error)
       commit(LOAD_CARDMSG, payload);
+    });
+  },
+  /**
+   * 載入位置資料
+   */
+  loadPosition({commit},payload) {
+    // 0 = success
+    // 1 = error
+    Vue.prototype.$axios({
+      url:'testdata/attendance/position.json',
+      params:{}
+    }).then((resp) => { // 回應正常
+      const respData = resp.data.data.list;
+      let positionList = []
+      let count = 0;
+      for (let data of respData) {
+        count++;
+        if(count < 6) positionList.push(data);
+      }
+
+      //TODO 後續補上errorcode判斷
+      payload.result = {
+        positionData:{
+          positionList:[],
+          errorCodeList:[],
+        },
+      }
+      payload.result.positionData.positionList = positionList;
+      payload.result.positionData.errorCodeList.push(0);
+      commit(LOAD_POSITION, payload);
+
+    }).catch((error) => { // 異常處理
+      window.console.error(error);
+      payload.result.positionData.positionList.push(1);
+      window.alert(error)
+      commit(LOAD_POSITION, payload);
+    });
+  },
+  /**
+   * 載入心率分析資料
+   */
+  loadHra({commit},payload) {
+    // 0 = success
+    // 1 = error
+    Vue.prototype.$axios({
+      url:'testdata/attendance/heartRateAnalysis.json',
+      params:{}
+    }).then((resp) => { // 回應正常
+      const respData = resp.data.data.list;
+      let hraList = []
+      let count = 0;
+      for (let data of respData) {
+        count++;
+        if(count < 5) hraList.push(data); 
+      }
+
+      //TODO 後續補上errorcode判斷
+      payload.result = {
+        hraData:{
+          hraList:[],
+          errorCodeList:[],
+        },
+      }
+      payload.result.hraData.hraList = hraList;
+      payload.result.hraData.errorCodeList.push(0);
+      commit(LOAD_HRA, payload);
+
+    }).catch((error) => { // 異常處理
+      window.console.error(error);
+      payload.result.hraData.errorCodeList.push(1);
+      window.alert(error)
+      commit(LOAD_HRA, payload);
+    });
+  },
+  /**
+   * 載入考勤基本資料
+   */
+  loadAttendanceBase({commit},payload) {
+    // 0 = success
+    // 1 = error
+    Vue.prototype.$axios({
+      url:'testdata/attendance/attendanceData.json',
+      params:{}
+    }).then((resp) => { // 回應正常
+      const respData = resp.data.data.list;
+      let attendanceBaseList = []
+      let count = 0;
+      for (let data of respData) {
+        count++;
+        if(count < 5) {
+          data.date = "2020-1-21"
+          data.time = "11:50:00"
+          attendanceBaseList.push(data);
+        }
+      }
+
+      //TODO 後續補上errorcode判斷
+      payload.result = {
+        attendanceBaseData:{
+          errorCodeList:[],
+        },
+      }
+      payload.result.attendanceBaseData.attendanceBaseList = attendanceBaseList;
+      payload.result.attendanceBaseData.errorCodeList.push(0);
+      commit(LOAD_ATTENDANCEBASE, payload);
+
+    }).catch((error) => { // 異常處理
+      window.console.error(error);
+      payload.result.attendanceBase.errorCodeList.push(1);
+      window.alert(error)
+      commit(LOAD_ATTENDANCEBASE, payload);
+    });
+  },
+  /**
+   * 載入SOS資料
+   */
+  loadSos({commit},payload) {
+    // 0 = success
+    // 1 = error
+    Vue.prototype.$axios({
+      url:'testdata/attendance/sos.json',
+      params:{}
+    }).then((resp) => { // 回應正常
+      const respData = resp.data.data.list;
+      let sosList = []
+      let count = 0;
+      for (let data of respData) {
+        count++;
+        if(count < 5) {
+          data.date = "2020-1-21"
+          data.time = "11:50:00"
+          sosList.push(data);
+        }
+      }
+
+      //TODO 後續補上errorcode判斷
+      payload.result = {
+        sosData:{
+          errorCodeList:[],
+        },
+      }
+      payload.result.sosData.sosList = sosList;
+      payload.result.sosData.errorCodeList.push(0);
+      commit(LOAD_SOS, payload);
+
+    }).catch((error) => { // 異常處理
+      window.console.error(error);
+      payload.result.sosData.errorCodeList.push(1);
+      window.alert(error)
+      commit(LOAD_SOS, payload);
+    });
+  },
+  /**
+   * 載入MEETING資料
+   */
+  loadMeeting({commit},payload) {
+    // 0 = success
+    // 1 = error
+    Vue.prototype.$axios({
+      url:'testdata/attendance/meetingData.json',
+      params:{}
+    }).then((resp) => { // 回應正常
+      const respData = resp.data.data.list;
+      let meetingList = []
+      let count = 0;
+      for (let data of respData) {
+        count++;
+        if(count < 4) meetingList.push(data);
+      }
+
+      //TODO 後續補上errorcode判斷
+      payload.result = {
+        meetingData:{
+          errorCodeList:[],
+        },
+      }
+      payload.result.meetingData.meetingList = meetingList;
+      payload.result.meetingData.errorCodeList.push(0);
+      commit(LOAD_MEETING, payload);
+
+    }).catch((error) => { // 異常處理
+      window.console.error(error);
+      payload.result.meetingData.errorCodeList.push(1);
+      window.alert(error)
+      commit(LOAD_MEETING, payload);
     });
   },
 };

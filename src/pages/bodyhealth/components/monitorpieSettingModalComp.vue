@@ -180,6 +180,7 @@ export default {
     align-items: center;
     width: 30%;
     height: 100%;
+    padding-left: 0vw;
 }
 .modal-body-content-sub > h5:last-child {
     display: flex;

@@ -1,7 +1,7 @@
 <template>
     <div class="gfTreeComp">
         <div class="gfTreeComp-header">
-            <h5 class="gfTreeComp-header-title">Group Structure</h5>
+            <h4 class="gfTreeComp-header-title">Group Structure</h4>
             <div class="gfTreeComp-header-content">
                 <p data-bs-toggle="modal" data-bs-target="#gfAddModal">Add</p>
                 <div class="common-line"></div>
@@ -160,9 +160,10 @@ export default {
   justify-content: center;
   align-items: flex-end;
   height: 100%;
-  width: 25%;
+  // width: 25%;
   margin-left: 5%;
-  font-size: 1.7vmin;
+  // font-size: 1.7vmin;
+  margin-bottom: 0.5rem;
 }
 .gfTreeComp-header-content {
   display: flex;
@@ -251,6 +252,9 @@ export default {
       // display: none; // 也可以去掉
     }
   }
+}
+.is-leaf.el-tree-node__expand-icon.el-icon-caret-right {
+  width: 0.5vw;
 }
 /* Modal */
 #gfAddModal > .modal-dialog > .modal-content {

@@ -66,6 +66,14 @@ export default {
 }
 </script>
 <style scoped>
+.paginationComp {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  overflow-x: scroll;
+}
 /*paginatio*/
 .number, .btn-prev, .btn-next {
   font-weight: 500;
@@ -80,13 +88,6 @@ export default {
 }
 .number:hover {
   color: white !important;
-}
-.paginationComp {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
 }
 .paginationComp-area-p1 {
   width: 30%; 

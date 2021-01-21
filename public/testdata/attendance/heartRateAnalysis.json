@@ -9,47 +9,42 @@
 		"pages": 1,
 		"list": [
 			{
-				"check": 1,
+				"minimum": "500",
+				"maximum": "100",
+				"average": "200",
 				"time": "2020-10-15"
 			},
 			{
-				"check": 1,
+				"minimum": "1500", 
+				"maximum": "500", 
+				"average": "600",
 				"time": "2020-10-16"
 			},
 			{
-				"check": 2,
+				"minimum": "700", 
+				"maximum": "150", 
+				"average": "400",
 				"time": "2020-10-17"
 			},
 			{
-				"check": 1,
+				"minimum": "400", 
+				"maximum": "200", 
+				"average": "100",
 				"time": "2020-10-18"
-            }, 
-            {
-				"check": 2,
-				"time": "2020-10-19"
-            },
-            {
-				"check": 1,
-				"time": "2020-10-20"
 			},
 			{
-			"deviceName": null,
-			"deviceDesc": null,
-			"deviceModelId": null,
-			"deviceModel": null,
-			"serialNo": "d8c93c791358",
-			"cardNo": "0",
-			"electric": null,
-			"id": "1936",
-			"name": "黃俊嘉",
-			"sex": true,
-			"tenantName": "瀚宇彩晶股份有限公司",
-			"orgName": "SG0400",
-			"wristbandNo": null,
-			"inTime": null,
-			"outTime": null,
-			"state": 2
-		}],
+				"minimum": "50", 
+				"maximum": "200", 
+				"average": "100",
+				"time": "2020-10-19"
+			},
+			{
+				"minimum": "80", 
+				"maximum": "50", 
+				"average": "55",
+				"time": "2020-10-20"
+			}
+		],
 		"prePage": 0,
 		"nextPage": 0,
 		"isFirstPage": true,

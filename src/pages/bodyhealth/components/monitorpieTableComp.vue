@@ -21,16 +21,14 @@
         </el-table-column>
       </el-table>
       <div>
-      <el-col>
-        <paginationComp
-          :total="total"
-          :pageNow="pageNow"
-          :pageSize="pageSize"
-          :pageSizes="pageSizes"
-          @changeData="changeData"
-        >
-        </paginationComp>
-      </el-col>
+          <paginationComp
+            :total="total"
+            :pageNow="pageNow"
+            :pageSize="pageSize"
+            :pageSizes="pageSizes"
+            @changeData="changeData"
+          >
+          </paginationComp>
       </div>
   </div>
 </template>
