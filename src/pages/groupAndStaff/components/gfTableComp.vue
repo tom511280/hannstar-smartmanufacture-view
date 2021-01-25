@@ -132,7 +132,7 @@ export default {
     margin-left: 1%;
 }
 .gfTableComp-table-area {
-    height: 90%;
+    height: 86%;
     widows: 100%;   
 }
 .gfTableComp-table-area-detail {

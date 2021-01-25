@@ -161,11 +161,11 @@ export default {
     letter-spacing: normal;
 }
 .vsm--list {
-  background-color:#fff !important;
-  padding:0px !important;
+  /* background-color:#fff !important; */
+  /* padding:0px !important; */
 }
 .v-sidebar-menu.vsm_expanded .vsm--item .vsm--link_level-1 .vsm--icon {
-  background-color:#fff !important;
+  /* background-color:#fff !important; */
 }
 /* .v-sidebar-menu.vsm_expanded .vsm--item .vsm--link_level-1 .vsm--icon:hover {
   background-color:#394867 !important;
@@ -212,13 +212,20 @@ export default {
   background-size: 100% 100%;
 }
 /*游標移動到項目時的樣式*/
+/* .vsm--link.vsm--link_level-1 {
+  color: #707b91 !important;
+} */
+/* .vsm--link.vsm--link_level-1 > .vsm--icon:hover {
+  color:#707b91 !important;
+} */
+/*
 .vsm--link.vsm--link_level-2 {
   color: #707b91 !important;
 }
 .vsm--link.vsm--link_level-2:hover {
-  color: #394867 !important;
-  /* background-color: #f1f6f9 !important; */
+  color: #707b91 !important;
 }
+*/
 .vsm--link_level-2.vsm--link_active {
   color: #394867 !important;
   background-color: #f1f6f9 !important;
@@ -227,4 +234,5 @@ export default {
 .vsm--link.vsm--link_level-1.vsm--link_active{
   box-shadow: 3px 0px 0px 0px white inset !important;
 }
+
 </style>

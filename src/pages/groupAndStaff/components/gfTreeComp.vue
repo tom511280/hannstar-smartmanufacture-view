@@ -226,7 +226,7 @@ export default {
   // 横线
   .el-tree-node::after {
     content: "";
-    width: 24px;
+    width: 18px;
     height: 20px;
     position: absolute;
     left: -3px;

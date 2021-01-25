@@ -85,7 +85,7 @@
                         <h5>Set staff Connect Device</h5>
                     </div>
                     <div class="modal-body">
-                        <div class="modal-body-content">
+                        <div class="gfDeviceModal-modal-body-content modal-body-content">
                             <div class="modal-body-content-sub">
                                 <h5>Name</h5>
                                 <input type="text" v-model="addNodeName" />
@@ -113,7 +113,7 @@
                         <h5>Set staff Card</h5>
                     </div>
                     <div class="modal-body">
-                        <div class="modal-body-content">
+                        <div class="gfCardModal-modal-body-content modal-body-content">
                             <div class="modal-body-content-sub">
                                 <h5>Name</h5>
                                 <input type="text" v-model="addNodeName" />
@@ -301,6 +301,11 @@ export default {
 #gfDeleteModal .modal-dialog{
     width: 15vw;
 }
+/* #gfEditStaffModal > .modal-dialog,
+#gfDeviceModal > .modal-dialog,
+#gfCardModal > .modal-dialog  {
+    width: 20vw;
+} */
 
 #gfDeleteModal .modal-dialog > .modal-content > .modal-body > .modal-body-content > .modal-body-content-sub > h4{
     display: flex;
@@ -320,5 +325,17 @@ export default {
 .fileupload-content {
     margin-left: 1vw;
     color: #a1a1a1;
+}
+.gfDeviceModal-modal-body-content > .modal-body-content-sub > h5 {
+    width: 40%;
+}
+.gfDeviceModal-modal-body-content > .modal-body-content-sub > input[type=text] {
+    width: 50%;
+}
+.gfCardModal-modal-body-content > .modal-body-content-sub > h5 {
+    width: 40%;
+}
+.gfCardModal-modal-body-content > .modal-body-content-sub > input[type=text] {
+    width: 50%;
 }
 </style>

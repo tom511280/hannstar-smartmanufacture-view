@@ -28,7 +28,8 @@
 	overflow-x: hidden
 }
 .v-sidebar-menu .vsm--dropdown>.vsm--list {
-	padding: 5px
+	/*cus add*/
+	/* padding: 5px */
 }
 .v-sidebar-menu .vsm--item {
 	position: relative;
@@ -251,11 +252,13 @@
 	color: #fff
 }
 .v-sidebar-menu.vsm_collapsed .vsm--link_level-1.vsm--link_hover .vsm--icon,.v-sidebar-menu.vsm_collapsed .vsm--link_level-1:hover .vsm--icon {
-	color: #fff;
-	background-color: #4285f4
+	/* color: #fff;
+	background-color: #4285f4 */
 }
 .v-sidebar-menu .vsm--dropdown .vsm--list {
-	background-color: #36363b
+	/*cus add*/
+	background-color: #fff
+	/* background-color: #36363b */
 }
 .v-sidebar-menu .vsm--mobile-bg {
 	background-color: #4285f4
@@ -286,6 +289,8 @@
 	background-color: #fff
 }
 .v-sidebar-menu.vsm_white-theme .vsm--link {
+	/*cus add*/
+	background-color: #fff;
 	color: #262626
 }
 .v-sidebar-menu.vsm_white-theme .vsm--link_level-1.vsm--link_exact-active,.v-sidebar-menu.vsm_white-theme .vsm--link_level-1.vsm--link_active {
@@ -293,11 +298,12 @@
 	box-shadow: 3px 0px 0px 0px #4285f4 inset
 }
 .v-sidebar-menu.vsm_white-theme .vsm--link_level-1.vsm--link_exact-active .vsm--icon,.v-sidebar-menu.vsm_white-theme .vsm--link_level-1.vsm--link_active .vsm--icon {
+	/*cus add*/
 	color: #fff;
-	background-color: #262626
+	/* background-color: #262626 */
 }
 .v-sidebar-menu.vsm_white-theme .vsm--link_level-1 .vsm--icon {
-	background-color: #bbc5d6
+	background-color: #fff
 }
 .v-sidebar-menu.vsm_white-theme .vsm--link_hover,.v-sidebar-menu.vsm_white-theme .vsm--link:hover {
 	background-color: rgba(242,242,242,0.5)
@@ -309,8 +315,14 @@
 	color: #fff
 }
 .v-sidebar-menu.vsm_white-theme.vsm_collapsed .vsm--link_level-1.vsm--link_hover .vsm--icon,.v-sidebar-menu.vsm_white-theme.vsm_collapsed .vsm--link_level-1:hover .vsm--icon {
-	color: #fff;
-	background-color: #4285f4
+	/*cus add*/
+	/* color: #fff; */
+	/* background-color: #4285f4 */
+	/* background-color: rgba(242,242,242,0.5) !important; */
+}
+/*cus add*/
+.vsm--link.vsm--link_level-1.vsm--link_hover:not(.vsm--link_active) > .vsm--icon {
+	background-color: rgba(242,242,242,0.5) !important;
 }
 .v-sidebar-menu.vsm_white-theme .vsm--dropdown .vsm--list {
 	background-color: #e3e3e3
@@ -323,7 +335,9 @@
 	background-color: #4285f4
 }
 .v-sidebar-menu.vsm_white-theme.vsm_expanded .vsm--item_open .vsm--link_level-1 .vsm--icon {
-	background-color: #4285f4
+	/* background-color: #4285f4 */
+	/*cus add*/
+	background-color: #fff;
 }
 .v-sidebar-menu.vsm_white-theme.vsm_rtl .vsm--link_level-1.vsm--link_active,.v-sidebar-menu.vsm_white-theme.vsm_rtl .vsm--link_level-1.vsm--link_exact-active {
 	-webkit-box-shadow: -3px 0px 0px 0px #4285f4 inset;
