@@ -29,29 +29,70 @@ export default {
             {
               title: 'Overview',
               href: '/overview/overviewView',
-              
+              badge: {
+                text: '建置中',
+                class: 'vsm--badge_default',
+                attributes: {
+                }
+              }
             },
             {
-              title: 'Instant Alert'
+              title: 'Instant Alert',
+              badge: {
+                text: '建置中',
+                class: 'vsm--badge_default',
+                attributes: {
+                }
+              }
             },
             {
               title: 'Body Health',
               href: '/bodyhealth/bodyhealthView',
-              alias: ['/bodyhealth/bodyhealthView', '/bodyhealth/bodyhealthDetailView']
+              alias: ['/bodyhealth/bodyhealthView', '/bodyhealth/bodyhealthDetailView'],
+              badge: {
+                text: '已開放',
+                class: 'vsm--badge_open vsm--badge_default',
+                attributes: {
+                }
+              }
             },
             {
-              title: 'Movement'
+              title: 'Movement',
+              badge: {
+                text: '建置中',
+                class: 'vsm--badge_default',
+                attributes: {
+                }
+              }
             },
             {
-              title: 'Body Temperature'
+              title: 'Body Temperature',
+              badge: {
+                text: '建置中',
+                class: 'vsm--badge_default',
+                attributes: {
+                }
+              }
             },
             {
               title: 'Attendance',
               href: '/attendance/attendanceView',
-              alias: ['/attendance/attendanceView', '/attendance/attendanceDetailView']
+              alias: ['/attendance/attendanceView', '/attendance/attendanceDetailView'],
+              badge: {
+                text: '已開放',
+                class: 'vsm--badge_open vsm--badge_default',
+                attributes: {
+                }
+              }
             },
             {
-              title: 'Notification'
+              title: 'Notification',
+              badge: {
+                text: '建置中',
+                class: 'vsm--badge_default',
+                attributes: {
+                }
+              }
             },
           ]
         },
@@ -60,10 +101,22 @@ export default {
           icon: 'fa pm-icon',
           child: [
             {
-              title: 'Personal Monitor'
+              title: 'Personal Monitor',
+              badge: {
+                text: '建置中',
+                class: 'vsm--badge_default',
+                attributes: {
+                }
+              }
             },
             {
-              title: 'Exposure Track'
+              title: 'Exposure Track',
+              badge: {
+                text: '建置中',
+                class: 'vsm--badge_default',
+                attributes: {
+                }
+              }
             },
           ]
         },
@@ -73,16 +126,40 @@ export default {
           child: [
             {
               title: 'Group & Staffs',
-              href: '/groupAndStaff/groupAndStaffView'
+              href: '/groupAndStaff/groupAndStaffView',
+              badge: {
+                text: '已開放',
+                class: 'vsm--badge_open vsm--badge_default',
+                attributes: {
+                }
+              }
             },
             {
-              title: 'Device'
+              title: 'Device',
+              badge: {
+                text: '建置中',
+                class: 'vsm--badge_default',
+                attributes: {
+                }
+              }
             },
             {
-              title: 'Locations'
+              title: 'Locations',
+              badge: {
+                text: '建置中',
+                class: 'vsm--badge_default',
+                attributes: {
+                }
+              }
             },
             {
-              title: 'E-Fences'
+              title: 'E-Fences',
+              badge: {
+                text: '建置中',
+                class: 'vsm--badge_default',
+                attributes: {
+                }
+              }
             },
           ]
         },
@@ -91,10 +168,22 @@ export default {
           icon: 'fa us-icon',
           child: [
             {
-              title: 'Center'
+              title: 'Center',
+              badge: {
+                text: '建置中',
+                class: 'vsm--badge_default',
+                attributes: {
+                }
+              }
             },
             {
-              title: 'Setting'
+              title: 'Setting',
+              badge: {
+                text: '建置中',
+                class: 'vsm--badge_default',
+                attributes: {
+                }
+              }
             },
           ]
         }
@@ -121,6 +210,9 @@ export default {
   mounted () {
     this.onResize()
     window.addEventListener('resize', this.onResize)
+
+    // $('[data-toggle="tooltip"]').tooltip();
+
   },
   methods: {
     onToggleCollapse (collapsed) {

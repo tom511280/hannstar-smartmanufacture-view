@@ -347,8 +347,14 @@
 	color: rgba(38,38,38,0.7)
 }
 .v-sidebar-menu.vsm_white-theme .vsm--badge_default {
-	color: #262626;
-	background-color: #f2f2f2
+	 color: #262626;
+	/*background-color: #f2f2f2 */
+	/* color: var(--bs-light); */
+	background-color: var(--bs-warning);
+}
+.v-sidebar-menu.vsm_white-theme .vsm--badge_open {
+	color: var(--bs-light);
+	background-color: var(--bs-success);
 }
 .v-sidebar-menu.vsm_white-theme .vsm--toggle-btn {
 	color: #262626;
