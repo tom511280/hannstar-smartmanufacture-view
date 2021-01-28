@@ -350,7 +350,7 @@
 	 color: #262626;
 	/*background-color: #f2f2f2 */
 	/* color: var(--bs-light); */
-	background-color: var(--bs-warning);
+	background-color: #AAA;
 }
 .v-sidebar-menu.vsm_white-theme .vsm--badge_open {
 	color: var(--bs-light);
