@@ -1,6 +1,25 @@
 <template>
     <div class="gfTreeComp">
-        <div class="gfTreeComp-header">
+      <div class="common-header-clrp">
+        <h4>Group Structure</h4>
+        <p data-bs-toggle="modal" data-bs-target="#gfAddModal">Add</p>
+        <div class="common-vertical-separation-line"></div>
+        <p data-bs-toggle="modal" data-bs-target="#gfEditModal">Edit</p>
+      </div>
+      <div class="common-content-clrp">
+        <el-tree 
+                node-key="id"
+                class="tree-line" 
+                :indent="0" 
+                :data="datas"
+                @node-click="handleNodeClick"
+                ref="tree"
+                :props="defaultProps"
+            >
+          </el-tree>
+      </div>
+
+        <!-- <div class="gfTreeComp-header">
             <h4 class="gfTreeComp-header-title">Group Structure</h4>
             <div class="gfTreeComp-header-content">
                 <p data-bs-toggle="modal" data-bs-target="#gfAddModal">Add</p>
@@ -19,7 +38,7 @@
                 :props="defaultProps"
             >
             </el-tree>
-        </div>
+        </div> -->
         <!-- gf add Modal -->
         <div class="modal fade" id="gfAddModal" tabindex="-1" aria-labelledby="gfEditModal" aria-hidden="true">
             <div class="modal-dialog">
@@ -144,59 +163,94 @@ export default {
     height: 100%;
     width: 100%;
 }
-.gfTreeComp-header {
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   height: 6.5vh;
-   width: 100%;
-   border-bottom: 2px solid #9ba4b4;
-   padding-bottom: 2.5%;
+.gfTreeComp > .common-header-clrp {
+    height: 7.5%;
+    align-items: flex-end;
+    padding-bottom: 1vh;
+    border-bottom: 1px solid #9ba4b4;
 }
-.gfTreeComp-header-title {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-end;
+.gfTreeComp > .common-content-clrp {
+    align-items:flex-start; 
+    height: 92.5%;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    padding-top: 0.5vh;
+}
+.gfTreeComp > .common-header-clrp > h4 {
   height: 100%;
-  // width: 25%;
-  margin-left: 5%;
-  // font-size: 1.7vmin;
-  margin-bottom: 0.5rem;
+  width: 40%;
+  white-space:pre-wrap;
+  margin-right: 2vw;
 }
-.gfTreeComp-header-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-end;
-  height: 100%;
-  width: 70%;
-  padding-right: 9%;
+.gfTreeComp > .common-header-clrp > p {
+  // margin-bottom:0.75vh ;
+  color: #2f87fd;
+  cursor: pointer;
+  font-size: 1.5vmin;
+  padding-bottom: 0.5vh;
 }
-.gfTreeComp-header-content > p {
-   margin-bottom:0.75vh ;
-   color: #2f87fd;
-   cursor: pointer;
-   font-size: 1.5vmin;
-}
-.modal-body-content-sub >  input[type=text] {
-  width: 10vw;
-}
-
-.gfTreeComp-info {
-   height: 90%;
-   width: 100%;
-   padding-top: 5%;
-}
-.common-line {
-  height: 2vh;
+.gfTreeComp > .common-header-clrp > .common-vertical-separation-line {
+  height: 1.6vh;
   margin-top: 0.2vh;
   margin-bottom: 0.2vh;
   margin-left: 0.6vw;
   margin-right: 0.6vw;
-  box-shadow: 0 0 0 0.5px #bbbfca;
 }
+
+
+
+
+// .gfTreeComp-header {
+//    display: flex;
+//    flex-direction: row;
+//    justify-content: center;
+//    align-items: center;
+//    height: 6.5vh;
+//    width: 100%;
+//    border-bottom: 2px solid #9ba4b4;
+//    padding-bottom: 2.5%;
+// }
+// .gfTreeComp-header-title {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   align-items: flex-end;
+//   height: 100%;
+//   margin-left: 5%;
+//   margin-bottom: 0.5rem;
+// }
+// .gfTreeComp-header-content {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: flex-end;
+//   align-items: flex-end;
+//   height: 100%;
+//   width: 70%;
+//   padding-right: 9%;
+// }
+// .gfTreeComp-header-content > p {
+//    margin-bottom:0.75vh ;
+//    color: #2f87fd;
+//    cursor: pointer;
+//    font-size: 1.5vmin;
+// }
+// .modal-body-content-sub >  input[type=text] {
+//   width: 10vw;
+// }
+
+// .gfTreeComp-info {
+//    height: 90%;
+//    width: 100%;
+//    padding-top: 5%;
+// }
+// .common-line {
+//   height: 2vh;
+//   margin-top: 0.2vh;
+//   margin-bottom: 0.2vh;
+//   margin-left: 0.6vw;
+//   margin-right: 0.6vw;
+//   box-shadow: 0 0 0 0.5px #bbbfca;
+// }
 /*樹型菜單客製*/
 .tree-line{
   .el-tree-node {

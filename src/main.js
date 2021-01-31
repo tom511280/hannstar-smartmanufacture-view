@@ -2,11 +2,12 @@ import Vue from 'vue'
 import App from './App.vue'
 
 
-
+import '@/assets/tailwind.css'
+import '@/assets/css/hannstarBase.css'
 import 'bootstrap/dist/js/bootstrap.js'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'normalize.css/normalize.css'
-import '@/assets/css/hannstarCommon.css'; /*引入登入公共樣式*/
+import '@/assets/css/hannstarCommon.css';/*引入登入公共樣式*/
 // import '@/assets/css/fontawesome.css';
 
 
@@ -21,7 +22,7 @@ import routes from '@/router.config';
 const router=new VueRouter(routes)
 
 //引入animate.css
-import animated from 'animate.css' 
+import animated from 'animate.css'
 Vue.use(animated)
 
 //引入vue-sidebar-menu

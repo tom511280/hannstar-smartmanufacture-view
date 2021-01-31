@@ -1,20 +1,44 @@
+/*參數類*/
+:root {
+
+  --common-background-color:#f1f2f3;
+
+  /*common-item(區塊)*/
+  --common-item-inner-margin-left: 0.5vw;
+  --common-item-inner-margin-right: 0.5vw;
+  --common-item-inner-padding-left: 2vw;
+  --common-item-inner-padding-right: 2vw;
+  --common-item-inner-padding-top: 1.5vh;
+  --common-item-inner-padding-bottom: 1.5vh;
+  --common-item-inner-background-color:#ffffff;
+}
+/*移除預設*/
+.row > * {
+  padding-right: 0vw;
+  padding-left: 0vw;
+  margin-top: 0vh;
+}
+.container, .container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
+  padding-right: 0vw;
+  padding-left: 0vw;
+}
 *
 {
-    font-family: Roboto;
-    font-stretch: normal;
-    font-style: normal;
-    font-weight: normal;
-    letter-spacing: normal;
-    font-size: 1vmin;
-    line-height: 1vmin;
+  font-family: Roboto;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  font-size: 1vmin;
+  line-height: 1vmin;
 }
+
 /*text*/
 h1, h2, h3, h4, h5 {
     white-space:nowrap;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
     font-weight: bold;
     letter-spacing: normal;
     color: #394867;
@@ -30,77 +54,56 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 }
-.description {
-  font-size: 1.5vmin;
-}
-
-/*error text css*/
-.errortext {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  height: 1.7vh;
-  width: 18vw;
-  font-size: 1.4vmin;
-  color: #e43030;
-  margin-top: 0.2vh;
-}
-.input-error-style {
-  border-color: red !important;
-}
-.input-no-error-style {
-  border-color: #e8e8e8 !important;
-}
-
 
 /*input*/
 input[type=text], 
 input[type=email], 
 input[type=password], 
-/* input[type=file],  */
-select {
-  font-size: 1.5vmin;
-  color: #394867;
-  border-radius: 8px;
-  background-color: #ffffff;
-  line-height: 1.33;
-  border: solid 1px #dddfe5;
-  border-radius: 8px;
-  height: 3.5vh;
-  padding-left: 1%;
-  padding-right: 1%;
-  padding-top: 1%;
-  padding-bottom: 1%;
-}
+select,
 textarea {
-  font-size: 1.5vmin;
+  height: 3.5vh;
+  padding-left: 0.25vw;
+  padding-right: 0.25vw;
+  padding-top: 0.15vh;
+  padding-bottom: 0.15vh;
   color: #394867;
+  font-size: 1.5vmin;
+  line-height: 1vmin;
   border-radius: 8px;
   background-color: #ffffff;
-  line-height: 1.33;
   border: solid 1px #dddfe5;
-  border-radius: 8px;
-  /* height: 5.5vh; */
-  width: 15vw;
-  padding-left: 1%;
-  padding-right: 1%;
-  padding-top: 1%;
-  padding-bottom: 1%;
 }
-/* Change the white to any color ;) */
+/*select*/
+select {
+  /*移除箭頭樣式*/
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+
+  /*改變右邊箭頭樣式*/
+  background: url("../img/common/select-triangle.svg") no-repeat scroll right center transparent;
+  background-position-x: 95%;
+  padding-left: 0.5vw;
+  padding-top: 0.15vh;
+  padding-top: 0.15vh;
+  font-size: 1.5vmin;
+  width: 5vw;
+}
+
+/* 於inputbox中自動填入後的陰影 */
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active  {
-    -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
+/*checkbox樣式*/
 input[type='checkbox'] {
   cursor: pointer;
   position: relative;
   width: 0.95vw;
   height: 1.9vh;
-  font-size: 0.9rem;
+  font-size: 1.5vmin;
   visibility: hidden;
 }
 input[type=checkbox]:after {
@@ -116,7 +119,6 @@ input[type=checkbox]:after {
   box-shadow: 0 7px 64px 0 rgba(0, 0, 0, 0.07);
   border: solid 1px #bbbfca;
 }
-
 input[type='checkbox']:checked::after {
   background:url("../img/common/icon-s-check.png");
   background-size: 100% 100%;
@@ -124,7 +126,7 @@ input[type='checkbox']:checked::after {
 
 
 
-/*輸入框內的文字*/
+/*輸入框內的placeholder文字*/
 ::-webkit-input-placeholder {
   font-size: 1.5vmin;
   color: #bbbfca;
@@ -150,23 +152,7 @@ button, [type="button"] {
   color: #ffffff;
 }
 
-/*select*/
-select {
-  /*移除箭頭樣式*/
-  appearance:none;
-  -moz-appearance:none;
-  -webkit-appearance:none;
 
-  /*改變右邊箭頭樣式*/
-  background: url("../img/common/select-triangle.svg") no-repeat scroll right center transparent;
-  background-position-x: 95%;
-  padding-left: 6px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  font-size: 1.5vmin;
-  width: 5vw;
-  
-}
 
 /*table*/
 th, tr {
@@ -348,44 +334,74 @@ padding: 0.75vh 0 !important;
 }
 /*common area*/
 .row {
-    height: 100%;
+  height: 100%;
 }
 .common-item {
-    /* padding-left: 0.25vw;
-    padding-right: 0.25vw; */
-    /* padding-top: 1.5vh;
-    padding-bottom: 1.5vh; */
-    height: 100%;
+  height: 100%;
 }
-.common-item-inner {
-    padding-top: 1.5vh;
-    padding-bottom: 1.5vh;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    border-radius: 8px;
-    margin-left: 0.5vw;
-    margin-right: 0.5vw;
-    background-color: #ffffff;
-    height: 100%;
+.test{
+  font-size: 10px;
 }
+/* .common-item-inner {
+  @apply h-full w-full;
+  @apply ml-4 mr-4;
+  @apply ml-4 mr-4 pt-4 pb-4 pr-4 pl-4;
+  @apply h-full w-full;
+  @apply bg-common;
+
+  /* background-color: var(--common-item-inner-background-color); */
+  /* border-radius: 8px; */
+/* }  */
 .common-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    border-bottom: 1px solid #dddfe5;
-    height: 100%;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #dddfe5;
+  height: 100%;
+  width: 100%;
 }
 .common-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    /* margin-left: 1vw;
-    margin-right: 1vw; */
-    background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
+/*不包含左右padding - 通常用於有緊貼底線的header項目使用 start*/
+.common-item-inner-nlrp {
+  height: 100%;
+  margin-left: var(--common-item-inner-margin-left);
+  margin-right: var(--common-item-inner-margin-right);
+  padding-top: var(--common-item-inner-padding-top);
+  padding-bottom: var(--common-item-inner-padding-bottom);
+  background-color: var(--common-item-inner-background-color);
+  border-radius: 8px;
+}
+.common-header-clrp {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #dddfe5;
+  height: 100%;
+  width: 100%;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+.common-content-clrp {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+/*不包含左右padding - 通常用於有緊貼底線的header項目使用 end*/
+
+.common-vertical-separation-line {
+ box-shadow: 0 0 0 0.5px #bbbfca;
+}
+
 
 /* .common-container-row {
   display: flex;
@@ -540,4 +556,28 @@ padding: 0.75vh 0 !important;
 .viewmore > img {
   margin-top: 0.1vh;
   margin-left: 0.25vw;
+}
+
+
+.description {
+  font-size: 1.5vmin;
+}
+
+/*error text css*/
+.errortext {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 1.7vh;
+  width: 18vw;
+  font-size: 1.4vmin;
+  color: #e43030;
+  margin-top: 0.2vh;
+}
+.input-error-style {
+  border-color: red !important;
+}
+.input-no-error-style {
+  border-color: #e8e8e8 !important;
 }

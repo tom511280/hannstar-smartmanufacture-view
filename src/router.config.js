@@ -6,7 +6,7 @@ import sendResetpwdEmailView from '@/pages/member/views/sendResetpwdEmailView.vu
 import overviewView from '@/pages/overview/views/overviewView.vue'
 import bodyhealthView from '@/pages/bodyhealth/views/bodyhealthView.vue'
 import bodyhealthDetailView from '@/pages/bodyhealth/views/bodyhealthDetailView.vue'
-import groupAndStaffView from '@/pages/groupAndStaff/views/groupAndStaffView.vue'
+import groupAndStaffView from '@/pages/groupAndStaff/views/groupAndStaffView1.vue'
 import attendanceView from '@/pages/attendance/views/attendanceView.vue'
 import attendanceDetailView from '@/pages/attendance/views/attendanceDetailView.vue'
 

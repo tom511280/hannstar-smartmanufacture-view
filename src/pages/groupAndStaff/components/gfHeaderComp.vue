@@ -1,6 +1,40 @@
 <template>
     <div class="gfHeaderComp">
-        <div class="gfHeaderComp-item1">
+        <div class="row">
+          <div class="col-4 common-item">
+            <div class="common-item-inner">
+                <div class="item-area-content-description">
+                    <h1>2,345</h1>
+                    <p>Total Staffs</p>
+                </div>
+                <div class="item-area-content-line"></div>
+                <div class="gfHeaderComp-item-area-content-detail">
+                    <div class="detail-item">
+                        <div>Man</div>
+                        <div>1,000</div>
+                        <div>42%</div>
+                    </div>
+                    <div class="detail-item">
+                        <div>Woman </div>
+                        <div>1,345</div>
+                        <div>58%</div>
+                    
+                    </div>
+                </div>
+            </div> 
+          </div>
+          <div class="col-4 common-item">
+            <div class="common-item-inner">
+              111
+            </div> 
+          </div>
+          <div class="col-4 common-item">
+            <div class="common-item-inner">
+              111
+            </div> 
+          </div>
+        </div>
+        <!-- <div class="gfHeaderComp-item1">
             <div class="gfHeaderComp-item-area-content-description">
                 <h1>2,345</h1>
                 <p>Total Staffs</p>
@@ -39,7 +73,7 @@
             <div class="gfHeaderComp-item-area-img">
                 <img src="@/assets/img/groupAndStaff/icon-smartwatch-2.svg" alt="">
             </div>
-        </div>
+        </div> -->
     </div>
 </template>
 <script>
@@ -65,6 +99,9 @@ export default {
 }
 </script>
 <style scoped>
+.row {
+    width: 100%;
+}
 .gfHeaderComp {
     display: flex;
     flex-direction: row;
@@ -73,19 +110,20 @@ export default {
     height: 100%;
     width: 100%;
 }
-.gfHeaderComp-item1, .gfHeaderComp-item2, .gfHeaderComp-item3 {
+.common-item {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 32%;
     border-radius: 8px;
 }
-.gfHeaderComp-item1 {
+
+.row > .common-item:nth-child(1) > .common-item-inner {
+    margin-left: 0vw;
     background-color: #7c72a9;
 }
-.gfHeaderComp-item2 {
+.row > .common-item:nth-child(2) > .common-item-inner {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -94,14 +132,15 @@ export default {
     margin-left: 2%;
     margin-right: 2%;
 }
-.gfHeaderComp-item3 {
+.row > .common-item:nth-child(3) > .common-item-inner {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     background-color: #3797a4;
+    margin-right: 0vw;
 }
-.gfHeaderComp-item-area-content-description {
+.item-area-content-description {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -110,7 +149,18 @@ export default {
     width: 11vw;
     padding-left: 2vw;
 }
-.gfHeaderComp-item2-area-content-description {
+.item-area-content-line {
+    height: 60%;
+    width: 1px;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    background-color: #ffffff;
+    opacity: 0.43;
+}
+
+
+
+/* .gfHeaderComp-item2-area-content-description {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -118,7 +168,7 @@ export default {
     height: 100%;
     width: vw;
     padding-left: 2vw;
-}
+} */
 .gfHeaderComp-item-area-content-description > h1, .gfHeaderComp-item2-area-content-description > h1 {
     margin-bottom: 0.5vh;
     font-weight: 500;
@@ -129,14 +179,7 @@ export default {
     margin-bottom: 0.5vh;
     color: #ffffff;
 }
-.gfHeaderComp-item-area-content-line {
-    height: 60%;
-    width: 1px;
-    margin-top: 20%;
-    margin-bottom: 20%;
-    background-color: #ffffff;
-    opacity: 0.43;
-}
+
 .gfHeaderComp-item-area-content-detail {
     display: flex;
     flex-direction: column;

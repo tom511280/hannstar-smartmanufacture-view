@@ -2,24 +2,24 @@
     <div class="groupAndStaffView container-fluid">
         <div class="row">
           <div class="col-12 common-item">
-            <div class="common-item-inner groupAndStaffView-header-area">
+            <div class="common-item-inner groupAndStaffView-header">
               <gfHeaderComp ref="gfHeader"></gfHeaderComp>
             </div> 
           </div>
         </div>
-        <div class="row">
-            <div class="col-9 common-item">
-                <div class="common-item-inner groupAndStaffView-content-area-tree">
+        <!-- <div class="row">
+            <div class="col-2 common-item">
+                <div class="common-item-inner-nlrp groupAndStaffView-content-area-tree">
                     <gfTreeComp ref="gfTree"></gfTreeComp>
                 </div>
             </div>
-            <div class="col-3 common-item">
+            <div class="col-10 common-item">
                 <div class="common-item-inner groupAndStaffView-content-area-info">
                    <gfTableComp ref="groupStaff"></gfTableComp> 
                 </div>
             </div>
         </div>
-        <gfModalComp></gfModalComp>
+        <gfModalComp></gfModalComp> -->
     </div>
     <!-- <div class="groupAndStaffView">
         <div class="groupAndStaffView-header-area">
@@ -38,15 +38,15 @@
 </template>
 <script>
 import gfHeaderComp from '@/pages/groupAndStaff/components/gfHeaderComp.vue'
-import gfTreeComp from '@/pages/groupAndStaff/components/gfTreeComp.vue'
-import gfTableComp from '@/pages/groupAndStaff/components/gfTableComp.vue'
-import gfModalComp from '@/pages/groupAndStaff/components/gfModalComp.vue'
+// import gfTreeComp from '@/pages/groupAndStaff/components/gfTreeComp.vue'
+// import gfTableComp from '@/pages/groupAndStaff/components/gfTableComp.vue'
+// import gfModalComp from '@/pages/groupAndStaff/components/gfModalComp.vue'
 export default {
     components: {
         gfHeaderComp,
-        gfTreeComp,
-        gfTableComp,
-        gfModalComp
+        // gfTreeComp,
+        // gfTableComp,
+        // gfModalComp
     },
     computed: {
         statisticsData(){
@@ -119,7 +119,7 @@ export default {
 .groupAndStaffView > .row:nth-child(1) {
   width: 100%;
   height: 15%;
-  background-color: #f1f2f3;
+  // background-color: #f1f2f3;
 }
 .groupAndStaffView > .row:nth-child(2) {
   width: 100%;
@@ -127,34 +127,34 @@ export default {
 }
 
 
-.groupAndStaffView-header-area {
-    // height: 15%;
-    width: 100%;
-    background-color: #f1f2f3;
-    padding-left: 0vw;
-    padding-right: 0vw;
-    padding-top: 0vh;
-    // padding-bottom: 0vh;
-    // margin-bottom: 2%;
+.groupAndStaffView-header {
+  margin-left: 0vw;
+  margin-right: 0vw;
+  background-color: var(--common-background-color);
+    // width: 100%;
+    // padding-left: 0vw;
+    // padding-right: 0vw;
+    // padding-top: 0vh;
 }
 .groupAndStaffView-content-area {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    // height: 85%;
     width: 100%;
 }
 .groupAndStaffView-content-area-tree{
     height: 100%;
-    width: 16%;
-    margin-right: 2%;
+    // width: 16%;
+    // margin-right: 2%;
     border-radius: 8px;
     background-color: #ffffff;
+    padding-left: 0vw;
+    padding-right: 0vw;
 }
 .groupAndStaffView-content-area-info{
     height: 100%;
-    width: 82%;
+    // width: 82%;
     border-radius: 8px;
     background-color: #ffffff;
 }
