@@ -300,8 +300,12 @@ const actions = {
       for (let data of respData) {
         count++;
         if(count < 5) {
-          data.date = "2020-1-21"
-          data.time = "11:50:00"
+          let time = data.inTime.split(" ");
+          data.date = time[0]
+          data.time = time[1]
+
+          // data.date = "2020-1-21"
+          // data.time = "11:50:00"
           attendanceBaseList.push(data);
         }
       }
