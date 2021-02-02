@@ -10,9 +10,9 @@
             </select>
             <div class="attendanceChartComp-legend">
               <span class="attendanceChartComp-enter"></span>
-              <p>進入</p>
+              <p>Enter</p>
               <span class="attendanceChartComp-leave"></span>
-              <p>離開</p>
+              <p>Leave</p>
             </div>
         </div>
         <div class="common-content">
@@ -68,16 +68,16 @@ export default {
                                     show:true,
                         },
                         grid: {
-                                left: '6%',
+                                left: '10%',
                                 top: '7.5%',
                                 height: '85%',
-                                width:'87%'
+                                width:'80%'
                         },
                         xAxis: {
                                 // splitLine:{show: false},//去除網格線
                                 type: 'category',
                                 data: ['1/11', '1/12', '1/13', '1/14', '1/15', '1/16', '1/17'],
-                                name:'日期'
+                                name:'Date'
                         },
                         yAxis: {
                                 // splitLine:{show: false},//去除網格線
@@ -86,7 +86,7 @@ export default {
                                 // nameTextStyle: {
                                 //                 color:'red',
                                 // },
-                                name:'人數'
+                                name:'Number of people'
                         },
                         series: [
                                     {
