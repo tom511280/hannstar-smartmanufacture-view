@@ -76,4 +76,12 @@ http://ec2-54-199-123-149.ap-northeast-1.compute.amazonaws.com:8001/hannstar-sma
 
 # 問題集
 * Q1:vue : 因為這個系統上已停用指令碼執行，所以無法載入...
-* A1:https://officeguide.cc/powershell-set-execution-policy-remote-signed/
+* A1:https://officeguide.cc/powershell-set-execution-policy-remote-signed/,
+
+
+
+1/15:{
+步數:100,
+k:1000,
+距離:500m
+}

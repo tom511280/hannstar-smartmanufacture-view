@@ -2,10 +2,10 @@
   <div class="attendanceStayDetailsComp">
     <div class="common-header">
       <h4>Stay Details</h4>
-      <div class="viewmore">
+      <!-- <div class="viewmore">
         <p>View Detail</p>
         <img src="@/assets/img/bodyhealth/ic-arrow-orange-right.svg" alt="">
-      </div>
+      </div> -->
       <!-- <div class="select-area">
         <select id="timeSelect" name="timeSelect">
         <option>Attend</option>

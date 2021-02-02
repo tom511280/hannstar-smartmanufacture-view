@@ -5,28 +5,28 @@
         </div>
         <div class="common-line"></div>
         <div class="attendancePersonInfoComp-item">
-            <h3>Gender</h3>
-            <div class="description">{{gender}}</div>
+            <h3>{{gender}}</h3>
+            <div class="description">Gender</div>
         </div>
         <div class="common-line"></div>
         <div class="attendancePersonInfoComp-item">
-            <h3>SG004</h3>
-            <div class="description">{{groupName}}</div>
+            <h3>{{groupName}}</h3>
+            <div class="description">Group</div>
         </div>
         <div class="common-line"></div>
         <div class="attendancePersonInfoComp-item">
-            <h3>Metting Room</h3>
-            <div class="description">{{location}}</div>
+            <h3>{{location}}</h3>
+            <div class="description">Meeting Room</div>
         </div>
         <div class="common-line"></div>
         <div class="attendancePersonInfoComp-item">
-            <h3>Device</h3>
-            <div class="description">{{deviceType}}</div>
+            <h3>{{deviceType}}</h3>
+            <div class="description">Device</div>
         </div>
         <div class="common-line"></div>
         <div class="attendancePersonInfoComp-item">
-            <h3>Series NO.</h3>
-            <div class="description">{{serialNo}}</div>
+            <h3>{{serialNo}}</h3>
+            <div class="description">Series NO.</div>
         </div>
     </div>
 </template>
@@ -45,8 +45,8 @@ export default {
     methods: {
         setData(employeeData) {
             this.employeeName = employeeData.employeeName;
-            if(employeeData.gender == 0) this.gender = "girl"
-            if(employeeData.gender == 1) this.gender = "boy"
+            if(employeeData.gender == 0) this.gender = "Female"
+            if(employeeData.gender == 1) this.gender = "Male"
             this.groupName = employeeData.groupName;
             this.location = employeeData.location;
             this.deviceType = employeeData.deviceType;
@@ -95,5 +95,6 @@ export default {
 }
 .common-line {
     height: 100%;
+    background-color: #e8e8e8;
 }
 </style>

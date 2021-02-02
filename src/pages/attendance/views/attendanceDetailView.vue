@@ -205,19 +205,22 @@ export default {
     height: 100%;
     width: 100%;
 }
-.row:nth-child(n+1):nth-child(-n+3){
-    margin-bottom: 1%;
-}
+/* .row:nth-child(n+1):nth-child(-n+3){
+    margin-bottom: 1.5%;
+} */
 .row:nth-child(1) {
     height: 10%;
+    margin-bottom: 1%;
 }
 .row:nth-child(2) {
     height: 25%;
+    margin-bottom: 2%;
 }
 .row:nth-child(3) {
     height: 30%;
+    margin-bottom: 1.5%;
 }
 .row:nth-child(4) {
-    height: 28%;
+    height: 25%;
 }
 </style>

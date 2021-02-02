@@ -69,4 +69,27 @@
 * 組織人員LEVEL1和LEVEL2和間距縮小(V)(已處理)
 * 折線圖-資料往上長y軸自動調整RANGE(V)(本身可以做到)
 * 分頁多頁的話只顯示前三其他....(X)(需更動套件 需要較長時間)
-* SLIDERBAR 背景色白色去除(V)(已處理)
+* SIDERBAR 背景色白色去除(V)(已處理)
+
+
+################################################
+#heart rate 放資料
+Metting Room改
+attendanceDetailView 更改線的顏色
+attendanceDetailView boy改成male
+attendanceDetailView header上下換掉
+attendanceDetailView 只留view map
+attendanceDetailView Attendance的status改成checkin和checkout
+attendanceDetailView Notification的status改成sent和failed
+attendanceDetailView SOS Warning的Check改成yes和no
+attendanceDetailView Real-time Position 的 Duration補上 持續時間 依照天時分區隔開1d1h1m
+
+bodyhealthView的Name補上完整的工號
+
+
+bodyhealthDetailView的Sleep Monitor的HRS改成duration 內容改成幾hour ex.1.5 hours
+
+attendanceView的status改成arrived跟left
+
+groupAndStaffView的gender的內容有malec和femle(確認單字)
+groupAndStaffView Attendance改成checkin和checkout

@@ -2,18 +2,18 @@
   <div class="attendanceHRAComp">
     <div class="common-header">
       <h4>Heart Rate Analysis</h4>
-      <div class="viewmore">
+      <!-- <div class="viewmore">
         <p>View Detail</p>
         <img src="@/assets/img/bodyhealth/ic-arrow-orange-right.svg" alt="">
-      </div>
-      <!-- <div class="select-area">
+      </div> -->
+      <div class="select-area">
         <select id="timeSelect" name="timeSelect">
-        <option>Attend</option>
-        <option>Attend</option>
-        <option>Attend</option>
-        <option>Attend</option>
+        <option>Lately 24 hours</option>
+        <option>Lately 12 hours</option>
+        <option>Lately 6 hours</option>
+        <option>Lately 1 hours</option>
       </select>
-      </div>     -->
+      </div>    
     </div>
     <div class="common-content">
       <overViewListComp ref="overViewList"></overViewListComp>
@@ -65,5 +65,8 @@ export default {
   justify-content: flex-end;
   align-items: center; 
   width: 100%;
+}
+#timeSelect {
+  width: 8vw;
 }
 </style>

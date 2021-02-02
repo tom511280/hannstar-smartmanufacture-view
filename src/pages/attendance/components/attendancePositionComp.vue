@@ -3,7 +3,7 @@
     <div class="common-header">
         <h4>Real-time Position</h4>
         <div class="viewmore">
-                <p>View Detail</p>
+                <p>View Map</p>
                 <img src="@/assets/img/bodyhealth/ic-arrow-orange-right.svg" alt="">
         </div>
         <!-- <div class="viewmore">

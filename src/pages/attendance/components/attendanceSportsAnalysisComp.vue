@@ -8,16 +8,16 @@
                 <option>Attend</option>
                 <option>Attend</option>
             </select> -->
-            <div class="attendanceChartComp-legend">
+            <!-- <div class="attendanceChartComp-legend">
               <span class="attendanceChartComp-enter"></span>
               <p>步數</p>
               <span class="attendanceChartComp-leave"></span>
               <p>距離</p>
-            </div>
-            <div class="viewmore">
+            </div> -->
+            <!-- <div class="viewmore">
                 <p>View Detail</p>
                 <img src="@/assets/img/bodyhealth/ic-arrow-orange-right.svg" alt="">
-            </div>
+            </div> -->
         </div>
         <div class="common-content">
           <div :id="this.elid" style="width:100%;height: 100%;"></div>
@@ -43,15 +43,15 @@ export default {
                         },
                         grid: {
                                 left: '6%',
-                                top: '23%',
-                                height: '63%',
+                                top: '25%',
+                                height: '55%',
                                 width:'87%'
                         },
                         xAxis: {
                                 // splitLine:{show: false},//去除網格線
                                 type: 'category',
                                 data: ['1/11', '1/12', '1/13', '1/14', '1/15', '1/16', '1/17'],
-                                name:'日期'
+                                name:'Date'
                         },
                         yAxis: {
                                 // splitLine:{show: false},//去除網格線
@@ -60,7 +60,7 @@ export default {
                                 // nameTextStyle: {
                                 //                 color:'red',
                                 // },
-                                name:'距離/m'
+                                name:'Distance/m'
                         },
                         series: [
                                     {
@@ -88,7 +88,7 @@ export default {
     methods: {
         drawChart() {
             this.chartOptions.series[0].data = [200,500,600,700,800,900,200];
-            this.chartOptions.series[1].data = [150,450,550,650,750,850,150];
+            // this.chartOptions.series[1].data = [150,450,550,650,750,850,150];
             let monitorpieChart = this.$echarts.init(document.getElementById(this.elid));
             monitorpieChart.setOption(this.chartOptions);
         }

@@ -46,10 +46,10 @@ const mutations = {
   },
   [INIT_SLEEP](state) { 
 
-    state.sleep.normal.fields = ['Name','Group','HRS'];
-    state.sleep.normal.fieldkeys = ['name','group','time'];
-    state.sleep.normal.Allfields = ['Name','Group','HRS'];
-    state.sleep.normal.Allfieldkeys = ['name','group','time'];
+    state.sleep.normal.fields = ['Name','Group','Duration'];
+    state.sleep.normal.fieldkeys = ['name','group','duration'];
+    state.sleep.normal.Allfields = ['Name','Group','Duration'];
+    state.sleep.normal.Allfieldkeys = ['name','group','duration'];
     state.sleep.normal.datas = [];
     
     state.sleep.normal.errorCodeList = []
@@ -58,10 +58,10 @@ const mutations = {
     state.sleep.normal.pageSize = 10
     state.sleep.normal.totalNumber = 0
 
-    state.sleep.abnormal.fields = ['Name','Group','HRS'];
-    state.sleep.abnormal.fieldkeys = ['name','group','time'];
-    state.sleep.abnormal.Allfields = ['Name','Group','HRS'];
-    state.sleep.abnormal.Allfieldkeys = ['name','group','time'];
+    state.sleep.abnormal.fields = ['Name','Group','Duration'];
+    state.sleep.abnormal.fieldkeys = ['name','group','duration'];
+    state.sleep.abnormal.Allfields = ['Name','Group','Duration'];
+    state.sleep.abnormal.Allfieldkeys = ['name','group','duration'];
     state.sleep.abnormal.datas = [];
 
     state.sleep.abnormal.errorCodeList = []

@@ -209,6 +209,14 @@ const actions = {
       let count = 0;
       for (let data of respData) {
         count++;
+        data.localStat = "1d 1h 1m";
+        // let createTimeFormat = new Date(data.createTime);
+        // let updateTimeFormat = new Date(data.updateTime);
+        // let hour = parseInt(updateTimeFormat - createTimeFormat) / 1000 / 60
+        // let hour = parseInt(updateTimeFormat - createTimeFormat) / 1000 / 60
+        // let hour = parseInt(updateTimeFormat - createTimeFormat) / 1000 / 60
+
+        // localStat
         if(count < 6) positionList.push(data);
       }
 
@@ -321,8 +329,12 @@ const actions = {
       for (let data of respData) {
         count++;
         if(count < 5) {
-          data.date = "2020-1-21"
-          data.time = "11:50:00"
+          let time = data.time.split(" ");
+          data.date = time[0]
+          data.time = time[1]
+
+          // data.date = "2020-1-21"
+          // data.time = "11:50:00"
           sosList.push(data);
         }
       }

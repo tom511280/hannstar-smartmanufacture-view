@@ -2,10 +2,10 @@
   <div class="attendanceSosComp">
     <div class="common-header">
       <h4>SOS Warning</h4>
-      <div class="viewmore">
+      <!-- <div class="viewmore">
         <p>View Detail</p>
         <img src="@/assets/img/bodyhealth/ic-arrow-orange-right.svg" alt="">
-      </div>
+      </div> -->
     </div>
     <overViewListComp ref="overViewList"></overViewListComp>
   </div>

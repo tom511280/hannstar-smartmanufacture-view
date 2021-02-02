@@ -5,7 +5,7 @@ export const INIT_EMPLOYEE = 'INIT_EMPLOYEE';
 export const INIT_CARDMSG = 'INIT_CARDMSG';
 export const INIT_POSITION = 'INIT_POSITION';
 export const INIT_HRA = 'INIT_HRA';
-export const INIT_ATTENDANCEBASE = 'INIT_HRA';
+export const INIT_ATTENDANCEBASE = 'INIT_ATTENDANCEBASE';
 export const INIT_SOS = 'INIT_SOS';
 export const INIT_MEETING = 'INIT_MEETING';
 //讀取資料

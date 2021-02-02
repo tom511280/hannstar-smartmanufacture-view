@@ -104,11 +104,13 @@ const actions = {
       let normalDatas = []
       let abnormalDatas = []
       for (let data of respData) {
-        if(data.heartRate < 100){
+        if(data.duration < 5){
           // normalDatas.push(new Map(Object.entries(data)));
+          data.duration = data.duration + " hours";
           normalDatas.push(data);
         } else{
           // abnormalDatas.push(new Map(Object.entries(data)));
+          data.duration = data.duration + " hours";
           abnormalDatas.push(data);
         } 
       }
