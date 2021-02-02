@@ -3,7 +3,7 @@
         <div class="gfTreeComp-header">
             <h4 class="gfTreeComp-header-title">Group Structure</h4>
             <div class="gfTreeComp-header-content">
-                <p data-bs-toggle="modal" data-bs-target="#gfAddModal">Add</p>
+                <p @click="initAdd()" data-bs-toggle="modal" data-bs-target="#gfAddModal">Add</p>
                 <div class="common-line"></div>
                 <p data-bs-toggle="modal" data-bs-target="#gfEditModal">Edit</p>
                 </div>
@@ -89,6 +89,9 @@ export default {
     methods: {
       setTree(datas){
           this.datas = datas;
+      },
+      initAdd(){
+        this.addNodeName = "";
       },
       addNode(){
         //新增数据

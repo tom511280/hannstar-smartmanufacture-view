@@ -209,12 +209,22 @@ const actions = {
       let count = 0;
       for (let data of respData) {
         count++;
-        data.localStat = "1d 1h 1m";
-        // let createTimeFormat = new Date(data.createTime);
-        // let updateTimeFormat = new Date(data.updateTime);
-        // let hour = parseInt(updateTimeFormat - createTimeFormat) / 1000 / 60
-        // let hour = parseInt(updateTimeFormat - createTimeFormat) / 1000 / 60
-        // let hour = parseInt(updateTimeFormat - createTimeFormat) / 1000 / 60
+        // data.localStat = "1d 1h 1m";
+        let createTimeFormat = new Date(data.createTime);
+        let updateTimeFormat = new Date(data.updateTime);
+        let s = parseInt(updateTimeFormat - createTimeFormat) / 1000
+        let m = Math.floor(s / 60 % 60)
+        let h = Math.floor(s / 60 / 60 % 24)
+        let d = Math.floor(s / 60 / 60 / 24)
+        data.localStat = "";
+        if(d > 0) data.localStat+= d + " d ";
+        if(h > 0) data.localStat+= h + " h ";
+        if(m > 0) data.localStat+= m + " m ";
+
+        // data.localStat = "1d 1h 1m";
+
+        // let h = parseInt(updateTimeFormat - createTimeFormat) / 1000 / 60 / 60
+        // let d = parseInt(updateTimeFormat - createTimeFormat) / 1000 / 60 / 60
 
         // localStat
         if(count < 6) positionList.push(data);
