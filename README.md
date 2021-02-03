@@ -44,7 +44,7 @@ https://echarts.apache.org/examples/zh/index.html#chart-type-pie
 git add .
 
 git commit -m '
-2020-01-21變更
+2020-02-03變更
 Author: TomWu
 Content :
 1.完成PM說明調整

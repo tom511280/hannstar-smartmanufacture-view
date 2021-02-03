@@ -37,6 +37,7 @@ export default {
 .datepickerComp > .inputbox-area-external {
   width: 10vw;
   margin-right: 1vw;
+  height: 3.8vh;
 }
 .datepicker-inputBox {
     width: 7.75vw;

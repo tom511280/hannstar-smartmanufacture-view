@@ -29,7 +29,7 @@
           </div>
         </template>
         <!--loop data-->
-        <el-table-column v-for="(field, index) in fields" :key="field" :label="field" show-overflow-tooltip>
+        <el-table-column v-for="(field, index) in fields" :key="field" :label="field" :min-width="fieldsWidth[index]" show-overflow-tooltip>
           <template slot-scope="scope">
             <span v-if="fieldkeys[index] != 'detail'">{{ scope.row[fieldkeys[index]] }}</span>
             <span v-if="fieldkeys[index] == 'detail'">
