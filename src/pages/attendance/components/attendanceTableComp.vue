@@ -140,4 +140,10 @@ export default {
   height: 2vh;
   /* line-height:0px */
 }
+
+</style>
+<style>
+.el-table__body-wrapper.is-scrolling-none {
+    height: 100% !important;
+}
 </style>
