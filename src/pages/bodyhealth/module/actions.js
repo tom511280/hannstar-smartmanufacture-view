@@ -104,15 +104,19 @@ const actions = {
       let normalDatas = []
       let abnormalDatas = []
       for (let data of respData) {
-        if(data.duration < 5){
-          // normalDatas.push(new Map(Object.entries(data)));
-          data.duration = data.duration + " hours";
-          normalDatas.push(data);
-        } else{
-          // abnormalDatas.push(new Map(Object.entries(data)));
-          data.duration = data.duration + " hours";
-          abnormalDatas.push(data);
+
+        let hours = data.duration;
+        let day = hours / 24
+        data.duration = "";
+        if( day > 1){
+          data.duration = Math.floor(day) + " day ";
         } 
+        data.duration+= (hours % 24) + " hours";
+        
+
+        if(hours >= 6 && hours < 15) normalDatas.push(data);
+        else abnormalDatas.push(data);
+
       }
 
       //TODO 後續補上errorcode判斷

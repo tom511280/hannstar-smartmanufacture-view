@@ -3,7 +3,7 @@
     <table class="table">
       <thead>
         <tr>
-          <th v-for="field in fields" :key="field">{{ field }}</th>
+          <th  v-for="(field,index) in fields" :key="field" :style="{ width: fieldsWidth[index] + '%' }">{{ field }}</th>
         </tr>
       </thead>
       <tbody v-if="datas.length > 0">
@@ -31,15 +31,17 @@ export default {
       fieldkeys:[],
       fields:[],
       datas:[],
+      fieldsWidth:[],
       wtdclass:'tdclass wtdclass',
       gtdclass:'tdclass gtdclass'
     }
   },
   methods: {
-    drawTable(fields, fieldkeys, datas) {
+    drawTable(fields, fieldkeys, datas, fieldsWidth) {
       this.fieldkeys = fieldkeys;
       this.fields = fields;
       this.datas = datas;
+      this.fieldsWidth = fieldsWidth;
     }
   }
 }

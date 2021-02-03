@@ -242,11 +242,13 @@ export default {
                 heartRate.normal.fields,
                 heartRate.normal.fieldkeys,
                 heartRate.normal.datas,
+                heartRate.normal.fieldsWidth
             )  
             this.$refs.heartRateListP2.drawTable(
                 heartRate.abnormal.fields,
                 heartRate.abnormal.fieldkeys,
                 heartRate.abnormal.datas,
+                heartRate.abnormal.fieldsWidth
             ) 
             this.$refs.modalComp.setHeartRateModal(
                 this.heartMsg.heartRateMaxSelects, 
@@ -259,14 +261,16 @@ export default {
                 sleep.abnormal.totalNumber
             )
             this.$refs.sleepListP1.drawTable(
-                sleep.normal.fields,
-                sleep.normal.fieldkeys,
-                sleep.normal.datas,
-            )  
-            this.$refs.sleepListP2.drawTable(
                 sleep.abnormal.fields,
                 sleep.abnormal.fieldkeys,
                 sleep.abnormal.datas,
+                sleep.abnormal.fieldsWidth
+            )  
+            this.$refs.sleepListP2.drawTable(
+                sleep.normal.fields,
+                sleep.normal.fieldkeys,
+                sleep.normal.datas,
+                sleep.normal.fieldsWidth
             )
             this.$refs.modalComp.setSleepModal(
                 this.sleepMsg.sleepMaxSelects, 
@@ -282,11 +286,13 @@ export default {
                 sports.noReached.fields,
                 sports.noReached.fieldkeys,
                 sports.noReached.datas,
+                sports.noReached.fieldsWidth
             )  
             this.$refs.sportsListP2.drawTable(
                 sports.sportsSort.fields,
                 sports.sportsSort.fieldkeys,
                 sports.sportsSort.datas,
+                sports.sportsSort.fieldsWidth
             )
             this.$refs.modalComp.setSportsModal(
                 this.sportsMsg.sportsMinSelects

@@ -11,6 +11,7 @@ const state = {
         fieldkeys:[],
         Allfields:[],
         Allfieldkeys:[],
+        fieldsWidth:[],
         datas:[],
         errorCodeList:[],
         total: 0, // 總頁數
@@ -23,7 +24,7 @@ const state = {
         fieldkeys:[],
         Allfields:[],
         Allfieldkeys:[],
-        datas:[],
+        fieldsWidth:[],
         errorCodeList:[],
         total: 0, // 總頁數
         pageNow: 1, // 當前頁數
@@ -43,6 +44,7 @@ const state = {
         fieldkeys:[],
         Allfields:[],
         Allfieldkeys:[],
+        fieldsWidth:[],
         datas:[],
         errorCodeList:[],
         total: 0, // 總頁數
@@ -55,6 +57,7 @@ const state = {
         fieldkeys:[],
         Allfields:[],
         Allfieldkeys:[],
+        fieldsWidth:[],
         datas:[],
         errorCodeList:[],
         total: 0, // 總頁數
@@ -74,6 +77,7 @@ const state = {
         fieldkeys:[],
         Allfields:[],
         Allfieldkeys:[],
+        fieldsWidth:[],
         datas:[],
         errorCodeList:[],
         total: 0, // 總頁數
@@ -86,6 +90,7 @@ const state = {
         fieldkeys:[],
         Allfields:[],
         Allfieldkeys:[],
+        fieldsWidth:[],
         datas:[],
         errorCodeList:[],
         total: 0, // 總頁數
@@ -98,6 +103,7 @@ const state = {
         fieldkeys:[],
         Allfields:[],
         Allfieldkeys:[],
+        fieldsWidth:[],
         datas:[],
         errorCodeList:[],
         total: 0, // 總頁數

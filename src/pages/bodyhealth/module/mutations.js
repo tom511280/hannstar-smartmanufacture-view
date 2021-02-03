@@ -22,6 +22,7 @@ const mutations = {
     state.heartRate.normal.fieldkeys = ['name','group','heartRate','time'];
     state.heartRate.normal.Allfields = ['Name','Group','Bpm','Time'];
     state.heartRate.normal.Allfieldkeys = ['name','group','heartRate','time'];
+    state.heartRate.normal.fieldsWidth = ["30","25","10","35"];
     state.heartRate.normal.datas = [];
     
     state.heartRate.normal.errorCodeList = []
@@ -34,6 +35,7 @@ const mutations = {
     state.heartRate.abnormal.fieldkeys = ['name','group','heartRate','time'];
     state.heartRate.abnormal.Allfields = ['Name','Group','Bpm','Time'];
     state.heartRate.abnormal.Allfieldkeys = ['name','group','heartRate','time'];
+    state.heartRate.abnormal.fieldsWidth = ["30","25","10","35"];
     state.heartRate.abnormal.datas = [];
 
     state.heartRate.abnormal.errorCodeList = []
@@ -50,6 +52,7 @@ const mutations = {
     state.sleep.normal.fieldkeys = ['name','group','duration'];
     state.sleep.normal.Allfields = ['Name','Group','Duration'];
     state.sleep.normal.Allfieldkeys = ['name','group','duration'];
+    state.sleep.normal.fieldsWidth = ["35","35","30"];
     state.sleep.normal.datas = [];
     
     state.sleep.normal.errorCodeList = []
@@ -62,6 +65,7 @@ const mutations = {
     state.sleep.abnormal.fieldkeys = ['name','group','duration'];
     state.sleep.abnormal.Allfields = ['Name','Group','Duration'];
     state.sleep.abnormal.Allfieldkeys = ['name','group','duration'];
+    state.sleep.abnormal.fieldsWidth = ["35","35","30"];
     state.sleep.abnormal.datas = [];
 
     state.sleep.abnormal.errorCodeList = []
@@ -79,6 +83,7 @@ const mutations = {
     state.sports.reached.fieldkeys = ['name','group','steps'],
     state.sports.reached.Allfields = ['Name','Group','Steps'];
     state.sports.reached.Allfieldkeys = ['name','group','steps'],
+    state.sports.reached.fieldsWidth = ["35","35","30"];
     state.sports.reached.datas = [];
     
     state.sports.reached.errorCodeList = []
@@ -91,6 +96,7 @@ const mutations = {
     state.sports.noReached.fieldkeys = ['name','group','steps'],
     state.sports.noReached.Allfields = ['Name','Group','Steps'];
     state.sports.noReached.Allfieldkeys = ['name','group','steps'],
+    state.sports.noReached.fieldsWidth = ["35","35","30"];
     state.sports.noReached.datas = [];
     
     state.sports.noReached.errorCodeList = []
@@ -99,10 +105,11 @@ const mutations = {
     state.sports.noReached.pageSize = 10
     state.sports.noReached.totalNumber = 0
 
-    state.sports.sportsSort.fields = ['Name','Group','Steps'];
-    state.sports.sportsSort.fieldkeys = ['name','group','steps'],
-    state.sports.sportsSort.Allfields = ['Name','Group','Steps'];
-    state.sports.sportsSort.Allfieldkeys = ['name','group','steps'],
+    state.sports.sportsSort.fields = ['No','Name','Group','Steps'];
+    state.sports.sportsSort.fieldkeys = ['no','name','group','steps'],
+    state.sports.sportsSort.Allfields = ['No','Name','Group','Steps'];
+    state.sports.sportsSort.Allfieldkeys = ['no','name','group','steps'],
+    state.sports.sportsSort.fieldsWidth = ["10","30","30","30"];
     state.sports.sportsSort.datas = [];
     
     state.sports.sportsSort.errorCodeList = []
