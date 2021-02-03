@@ -33,7 +33,7 @@ const mutations = {
     state.attendanceData.attendanceList = [];
     state.attendanceData.fields = ['Name','Group','Enter Time','Leave Time','Status','Detail'];
     state.attendanceData.fieldkeys = ['name','tenantName','inTime','outTime','state','detail'];
-    state.attendanceData.fieldsWidth = ["25","35","45","45","20","20"]
+    state.attendanceData.fieldsWidth = ["30","35","45","45","25","20"]
     state.attendanceData.errorCodeList = [];
     state.attendanceData = Object.assign({}, state.attendanceData);
   },
