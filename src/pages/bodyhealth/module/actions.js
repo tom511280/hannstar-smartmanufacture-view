@@ -178,6 +178,26 @@ const actions = {
         sportsSortDatas.push(data);
       }
 
+      //
+      sportsSortDatas.sort(function(a,b) {
+        return a.steps - b.steps;
+      });
+      let sportsSortCount = 0;
+      let sportsSortDatasTmp = [];
+      for (let data of sportsSortDatas) {
+        sportsSortCount++;
+        data.no = "#" + sportsSortCount;
+        sportsSortDatasTmp.push(data);
+      }
+      sportsSortDatas = sportsSortDatasTmp;
+
+      //
+      noReachedlDatas.sort(function(a,b) {
+        return a.steps - b.steps;
+      });
+      
+
+
       //TODO 後續補上errorcode判斷
       payload.result = {
         sports:{
