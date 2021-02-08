@@ -1,0 +1,113 @@
+{
+    "data": {
+      "pageNum": 1,
+      "pageSize": 20,
+      "size": 6,
+      "startRow": 1,
+      "endRow": 6,
+      "total": "6",
+      "pages": 1,
+      "list": [
+        {
+          "id": "1128",
+          "taskid": "294",
+          "msgType": 1,
+          "serialNo": "d68ae3e42d97",
+          "employeeId": "1937",
+          "receiver": "賀立夫",
+          "msg": "205 討論智慧製造頁面",
+          "status": "Sent",
+          "createBy": "71",
+          "createTime": "2020-10-19 15:00:20",
+          "tenantId": "12",
+          "msgIndex": "009b20201228112954d68ae3e42d97"
+        },
+        {
+          "id": "562",
+          "taskid": "209",
+          "msgType": 1,
+          "serialNo": "d68ae3e42d97",
+          "employeeId": "1937",
+          "receiver": "賀立夫",
+          "msg": "206 討論智慧製造邏輯",
+          "status": "Failed",
+          "createBy": "71",
+          "createTime": "2020-10-20 08:00:00",
+          "tenantId": "12",
+          "msgIndex": "009b20200729114449d68ae3e42d97"
+        },
+        {
+          "id": "560",
+          "taskid": "208",
+          "msgType": 1,
+          "serialNo": "d68ae3e42d97",
+          "employeeId": "1937",
+          "receiver": "賀立夫",
+          "msg": "207 討論海棠畫面",
+          "status": "Failed",
+          "createBy": "71",
+          "createTime": "2020-10-20 18:00:00",
+          "tenantId": "12",
+          "msgIndex": "009b20200729114415d68ae3e42d97"
+        },
+        {
+          "id": "559",
+          "taskid": "207",
+          "msgType": 1,
+          "serialNo": "d68ae3e42d97",
+          "employeeId": "1937",
+          "receiver": "賀立夫",
+          "msg": "207 開早會",
+          "status": "Failed",
+          "createBy": "71",
+          "createTime": "2020-10-21 18:00:00",
+          "tenantId": "12",
+          "msgIndex": "009b20200729114344d68ae3e42d97"
+        },
+        {
+          "id": "545",
+          "taskid": "194",
+          "msgType": 1,
+          "serialNo": "d68ae3e42d97",
+          "employeeId": "1937",
+          "receiver": "賀立夫",
+          "msg": "207 戰情室討論",
+          "status": "Failed",
+          "createBy": "71",
+          "createTime": "2020-10-21 20:30:00",
+          "tenantId": "12",
+          "msgIndex": "009b20200727150711d68ae3e42d97"
+        },
+        {
+          "id": "514",
+          "taskid": "171",
+          "msgType": 1,
+          "serialNo": "d68ae3e42d97",
+          "employeeId": "1937",
+          "receiver": "賀立夫",
+          "msg": "207 開發團隊討論",
+          "status": "Failed",
+          "createBy": "71",
+          "createTime": "2020-10-22 20:30:00",
+          "tenantId": "12",
+          "msgIndex": "009b20200714143512d68ae3e42d97"
+        }
+      ],
+      "prePage": 0,
+      "nextPage": 0,
+      "isFirstPage": true,
+      "isLastPage": true,
+      "hasPreviousPage": false,
+      "hasNextPage": false,
+      "navigatePages": 8,
+      "navigatepageNums": [
+        1
+      ],
+      "navigateFirstPage": 1,
+      "navigateLastPage": 1,
+      "firstPage": 1,
+      "lastPage": 1
+    },
+    "code": 0,
+    "msg": "获取成功"
+}

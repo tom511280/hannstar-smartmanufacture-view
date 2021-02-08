@@ -1,0 +1,17 @@
+{
+    "data": [
+      {
+        "id": "3784",
+        "serialNo": "d68ae3e42d97",
+        "employeeId": "1937",
+        "useState": 1,
+        "tenantId": "12",
+        "orgId": "74",
+        "createTime": 1594708000000,
+        "updateTime": null,
+        "createdBy": null
+      }
+    ],
+    "code": 0,
+    "msg": null
+}

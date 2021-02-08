@@ -1,0 +1,68 @@
+{
+	"data": {
+		"pageNum": 1,
+		"pageSize": 2,
+		"size": 2,
+		"startRow": 0,
+		"endRow": 1,
+		"total": "2",
+		"pages": 1,
+		"list": [
+			{
+				"localte": "瀚廚",
+				"duration": "60"
+			},
+			{
+				"localte": "406",
+				"duration": "4"
+            },
+            {
+				"localte": "407",
+				"duration": "10"
+            },
+            {
+				"localte": "餐廳",
+				"duration": "20"
+            },
+            {
+				"localte": "廁所",
+				"duration": "12"
+            },
+            {
+				"localte": "408",
+				"duration": "15"
+			},
+			{
+			"deviceName": null,
+			"deviceDesc": null,
+			"deviceModelId": null,
+			"deviceModel": null,
+			"serialNo": "d8c93c791358",
+			"cardNo": "0",
+			"electric": null,
+			"id": "1936",
+			"name": "黃俊嘉",
+			"sex": true,
+			"tenantName": "瀚宇彩晶股份有限公司",
+			"orgName": "SG0400",
+			"wristbandNo": null,
+			"inTime": null,
+			"outTime": null,
+			"state": 2
+		}],
+		"prePage": 0,
+		"nextPage": 0,
+		"isFirstPage": true,
+		"isLastPage": true,
+		"hasPreviousPage": false,
+		"hasNextPage": false,
+		"navigatePages": 8,
+		"navigatepageNums": [1],
+		"navigateFirstPage": 1,
+		"navigateLastPage": 1,
+		"firstPage": 1,
+		"lastPage": 1
+	},
+	"code": 0,
+	"msg": null
+}
