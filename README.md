@@ -27,16 +27,6 @@ rm -rf /usr/share/nginx/html/html8001/hannstar-smartmanufacture-view
 # 解包rar
 unrar x -o- -y hannstar-smartmanufacture-view.rar   /usr/share/nginx/html/html8001/
 
-# 舊版智慧健康管理手環後台
-http://iotbiz.shunshiwei.com:9201/?#/login
-hanyucaij001
-hanyucaij
-
-# 新版智慧健康管理手環後台UI
-https://app.zeplin.io/project/5f9bbbc7e5c6d0b9f031aa52
-Hann_____
-Hann_____
-
 # echarts中文官網
 https://echarts.apache.org/examples/zh/index.html#chart-type-pie
 
@@ -68,11 +58,6 @@ git pull
 
 # 參考
 https://github.com/xiaoniezi/vue-tree/blob/master/src/view/slot_tree.vue
-
-
-# AWS
-http://ec2-54-199-123-149.ap-northeast-1.compute.amazonaws.com:8001/hannstar-smartmanufacture-view/#/
-
 
 # 問題集
 * Q1:vue : 因為這個系統上已停用指令碼執行，所以無法載入...
